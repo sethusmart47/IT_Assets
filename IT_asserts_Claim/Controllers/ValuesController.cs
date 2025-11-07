@@ -2,6 +2,7 @@
 using IT_asserts_Claim.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace IT_asserts_Claim.Controllers
 {
@@ -29,10 +30,10 @@ namespace IT_asserts_Claim.Controllers
         }
 
         
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAccessory(int id, Accessory updated)
+        [HttpPut("{empcode}/{id}")]
+        public async Task<IActionResult> UpdateAccessory(string empcode, int id, Accessory updated)
         {
-            var existing = await _context.Accessories.FindAsync(id);
+            var existing = await _context.Accessories.FirstOrDefaultAsync(a => a.Id==id && a.Employee.EmpCode==empcode);
             if (existing == null)
                 return NotFound();
 
@@ -45,16 +46,44 @@ namespace IT_asserts_Claim.Controllers
             return Ok(existing);
         }
 
-        
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAccessory(int id)
-        {
-            var acc = await _context.Accessories.FindAsync(id);
-            if (acc == null) return NotFound();
 
-            _context.Accessories.Remove(acc);
+        //[HttpDelete("{empcode}/{id}")]
+        //public async Task<IActionResult> DeleteAccessory(string empcode, int id)
+        //{
+        //    var accessory = await _context.Accessories
+        //        .FirstOrDefaultAsync(a => a.Id == id && a.Employee.EmpCode == empcode);
+
+        //    if (accessory == null)
+        //        return NotFound("Accessory not found for this employee");
+
+        //    _context.Accessories.Remove(accessory);
+        //    await _context.SaveChangesAsync();
+
+        //    return Ok("Accessory deleted successfully");
+        //}
+        [HttpDelete("{empcode}/{id}")]
+        public async Task<IActionResult> DeleteAccessory(string empcode, int id)
+        {
+            // Find the employee by their code
+            var employee = await _context.Employees
+                .FirstOrDefaultAsync(e => e.EmpCode == empcode);
+
+            if (employee == null)
+                return NotFound("Employee not found");
+
+            // Find the accessory belonging to that employee
+            var accessory = await _context.Accessories
+                .FirstOrDefaultAsync(a => a.Id == id && a.EmpId == employee.Id);
+
+            if (accessory == null)
+                return NotFound("Accessory not found for this employee");
+
+            _context.Accessories.Remove(accessory);
             await _context.SaveChangesAsync();
-            return NoContent();
+
+            return Ok("Accessory deleted successfully");
         }
+
+
     }
 }

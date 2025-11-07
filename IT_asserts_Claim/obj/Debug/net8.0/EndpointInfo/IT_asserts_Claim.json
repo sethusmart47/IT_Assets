@@ -46,28 +46,6 @@
         }
       }
     },
-    "/api/Employee/{Empcode}": {
-      "get": {
-        "tags": [
-          "Employee"
-        ],
-        "parameters": [
-          {
-            "name": "Empcode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Employee/{empCode}": {
       "get": {
         "tags": [
@@ -155,12 +133,20 @@
         }
       }
     },
-    "/api/Values/{id}": {
+    "/api/Values/{empcode}/{id}": {
       "put": {
         "tags": [
           "Values"
         ],
         "parameters": [
+          {
+            "name": "empcode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "name": "id",
             "in": "path",
@@ -201,6 +187,14 @@
           "Values"
         ],
         "parameters": [
+          {
+            "name": "empcode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "name": "id",
             "in": "path",

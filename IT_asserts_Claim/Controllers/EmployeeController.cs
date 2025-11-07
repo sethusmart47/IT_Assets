@@ -43,30 +43,51 @@ namespace IT_asserts_Claim.Controllers
             return Ok(employees);
         }
 
-        [HttpGet]
-        [Route("{Empcode}")]
+        //[HttpGet]
+        //[Route("{Empcode}")]
 
-        public async Task<IActionResult> GetEmployeeById(string Empcode)
-        {
-            var employee = _context.Employees.Find(Empcode);
-            if (employee == null)
-            {
-                return NotFound();
-            }
-            return Ok(employee);
-        }
+        //public async Task<IActionResult> GetEmployeeById(string Empcode)
+        //{
+        //    var employee = _context.Employees.Find(Empcode);
+        //    if (employee == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Ok(employee);
+        //}
+
         [HttpGet("{empCode}")]
         public async Task<IActionResult> GetByEmpCode(string empCode)
         {
-            var employee = await _context.Employees
-                .Include(e => e.Accessories)
-                .FirstOrDefaultAsync(e => e.EmpCode == empCode);
+            try
+            {
+                var employee = await _context.Employees
+                    .Include(e => e.Accessories)
+                    .FirstOrDefaultAsync(e => e.EmpCode.ToLower() == empCode.ToLower());
 
-            if (employee == null)
-                return NotFound();
+                if (employee == null)
+                    return NotFound($"No employee found with EmpCode: {empCode}");
 
-            return Ok(employee);
+                return Ok(employee);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
+
+        //[HttpGet("{empCode}")]
+        //public async Task<IActionResult> GetByEmpCode1(string empCode)
+        //{
+        //    var employee = await _context.Employees
+        //        .Include(e => e.Accessories)
+        //        .FirstOrDefaultAsync(e => e.EmpCode == empCode);
+
+        //    if (employee == null)
+        //        return NotFound();
+
+        //    return Ok(employee);
+        //}
 
         [HttpGet("id/{id}")]
         public async Task<IActionResult> GetById(int id)
