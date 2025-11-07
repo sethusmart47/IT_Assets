@@ -59,6 +59,27 @@
   },
   {
     "ContainingType": "IT_asserts_Claim.Controllers.ValuesController",
+    "Method": "AddAccessory",
+    "RelativePath": "api/Values/{empcode}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empcode",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "accessory",
+        "Type": "IT_asserts_Claim.Models.Accessory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts_Claim.Controllers.ValuesController",
     "Method": "UpdateAccessory",
     "RelativePath": "api/Values/{empcode}/{id}",
     "HttpMethod": "PUT",
@@ -99,27 +120,6 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IT_asserts_Claim.Controllers.ValuesController",
-    "Method": "AddAccessory",
-    "RelativePath": "api/Values/{empId}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "empId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "accessory",
-        "Type": "IT_asserts_Claim.Models.Accessory",
         "IsRequired": true
       }
     ],

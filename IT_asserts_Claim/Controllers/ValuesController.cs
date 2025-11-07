@@ -15,18 +15,30 @@ namespace IT_asserts_Claim.Controllers
         {
             _context = context;
         }
-        [HttpPost("{empId}")]
-        public async Task<IActionResult> AddAccessory(int empId, Accessory accessory)
-        {
-            var emp = await _context.Employees.FindAsync(empId);
-            if (emp == null)
-                return NotFound("Employee not found");
+        //[HttpPost("{empId}")]
+        //public async Task<IActionResult> AddAccessory(int empId, Accessory accessory)
+        //{
+        //    var emp = await _context.Employees.FindAsync(empId);
+        //    if (emp == null)
+        //        return NotFound("Employee not found");
 
-            accessory.EmpId = empId;
+        //    accessory.EmpId = empId;
+        //    _context.Accessories.Add(accessory);
+        //    await _context.SaveChangesAsync();
+
+        //    return Ok(accessory);
+        //}
+        [HttpPut("{empcode}")]
+
+        public async Task<IActionResult>AddAccessory(string empcode ,[FromBody] Accessory accessory)
+        {
+            var employee = await _context.Employees.FirstOrDefaultAsync(a => a.EmpCode==empcode);
+            if (employee == null)
+                return NotFound("Employee not found");
+            accessory.EmpId=employee.Id;
             _context.Accessories.Add(accessory);
             await _context.SaveChangesAsync();
-
-            return Ok(accessory);
+            return CreatedAtAction(nameof(AddAccessory), new { id = accessory.Id }, accessory);
         }
 
         

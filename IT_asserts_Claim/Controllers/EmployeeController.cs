@@ -15,6 +15,14 @@ namespace IT_asserts_Claim.Controllers
         
         _context = context;
         }
+        //this also work
+        //[HttpPost]
+        //public async Task<IActionResult> AddEmployee(Employee emp)
+        //{
+        //    _context.Employees.Add(emp);
+        //    await _context.SaveChangesAsync();
+        //    return Ok(emp);
+        //}
 
         [HttpPost]
         public async Task<IActionResult> PostEmployee([FromBody] Employee employee)

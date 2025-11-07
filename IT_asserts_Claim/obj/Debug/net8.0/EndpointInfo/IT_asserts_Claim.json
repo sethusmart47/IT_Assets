@@ -91,19 +91,18 @@
         }
       }
     },
-    "/api/Values/{empId}": {
-      "post": {
+    "/api/Values/{empcode}": {
+      "put": {
         "tags": [
           "Values"
         ],
         "parameters": [
           {
-            "name": "empId",
+            "name": "empcode",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
