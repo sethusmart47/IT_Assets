@@ -9,7 +9,7 @@ namespace IT_asserts_Claim.Models
     {
 
         [Key]
-        [JsonIgnore]
+        
         public int Id { get; set; }
         public string AccessoryType { get; set; }
         public string AccessoryName { get; set; }

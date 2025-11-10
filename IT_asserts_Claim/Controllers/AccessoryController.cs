@@ -8,10 +8,10 @@ namespace IT_asserts_Claim.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class AccessoryController : ControllerBase
     {
         private readonly AppDbContext _context;
-        public ValuesController(AppDbContext context)
+        public AccessoryController(AppDbContext context)
         {
             _context = context;
         }
@@ -28,7 +28,7 @@ namespace IT_asserts_Claim.Controllers
 
         //    return Ok(accessory);
         //}
-        [HttpPut("{empcode}")]
+        [HttpPost("{empcode}")]
 
         public async Task<IActionResult>AddAccessory(string empcode ,[FromBody] Accessory accessory)
         {

@@ -12,9 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("IT_asserts_Claim")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4fd5088dd87ec77308d6d4050ebeff7845ea549")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11543591a8662d46f762826e4bf9c2f3fef4e65b")]
 [assembly: System.Reflection.AssemblyProductAttribute("IT_asserts_Claim")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IT_asserts_Claim")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
