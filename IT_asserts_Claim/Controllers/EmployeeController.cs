@@ -16,33 +16,41 @@ namespace IT_asserts_Claim.Controllers
         _context = context;
         }
         //this also work
-        //[HttpPost]
-        //public async Task<IActionResult> AddEmployee(Employee emp)
-        //{
-        //    _context.Employees.Add(emp);
-        //    await _context.SaveChangesAsync();
-        //    return Ok(emp);
-        //}
-
         [HttpPost]
-        public async Task<IActionResult> PostEmployee([FromBody] Employee employee)
+        public async Task<IActionResult> AddEmployee(Employee emp)
         {
-            if (employee == null)
-                return BadRequest("Employee data is null");
+            bool empExists = await _context.Employees
+       .AnyAsync(e => e.EmpCode == emp.EmpCode);
 
-            // Link accessories to employee
-            if (employee.Accessories != null)
+            if (empExists)
             {
-                foreach (var accessory in employee.Accessories)
-                {
-                    accessory.Employee = employee;
-                }
+                return Conflict(new { message = "Employee code already exists. Please use a unique code." });
             }
-
-            _context.Employees.Add(employee);
+            emp.Accessories = emp.Accessories ?? new List<Accessory>();
+            _context.Employees.Add(emp);
             await _context.SaveChangesAsync();
-            return Ok(employee);
+            return Ok(emp);
         }
+
+        //[HttpPost]
+        //public async Task<IActionResult> PostEmployee([FromBody] Employee employee)
+        //{
+        //    if (employee == null)
+        //        return BadRequest("Employee data is null");
+
+        //    // Link accessories to employee
+        //    if (employee.Accessories != null)
+        //    {
+        //        foreach (var accessory in employee.Accessories)
+        //        {
+        //            accessory.Employee = employee;
+        //        }
+        //    }
+
+        //    _context.Employees.Add(employee);
+        //    await _context.SaveChangesAsync();
+        //    return Ok(employee);
+        //}
 
         [HttpGet]
         public async Task<IActionResult> GetEmployees()

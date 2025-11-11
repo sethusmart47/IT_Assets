@@ -69,14 +69,14 @@
   },
   {
     "ContainingType": "IT_asserts_Claim.Controllers.EmployeeController",
-    "Method": "PostEmployee",
+    "Method": "AddEmployee",
     "RelativePath": "api/Employee",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "employee",
+        "Name": "emp",
         "Type": "IT_asserts_Claim.Models.Employee",
         "IsRequired": true
       }
