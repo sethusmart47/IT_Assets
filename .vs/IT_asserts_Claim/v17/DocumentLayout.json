@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\controllers\\accessorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\controllers\\accessorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,22 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\models\\accessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\models\\accessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\controllers\\accessorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\controllers\\accessorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\it_asserts_claim.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -42,8 +42,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T15:09:34.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Program.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Program.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Program.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Program.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T15:07:25.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T15:05:45.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Accessory.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Models\\Accessory.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Models\\Accessory.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Models\\Accessory.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Models\\Accessory.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAmwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T15:04:02.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Models\\Employee.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T15:02:02.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\appsettings.json",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\appsettings.json",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\appsettings.json",
+              "RelativeToolTip": "IT_asserts_Claim\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-06T17:17:13.08Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -52,82 +129,9 @@
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\AccessoryController.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\AccessoryController.cs",
               "RelativeToolTip": "IT_asserts_Claim\\Controllers\\AccessoryController.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAcwF8AAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAwwGUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T17:06:43.231Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\EmployeeController.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAIwBwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T15:09:34.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Program.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Program.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Program.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Program.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAUwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T15:07:25.301Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T15:05:45.692Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Accessory.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Models\\Accessory.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Models\\Accessory.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Models\\Accessory.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Models\\Accessory.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T15:04:02.144Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Models\\Employee.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Models\\Employee.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Models\\Employee.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Models\\Employee.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAswBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T15:02:02.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\appsettings.json",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\appsettings.json",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\appsettings.json",
-              "RelativeToolTip": "IT_asserts_Claim\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAACGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-06T17:17:13.08Z"
             },
             {
               "$type": "Document",

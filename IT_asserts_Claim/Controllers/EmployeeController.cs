@@ -52,12 +52,33 @@ namespace IT_asserts_Claim.Controllers
         //    return Ok(employee);
         //}
 
+        //[HttpGet]
+        //public async Task<IActionResult> GetEmployees()
+        //{
+        //    var employees = _context.Employees
+        //        .Include(e => e.Accessories)
+        //        .ToListAsync();
+
+        //    return Ok(employees);
+        //}
+
         [HttpGet]
         public async Task<IActionResult> GetEmployees()
         {
-            var employees = _context.Employees.ToList();
-            return Ok(employees);
+            try
+            {
+                var employees = await _context.Employees
+                    .Include(e => e.Accessories)
+                    .ToListAsync();
+
+                return Ok(employees);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
+
 
         //[HttpGet]
         //[Route("{Empcode}")]
