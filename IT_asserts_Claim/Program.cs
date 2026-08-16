@@ -33,12 +33,14 @@ builder.Services.AddAutoMapper(
 builder.Services.AddScoped<IAssetCategoryRepository, AssetCategoryRepository>();
 builder.Services.AddScoped<IAssetBrandRepository, AssetBrandRepository>();
 builder.Services.AddScoped<IAssetModelRepository, AssetModelRepository>();
+builder.Services.AddScoped<IVendorRepository, VendorRepository>();
 
 //Add this using directive
 // Services
 builder.Services.AddScoped<IAssetCategoryService, AssetCategoryService>();
 builder.Services.AddScoped<IAssetBrandService, AssetBrandService>();
 builder.Services.AddScoped<IAssetModelService, AssetModelService>();
+builder.Services.AddScoped<IVendorService, VendorService>();
 
 builder.Services.AddCors(options =>
 {

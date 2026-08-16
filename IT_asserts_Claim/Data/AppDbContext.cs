@@ -18,6 +18,8 @@ namespace IT_asserts_Claim.Data
         public DbSet<AssetBrand> AssetBrands { get; set; }
         public DbSet<AssetModel> AssetModels { get; set; }
 
+        public DbSet<Vendor>Vendors { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -57,6 +59,17 @@ namespace IT_asserts_Claim.Data
                       .WithMany(b => b.Models)
                       .HasForeignKey(e => e.AssetBrandId)
                       .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasQueryFilter(e => !e.IsDeleted);
+            });
+
+            modelBuilder.Entity<Vendor>(entity =>
+            {
+                entity.HasIndex(e => e.VendorName).IsUnique();
+                entity.HasIndex(e => e.Email).IsUnique();
+                entity.HasIndex(e => e.GSTNumber)
+                      .IsUnique();
+                      
 
                 entity.HasQueryFilter(e => !e.IsDeleted);
             });
