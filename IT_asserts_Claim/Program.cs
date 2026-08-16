@@ -1,5 +1,12 @@
+using AutoMapper;
 using IT_asserts_Claim.Data;
+using IT_asserts_Claim.Mapping;
+using IT_asserts_Claim.Repositories.Implementations;
+using IT_asserts_Claim.Repositories.Interface;
+using IT_asserts_Claim.Services.Implementations;
+using IT_asserts_Claim.Services.Interface;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection; // Add this using directi
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,8 +23,23 @@ builder.Services.AddCors(p => p.AddPolicy("AllowAll", builder =>
 {
     builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
 }));
+builder.Services.AddAutoMapper(
+    typeof(AssetMappingProfile));
+// Replace this line:
+// builder.Services.AddAutoMapper(typeof(Program));
 
-// In Program.cs
+// With this line
+// Repositories
+builder.Services.AddScoped<IAssetCategoryRepository, AssetCategoryRepository>();
+builder.Services.AddScoped<IAssetBrandRepository, AssetBrandRepository>();
+builder.Services.AddScoped<IAssetModelRepository, AssetModelRepository>();
+
+//Add this using directive
+// Services
+builder.Services.AddScoped<IAssetCategoryService, AssetCategoryService>();
+builder.Services.AddScoped<IAssetBrandService, AssetBrandService>();
+builder.Services.AddScoped<IAssetModelService, AssetModelService>();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp",
@@ -25,10 +47,11 @@ builder.Services.AddCors(options =>
         {
             policy.WithOrigins("http://localhost:4200")
                   .AllowAnyHeader()
-                  .AllowAnyMethod();
+                  .AllowAnyMethod()
+                  .AllowAnyOrigin();
         });
 });
-
+// In Program.cs
 var app = builder.Build();
 
 app.UseCors("AllowAngularApp");
@@ -41,7 +64,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 app.UseCors("AllowAll");

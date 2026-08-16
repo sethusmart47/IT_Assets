@@ -6,6 +6,8 @@ C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\bin\Debug\ne
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\bin\Debug\net8.0\IT_asserts_Claim.runtimeconfig.json
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\bin\Debug\net8.0\IT_asserts_Claim.dll
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\bin\Debug\net8.0\IT_asserts_Claim.pdb
+C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\bin\Debug\net8.0\Humanizer.dll
@@ -154,6 +156,7 @@ C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\ne
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\IT_asserts_Claim.csproj.CoreCompileInputs.cache
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\IT_asserts_Claim.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\IT_asserts_Claim.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\IT_asserts_Claim.sourcelink.json
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -169,4 +172,3 @@ C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\ne
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\IT_asserts_Claim.pdb
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\IT_asserts_Claim.genruntimeconfig.cache
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\ref\IT_asserts_Claim.dll
-C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\IT_asserts_Claim.sourcelink.json
