@@ -25,6 +25,7 @@ builder.Services.AddCors(p => p.AddPolicy("AllowAll", builder =>
 }));
 builder.Services.AddAutoMapper(
     typeof(AssetMappingProfile));
+builder.Services.AddAutoMapper(typeof(PurchaseMappingProfile));
 // Replace this line:
 // builder.Services.AddAutoMapper(typeof(Program));
 
@@ -34,6 +35,9 @@ builder.Services.AddScoped<IAssetCategoryRepository, AssetCategoryRepository>();
 builder.Services.AddScoped<IAssetBrandRepository, AssetBrandRepository>();
 builder.Services.AddScoped<IAssetModelRepository, AssetModelRepository>();
 builder.Services.AddScoped<IVendorRepository, VendorRepository>();
+builder.Services.AddScoped<IPurchaseRepository, PurchaseRepository>();
+builder.Services.AddScoped<IPurchasedItemRepository, PurchasedItemRepository>();
+builder.Services.AddScoped<IPurchaseAttachmentRepository, PurchaseAttachmentRepository>();
 
 //Add this using directive
 // Services
@@ -41,6 +45,10 @@ builder.Services.AddScoped<IAssetCategoryService, AssetCategoryService>();
 builder.Services.AddScoped<IAssetBrandService, AssetBrandService>();
 builder.Services.AddScoped<IAssetModelService, AssetModelService>();
 builder.Services.AddScoped<IVendorService, VendorService>();
+builder.Services.AddScoped<IPurchaseService, PurchaseService>();
+builder.Services.AddScoped<IPurchasedItemService, PurchasedItemService>();
+builder.Services.AddScoped<IPurchaseAttachmentService, PurchaseAttachmentService>();
+
 
 builder.Services.AddCors(options =>
 {
@@ -53,9 +61,10 @@ builder.Services.AddCors(options =>
                   .AllowAnyOrigin();
         });
 });
+
 // In Program.cs
 var app = builder.Build();
-
+app.UseStaticFiles();
 app.UseCors("AllowAngularApp");
 
 
@@ -65,7 +74,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+var uploadsPath = Path.Combine(app.Environment.WebRootPath, "uploads", "purchases");
+if (!Directory.Exists(uploadsPath))
+    Directory.CreateDirectory(uploadsPath);
 //app.UseHttpsRedirection();
 
 app.UseAuthorization();

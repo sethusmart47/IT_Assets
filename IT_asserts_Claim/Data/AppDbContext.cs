@@ -20,47 +20,61 @@ namespace IT_asserts_Claim.Data
 
         public DbSet<Vendor>Vendors { get; set; }
 
+        public DbSet<Purchase> Purchases { get; set; }
+        public DbSet<PurchasedItem> PurchasedItems { get; set; }
+        public DbSet<PurchaseAttachment> PurchaseAttachments { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<AssetCategory>(entity =>
-    {
-        entity.HasIndex(e => e.CategoryName).IsUnique();
-        entity.HasQueryFilter(e => !e.IsDeleted);
-    });
+            {
+                entity.HasIndex(x => x.CategoryName)
+                      .IsUnique();
+
+                entity.HasQueryFilter(x => !x.IsDeleted);
+            });
+
 
             modelBuilder.Entity<AssetBrand>(entity =>
             {
-                entity.HasIndex(e => new
+                entity.HasIndex(x => new
                 {
-                    e.AssetCategoryId,
-                    e.BrandName
+                    x.AssetCategoryId,
+                    x.BrandName
                 }).IsUnique();
 
-                entity.HasOne(e => e.AssetCategory)
-              .WithMany(c => c.Brands)
-              .HasForeignKey(e => e.AssetCategoryId)
-              .OnDelete(DeleteBehavior.Restrict);
+                entity.HasOne(x => x.AssetCategory)
+                      .WithMany(x => x.Brands)
+                      .HasForeignKey(x => x.AssetCategoryId)
+                      .OnDelete(DeleteBehavior.Restrict);
 
-                entity.HasQueryFilter(e => !e.IsDeleted);
+                entity.HasQueryFilter(x => !x.IsDeleted);
             });
+
 
             modelBuilder.Entity<AssetModel>(entity =>
             {
-                entity.HasIndex(e => new { e.AssetBrandId, e.ModelName }).IsUnique();
+                entity.HasIndex(x => new
+                {
+                    x.AssetBrandId,
+                    x.ModelName
+                }).IsUnique();
 
-                entity.HasOne(e => e.AssetCategory)
-                      .WithMany(c => c.Models)
-                      .HasForeignKey(e => e.AssetCategoryId)
+                // Model -> Category
+                entity.HasOne(x => x.AssetCategory)
+                      .WithMany(x => x.Models)
+                      .HasForeignKey(x => x.AssetCategoryId)
                       .OnDelete(DeleteBehavior.Restrict);
 
-                entity.HasOne(e => e.AssetBrand)
-                      .WithMany(b => b.Models)
-                      .HasForeignKey(e => e.AssetBrandId)
+                // Model -> Brand
+                entity.HasOne(x => x.AssetBrand)
+                      .WithMany(x => x.Models)
+                      .HasForeignKey(x => x.AssetBrandId)
                       .OnDelete(DeleteBehavior.Restrict);
 
-                entity.HasQueryFilter(e => !e.IsDeleted);
+                entity.HasQueryFilter(x => !x.IsDeleted);
             });
 
             modelBuilder.Entity<Vendor>(entity =>
@@ -73,7 +87,47 @@ namespace IT_asserts_Claim.Data
 
                 entity.HasQueryFilter(e => !e.IsDeleted);
             });
+            // ─── Purchase Configuration ───
+            modelBuilder.Entity<Purchase>(entity =>
+            {
+                entity.HasIndex(e => e.PurchaseNumber).IsUnique();
+                entity.HasIndex(e => e.InvoiceNumber);
+                entity.HasIndex(e => e.Status);
+                entity.HasIndex(e => e.VendorId);
+
+                entity.Property(e => e.Status)
+                    .HasConversion<string>()
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.OwnershipType)
+                    .HasConversion<string>()
+                    .HasMaxLength(20);
+            });
+
+            // ─── PurchasedItem Configuration ───
+            modelBuilder.Entity<PurchasedItem>(entity =>
+            {
+                entity.HasIndex(e => e.PurchaseId);
+
+                entity.HasOne(e => e.Purchase)
+                    .WithMany(p => p.PurchasedItems)
+                    .HasForeignKey(e => e.PurchaseId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            // ─── PurchaseAttachment Configuration ───
+            modelBuilder.Entity<PurchaseAttachment>(entity =>
+            {
+                entity.HasIndex(e => e.PurchaseId);
+
+                entity.HasOne(e => e.Purchase)
+                    .WithMany(p => p.Attachments)
+                    .HasForeignKey(e => e.PurchaseId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
 
         }
+
     }
+
 }

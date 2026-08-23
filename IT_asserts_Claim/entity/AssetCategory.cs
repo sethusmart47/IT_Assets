@@ -10,6 +10,6 @@ namespace IT_asserts_Claim.entity
 
         public ICollection<AssetBrand> Brands { get; set; }
             = new List<AssetBrand>();
-        public ICollection<AssetModel> Models { get; set; }
+        public ICollection<AssetModel> Models { get; set; } = new List<AssetModel>();
     }
 }

@@ -14,7 +14,15 @@ namespace IT_asserts_Claim.Mapping
         public AssetMappingProfile()
         {
             // ═══ CATEGORY ═══
-            CreateMap<AssetCategory, AssetCategoryDto>();
+            CreateMap<AssetCategory, AssetCategoryDto>()
+           .ForMember(
+               dest => dest.AssetBrandDtos,
+               opt => opt.MapFrom(src => src.Brands)
+           )
+           .ForMember(
+               dest => dest.AssetModelDtos,
+               opt => opt.MapFrom(src => src.Models)
+           );
             CreateMap<CreateAssetCategoryDto, AssetCategory>();
             CreateMap<AssetCategory, CategoryDropdownItem>();
 

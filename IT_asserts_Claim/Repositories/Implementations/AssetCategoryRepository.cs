@@ -18,6 +18,8 @@ namespace IT_asserts_Claim.Repositories.Implementations
         public async Task<List<AssetCategory>> GetAllAsync()
         {
             return await _context.AssetCategories
+                .Include(c=>c.Brands)
+                  .Include(b=>b.Models)
                 .OrderBy(x => x.CategoryName)
                 .AsNoTracking()
                 .ToListAsync();
