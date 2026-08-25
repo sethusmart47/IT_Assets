@@ -23,7 +23,8 @@ namespace IT_asserts_Claim.Data
         public DbSet<Purchase> Purchases { get; set; }
         public DbSet<PurchasedItem> PurchasedItems { get; set; }
         public DbSet<PurchaseAttachment> PurchaseAttachments { get; set; }
-
+        public DbSet<Asset> Assets { get; set; }
+        public DbSet<AssetLifecycleHistory> AssetLifecycleHistories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -125,8 +126,32 @@ namespace IT_asserts_Claim.Data
                     .HasForeignKey(e => e.PurchaseId)
                     .OnDelete(DeleteBehavior.Restrict);
             });
+            modelBuilder.Entity<Asset>(entity =>
+             {
+                 entity.HasIndex(a => a.AssetTag).IsUnique();
+                 entity.HasIndex(a => a.SerialNumber).IsUnique();
+                 entity.HasQueryFilter(a => !a.IsDeleted);
 
-        }
+                 entity.HasOne(a => a.Purchase)
+                       .WithMany()
+                       .HasForeignKey(a => a.PurchaseId)
+                       .OnDelete(DeleteBehavior.Restrict);
+             });
+
+                        modelBuilder.Entity<AssetLifecycleHistory>(entity =>
+                        {
+                            entity.HasQueryFilter(h => !h.IsDeleted);
+
+                            entity.HasOne(h => h.Asset)
+                                  .WithMany(a => a.LifecycleHistories)
+                                  .HasForeignKey(h => h.AssetId)
+                                  .OnDelete(DeleteBehavior.Restrict);
+
+                            entity.HasIndex(h => h.AssetId);
+                            entity.HasIndex(h => new { h.AssetId, h.PerformedDate });
+                        });
+
+                    }
 
     }
 

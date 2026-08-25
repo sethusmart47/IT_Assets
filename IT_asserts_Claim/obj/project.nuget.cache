@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B9vn9Vzh/Ok=",
+  "dgSpecHash": "1JE+Pbp+Zo4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\IT_asserts_Claim.csproj",
+  "projectFilePath": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\IT_asserts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sethu\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\sethu\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

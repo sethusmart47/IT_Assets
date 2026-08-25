@@ -5224,9 +5224,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\IT_asserts_Claim.csproj",
-      "projectName": "IT_asserts_Claim",
-      "projectPath": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\IT_asserts_Claim.csproj",
+      "projectUniqueName": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\IT_asserts.csproj",
+      "projectName": "IT_asserts",
+      "projectPath": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\IT_asserts.csproj",
       "packagesPath": "C:\\Users\\sethu\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\obj\\",
       "projectStyle": "PackageReference",

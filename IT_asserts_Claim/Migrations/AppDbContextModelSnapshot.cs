@@ -83,6 +83,113 @@ namespace IT_asserts_Claim.Migrations
                     b.ToTable("Employees");
                 });
 
+            modelBuilder.Entity("IT_asserts_Claim.entity.Asset", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("AssetTag")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateOnly?>("AssignedDate")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Brand")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Condition")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Configuration")
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("CurrentEmployeeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateOnly?>("LastServiceDate")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Model")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("OwnershipType")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("PurchaseId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Remarks")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("SerialNumber")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<DateOnly>("WarrantyEndDate")
+                        .HasColumnType("date");
+
+                    b.Property<int>("WarrantyMonths")
+                        .HasColumnType("int");
+
+                    b.Property<DateOnly>("WarrantyStartDate")
+                        .HasColumnType("date");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssetTag")
+                        .IsUnique();
+
+                    b.HasIndex("PurchaseId");
+
+                    b.HasIndex("SerialNumber")
+                        .IsUnique();
+
+                    b.ToTable("Assets");
+                });
+
             modelBuilder.Entity("IT_asserts_Claim.entity.AssetBrand", b =>
                 {
                     b.Property<Guid>("Id")
@@ -170,6 +277,82 @@ namespace IT_asserts_Claim.Migrations
                         .IsUnique();
 
                     b.ToTable("AssetCategories");
+                });
+
+            modelBuilder.Entity("IT_asserts_Claim.entity.AssetLifecycleHistory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Action")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<Guid>("AssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("EmployeeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NewStatus")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("OldStatus")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PerformedBy")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("PerformedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("ReferenceId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ReferenceType")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Remarks")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssetId");
+
+                    b.HasIndex("AssetId", "PerformedDate");
+
+                    b.ToTable("AssetLifecycleHistories");
                 });
 
             modelBuilder.Entity("IT_asserts_Claim.entity.AssetModel", b =>
@@ -526,6 +709,17 @@ namespace IT_asserts_Claim.Migrations
                     b.Navigation("Employee");
                 });
 
+            modelBuilder.Entity("IT_asserts_Claim.entity.Asset", b =>
+                {
+                    b.HasOne("IT_asserts_Claim.entity.Purchase", "Purchase")
+                        .WithMany()
+                        .HasForeignKey("PurchaseId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Purchase");
+                });
+
             modelBuilder.Entity("IT_asserts_Claim.entity.AssetBrand", b =>
                 {
                     b.HasOne("IT_asserts_Claim.entity.AssetCategory", "AssetCategory")
@@ -535,6 +729,17 @@ namespace IT_asserts_Claim.Migrations
                         .IsRequired();
 
                     b.Navigation("AssetCategory");
+                });
+
+            modelBuilder.Entity("IT_asserts_Claim.entity.AssetLifecycleHistory", b =>
+                {
+                    b.HasOne("IT_asserts_Claim.entity.Asset", "Asset")
+                        .WithMany("LifecycleHistories")
+                        .HasForeignKey("AssetId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Asset");
                 });
 
             modelBuilder.Entity("IT_asserts_Claim.entity.AssetModel", b =>
@@ -592,6 +797,11 @@ namespace IT_asserts_Claim.Migrations
             modelBuilder.Entity("IT_asserts_Claim.Models.Employee", b =>
                 {
                     b.Navigation("Accessories");
+                });
+
+            modelBuilder.Entity("IT_asserts_Claim.entity.Asset", b =>
+                {
+                    b.Navigation("LifecycleHistories");
                 });
 
             modelBuilder.Entity("IT_asserts_Claim.entity.AssetBrand", b =>

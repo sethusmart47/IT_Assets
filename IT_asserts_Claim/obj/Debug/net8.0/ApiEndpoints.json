@@ -68,6 +68,180 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "Method": "GetAll",
+    "RelativePath": "api/Asset",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "category",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "brand",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "Method": "GetById",
+    "RelativePath": "api/Asset/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "Method": "Update",
+    "RelativePath": "api/Asset/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "IT_asserts.Dtos.Asset.UpdateAssetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "Method": "Delete",
+    "RelativePath": "api/Asset/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "Method": "GetAvailableItems",
+    "RelativePath": "api/Asset/available-items/{purchaseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "purchaseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "Method": "GetAvailablePurchases",
+    "RelativePath": "api/Asset/available-purchases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "Method": "BulkRegister",
+    "RelativePath": "api/Asset/bulk-register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "IT_asserts.Dtos.Asset.BulkCreateAssetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "Method": "Register",
+    "RelativePath": "api/Asset/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "IT_asserts.Dtos.Asset.CreateAssetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "Method": "GetRegistrationSummary",
+    "RelativePath": "api/Asset/registration-summary/{purchaseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "purchaseId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "Method": "ValidateSerialNumbers",
+    "RelativePath": "api/Asset/validate-serials",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "IT_asserts.Dtos.Asset.ValidateSerialNumbersDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "IT_asserts_Claim.Controllers.AssetCascadingController",
     "Method": "GetCascadingDropdown",
     "RelativePath": "api/AssetCascading",
@@ -787,7 +961,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[IT_asserts_Claim.WeatherForecast, IT_asserts_Claim, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[IT_asserts_Claim.WeatherForecast, IT_asserts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

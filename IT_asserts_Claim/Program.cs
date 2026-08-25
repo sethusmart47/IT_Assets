@@ -1,4 +1,8 @@
 using AutoMapper;
+using IT_asserts.Repositories.Implementations;
+using IT_asserts.Repositories.Interface;
+using IT_asserts.Services.Implementations;
+using IT_asserts.Services.Interface;
 using IT_asserts_Claim.Data;
 using IT_asserts_Claim.Mapping;
 using IT_asserts_Claim.Repositories.Implementations;
@@ -23,11 +27,11 @@ builder.Services.AddCors(p => p.AddPolicy("AllowAll", builder =>
 {
     builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
 }));
-builder.Services.AddAutoMapper(
-    typeof(AssetMappingProfile));
-builder.Services.AddAutoMapper(typeof(PurchaseMappingProfile));
+//builder.Services.AddAutoMapper(
+//    typeof(AssetMappingProfile));
+//builder.Services.AddAutoMapper(typeof(PurchaseMappingProfile));
 // Replace this line:
-// builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(Program));
 
 // With this line
 // Repositories
@@ -38,7 +42,8 @@ builder.Services.AddScoped<IVendorRepository, VendorRepository>();
 builder.Services.AddScoped<IPurchaseRepository, PurchaseRepository>();
 builder.Services.AddScoped<IPurchasedItemRepository, PurchasedItemRepository>();
 builder.Services.AddScoped<IPurchaseAttachmentRepository, PurchaseAttachmentRepository>();
-
+builder.Services.AddScoped<IAssetRepository, AssetRepository>();
+builder.Services.AddScoped<IAssetLifecycleHistoryRepository, AssetLifecycleHistoryRepository>();
 //Add this using directive
 // Services
 builder.Services.AddScoped<IAssetCategoryService, AssetCategoryService>();
@@ -48,7 +53,7 @@ builder.Services.AddScoped<IVendorService, VendorService>();
 builder.Services.AddScoped<IPurchaseService, PurchaseService>();
 builder.Services.AddScoped<IPurchasedItemService, PurchasedItemService>();
 builder.Services.AddScoped<IPurchaseAttachmentService, PurchaseAttachmentService>();
-
+builder.Services.AddScoped<IAssetService, AssetService>();
 
 builder.Services.AddCors(options =>
 {

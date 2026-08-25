@@ -75,7 +75,7 @@ namespace IT_asserts_Claim.Services.Implementations
             item.Configuration = dto.Configuration.Trim();
             item.Quantity = dto.Quantity;
             item.UnitPrice = dto.UnitPrice;
-            item.WarrantyPeriod = dto.WarrantyPeriod?.Trim() ?? string.Empty;
+            item.WarrantyPeriod = dto.WarrantyPeriod;
             item.SubTotal = dto.Quantity * dto.UnitPrice;
 
             _itemRepository.Update(item);

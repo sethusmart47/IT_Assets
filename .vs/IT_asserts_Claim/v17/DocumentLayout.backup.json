@@ -3,8 +3,160 @@
   "WorkspaceRootPath": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\services\\implementations\\assetservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\services\\implementations\\assetservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260825182747_Asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IT_asserts_Claim\\Migrations\\20260825182747_Asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\asset\\availablepurchasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\dtos\\asset\\availablepurchasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\entity\\purchaseditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\entity\\purchaseditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260825182450_Asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IT_asserts_Claim\\Migrations\\20260825182450_Asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\services\\implementations\\purchaseditemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\services\\implementations\\purchaseditemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\purchaseitem\\updatepurchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\purchaseitem\\updatepurchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\purchaseitem\\purchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\purchaseitem\\purchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\repositories\\implementations\\purchaseditemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\repositories\\implementations\\purchaseditemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\repositories\\implementations\\assetrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\repositories\\implementations\\assetrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\repositories\\implementations\\assetlifecyclehistoryrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\repositories\\implementations\\assetlifecyclehistoryrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\controllers\\assetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\controllers\\assetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\services\\interface\\iassetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\services\\interface\\iassetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\repositories\\interface\\iassetlifecyclehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\repositories\\interface\\iassetlifecyclehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\repositories\\interface\\iassetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\repositories\\interface\\iassetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\mapping\\assetmappingprofile .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\mapping\\assetmappingprofile .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\asset\\registrationsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\dtos\\asset\\registrationsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\asset\\validationresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\dtos\\asset\\validationresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\asset\\validateserialnumbersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\dtos\\asset\\validateserialnumbersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\asset\\updateassetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\dtos\\asset\\updateassetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\asset\\bulkcreateassetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\dtos\\asset\\bulkcreateassetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\asset\\createassetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\dtos\\asset\\createassetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\asset\\assetlifecyclehistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\dtos\\asset\\assetlifecyclehistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\asset\\assetdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\dtos\\asset\\assetdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\asset\\assetlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\asset\\assetlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\it_asserts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts.csproj|solutionrelative:it_asserts_claim\\it_asserts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\asset\\assetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\asset\\assetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\entity\\assetlifecyclehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\entity\\assetlifecyclehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\entity\\asset .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\entity\\asset .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\enum\\assetcondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\enum\\assetcondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\enum\\assetstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\enum\\assetstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\repositories\\implementations\\purchaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\repositories\\implementations\\purchaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\services\\implementations\\purchaseservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\services\\implementations\\purchaseservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\entity\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\entity\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\controllers\\purchaseditemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\controllers\\purchaseditemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\controllers\\purchaseattachmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\controllers\\purchaseattachmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\purchaseitem\\createpurchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\purchaseitem\\createpurchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,14 +207,6 @@
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\asset category\\assetcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260822184350_FixAssetCategoryBrandModelRelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IT_asserts_Claim\\Migrations\\20260822184350_FixAssetCategoryBrandModelRelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\mapping\\assetmasterprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\mapping\\assetmasterprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -75,18 +219,6 @@
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\purchase\\createpurchasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\services\\implementations\\purchaseservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\services\\implementations\\purchaseservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\repositories\\implementations\\purchaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\repositories\\implementations\\purchaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\controllers\\purchaseditemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\controllers\\purchaseditemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\purchase\\purchasedetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\purchase\\purchasedetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -95,20 +227,8 @@
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\mapping\\purchasemappingprofile .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260822074241_Purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IT_asserts_Claim\\Migrations\\20260822074241_Purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\it_asserts_claim.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\it_asserts_claim.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\services\\implementations\\purchaseattachmentservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -117,10 +237,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\repositories\\interface\\ipurchaseattachmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\repositories\\interface\\ipurchaseattachmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\services\\implementations\\purchaseditemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\services\\implementations\\purchaseditemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\purchase\\updatepurchasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -147,10 +263,6 @@
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\repositories\\implementations\\purchaseattachmentrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\repositories\\implementations\\purchaseditemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\repositories\\implementations\\purchaseditemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\enum\\purchasestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\enum\\purchasestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -175,32 +287,12 @@
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\purchase\\purchaseattachmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\purchaseitem\\purchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\purchaseitem\\purchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\purchaseitem\\updatepurchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\purchaseitem\\updatepurchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\purchaseitem\\createpurchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\purchaseitem\\createpurchaseditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\purchase\\nextpurchasenumberdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\purchase\\nextpurchasenumberdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\entity\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\entity\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\dtos\\purchase\\purchaselistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\dtos\\purchase\\purchaselistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\entity\\purchaseditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\entity\\purchaseditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\enum\\ownershiptype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -377,6 +469,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\migrations\\20260822184350_fixassetcategorybrandmodelrelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\migrations\\20260822184350_fixassetcategorybrandmodelrelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|c:\\users\\sethu\\desktop\\it_assests\\it_asserts_claim\\it_asserts_claim\\migrations\\20260822074241_purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2EF5676-AE24-4378-BBF5-E32A07C961DE}|IT_asserts_Claim\\IT_asserts_Claim.csproj|solutionrelative:it_asserts_claim\\migrations\\20260822074241_purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -386,37 +486,518 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAIwBYAAAAMAAAAAAAAAA==",
+              "Title": "20260825182747_Asset.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260825182747_Asset.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Migrations\\20260825182747_Asset.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260825182747_Asset.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Migrations\\20260825182747_Asset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-15T10:39:16.409Z",
+              "WhenOpened": "2026-08-25T18:27:47.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20260825182450_Asset.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260825182450_Asset.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Migrations\\20260825182450_Asset.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260825182450_Asset.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Migrations\\20260825182450_Asset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T18:24:50.192Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AssetCascadingController.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\AssetCascadingController.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\AssetCascadingController.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\AssetCascadingController.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Controllers\\AssetCascadingController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAiwCUAAAAMAAAAAAAAAA==",
+              "Title": "PurchasedItem.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\PurchasedItem.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\PurchasedItem.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\PurchasedItem.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\entity\\PurchasedItem.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAD4vwYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-15T10:50:05.098Z",
+              "WhenOpened": "2026-08-22T06:06:49.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PurchasedItemService.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\PurchasedItemService.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Implementations\\PurchasedItemService.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\PurchasedItemService.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Services\\Implementations\\PurchasedItemService.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAE0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T07:05:50.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AssetService .cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\AssetService .cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Implementations\\AssetService .cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\AssetService .cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Services\\Implementations\\AssetService .cs",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAuwBYBAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T18:05:51.934Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AvailablePurchaseDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\AvailablePurchaseDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset\\AvailablePurchaseDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\AvailablePurchaseDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Asset\\AvailablePurchaseDto.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAIA6wBgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T18:00:13.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PurchasedItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\PurchasedItemDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\PurchaseItem\\PurchasedItemDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\PurchasedItemDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\PurchaseItem\\PurchasedItemDto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA7wAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T06:38:02.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PurchasedItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\PurchasedItemRepository.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Implementations\\PurchasedItemRepository.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\PurchasedItemRepository.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Repositories\\Implementations\\PurchasedItemRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAawBkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T06:53:57.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdatePurchasedItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\UpdatePurchasedItemDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\PurchaseItem\\UpdatePurchasedItemDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\UpdatePurchasedItemDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\PurchaseItem\\UpdatePurchasedItemDto.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAD4vyAAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T06:37:32.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AssetRepository .cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\AssetRepository .cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Implementations\\AssetRepository .cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\AssetRepository .cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Repositories\\Implementations\\AssetRepository .cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAACYAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T18:03:29.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AssetLifecycleHistoryRepository .cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\AssetLifecycleHistoryRepository .cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Implementations\\AssetLifecycleHistoryRepository .cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\AssetLifecycleHistoryRepository .cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Repositories\\Implementations\\AssetLifecycleHistoryRepository .cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwBMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T18:04:33.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Program.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Program.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Program.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T15:07:25.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T15:05:45.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AssetController.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\AssetController.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\AssetController.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\AssetController.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Controllers\\AssetController.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAAwK8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T18:08:58.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IAssetService.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Interface\\IAssetService.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Interface\\IAssetService.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Interface\\IAssetService.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Services\\Interface\\IAssetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T18:05:22.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IAssetLifecycleHistoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Interface\\IAssetLifecycleHistoryRepository.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Interface\\IAssetLifecycleHistoryRepository.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Interface\\IAssetLifecycleHistoryRepository.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Repositories\\Interface\\IAssetLifecycleHistoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T18:02:56.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IAssetRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Interface\\IAssetRepository.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Interface\\IAssetRepository.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Interface\\IAssetRepository.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Repositories\\Interface\\IAssetRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T18:02:26.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AssetMappingProfile .cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Mapping\\AssetMappingProfile .cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Mapping\\AssetMappingProfile .cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Mapping\\AssetMappingProfile .cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Mapping\\AssetMappingProfile .cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T18:01:03.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RegistrationSummaryDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\RegistrationSummaryDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset\\RegistrationSummaryDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\RegistrationSummaryDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Asset\\RegistrationSummaryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:59:47.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ValidationResultDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\ValidationResultDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset\\ValidationResultDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\ValidationResultDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Asset\\ValidationResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:58:21.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ValidateSerialNumbersDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\ValidateSerialNumbersDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset\\ValidateSerialNumbersDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\ValidateSerialNumbersDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Asset\\ValidateSerialNumbersDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:57:46.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UpdateAssetDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\UpdateAssetDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset\\UpdateAssetDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\UpdateAssetDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Asset\\UpdateAssetDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:56:42.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BulkCreateAssetDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\BulkCreateAssetDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset\\BulkCreateAssetDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\BulkCreateAssetDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Asset\\BulkCreateAssetDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:54:56.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CreateAssetDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\CreateAssetDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset\\CreateAssetDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\CreateAssetDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Asset\\CreateAssetDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:54:25.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AssetLifecycleHistoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\AssetLifecycleHistoryDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset\\AssetLifecycleHistoryDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\AssetLifecycleHistoryDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Asset\\AssetLifecycleHistoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:53:15.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AssetDetailDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\AssetDetailDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset\\AssetDetailDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\AssetDetailDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Asset\\AssetDetailDto.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAcwCMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:51:48.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AssetListDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\AssetListDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset\\AssetListDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\AssetListDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Asset\\AssetListDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:49:33.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AssetDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\AssetDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset\\AssetDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset\\AssetDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Asset\\AssetDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:49:06.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AssetLifecycleHistory.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\AssetLifecycleHistory.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\AssetLifecycleHistory.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\AssetLifecycleHistory.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\entity\\AssetLifecycleHistory.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:47:38.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Asset .cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\Asset .cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\Asset .cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\Asset .cs",
+              "RelativeToolTip": "IT_asserts_Claim\\entity\\Asset .cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAA5wEEAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:46:56.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AssetCondition.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Enum\\AssetCondition.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Enum\\AssetCondition.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Enum\\AssetCondition.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Enum\\AssetCondition.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:46:20.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IT_asserts_Claim.csproj",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\IT_asserts.csproj",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\IT_asserts.csproj",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\IT_asserts.csproj",
+              "RelativeToolTip": "IT_asserts_Claim\\IT_asserts.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-15T11:09:30.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AssetStatus.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Enum\\AssetStatus.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Enum\\AssetStatus.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Enum\\AssetStatus.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Enum\\AssetStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T17:45:49.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "CreatePurchasedItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\CreatePurchasedItemDto.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\PurchaseItem\\CreatePurchasedItemDto.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\CreatePurchasedItemDto.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\PurchaseItem\\CreatePurchasedItemDto.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T06:36:58.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Purchase.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\Purchase.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\Purchase.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\Purchase.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\entity\\Purchase.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAA0wCoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T06:04:59.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PurchaseService .cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\PurchaseService .cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Implementations\\PurchaseService .cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\PurchaseService .cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Services\\Implementations\\PurchaseService .cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAD4vyEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T07:01:44.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "PurchaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\PurchaseRepository.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Implementations\\PurchaseRepository.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\PurchaseRepository.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Repositories\\Implementations\\PurchaseRepository.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAADIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T06:46:39.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "PurchasedItemController.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\PurchasedItemController.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\PurchasedItemController.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\PurchasedItemController.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Controllers\\PurchasedItemController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAiwDwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T07:20:16.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "PurchaseAttachmentController.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\PurchaseAttachmentController.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\PurchaseAttachmentController.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\PurchaseAttachmentController.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Controllers\\PurchaseAttachmentController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwCUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T07:21:22.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
               "Title": "AssetCategoryService.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\AssetCategoryService.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Implementations\\AssetCategoryService.cs",
@@ -429,20 +1010,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PurchaseAttachmentController.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\PurchaseAttachmentController.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\PurchaseAttachmentController.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\PurchaseAttachmentController.cs*",
-              "RelativeToolTip": "IT_asserts_Claim\\Controllers\\PurchaseAttachmentController.cs*",
-              "ViewState": "AgIAACEAAAAAAAAAAAAIwCUAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 41,
+              "Title": "AssetCascadingController.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\AssetCascadingController.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\AssetCascadingController.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\AssetCascadingController.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Controllers\\AssetCascadingController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAiwCUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T07:21:22.626Z",
+              "WhenOpened": "2026-08-15T10:50:05.098Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 39,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "IT_asserts_Claim\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T10:39:16.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
               "Title": "AssetCategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\AssetCategoryRepository.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Implementations\\AssetCategoryRepository.cs",
@@ -455,7 +1049,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 43,
               "Title": "PurchaseController.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\PurchaseController.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\PurchaseController.cs",
@@ -468,7 +1062,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 44,
               "Title": "AssetCascading.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\AssetCascading.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\AssetCascading.cs",
@@ -481,7 +1075,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 45,
               "Title": "BrandControllerController.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\BrandControllerController.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\BrandControllerController.cs",
@@ -494,7 +1088,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 46,
               "Title": "ModelController.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\ModelController.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\ModelController.cs",
@@ -507,7 +1101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 47,
               "Title": "AssetBrand.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\AssetBrand.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\AssetBrand.cs",
@@ -520,7 +1114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 48,
               "Title": "AssetCategory.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\AssetCategory.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\AssetCategory.cs",
@@ -533,7 +1127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 49,
               "Title": "AssetModel.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\AssetModel.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\AssetModel.cs",
@@ -546,7 +1140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 50,
               "Title": "AssetCategoryDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset Category\\AssetCategoryDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset Category\\AssetCategoryDto.cs",
@@ -559,7 +1153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 117,
               "Title": "20260822184350_FixAssetCategoryBrandModelRelationship.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260822184350_FixAssetCategoryBrandModelRelationship.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Migrations\\20260822184350_FixAssetCategoryBrandModelRelationship.cs",
@@ -572,46 +1166,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 51,
               "Title": "AssetMasterProfile.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Mapping\\AssetMasterProfile.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Mapping\\AssetMasterProfile.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Mapping\\AssetMasterProfile.cs",
               "RelativeToolTip": "IT_asserts_Claim\\Mapping\\AssetMasterProfile.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAABkAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAIBJwBkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-15T04:34:49.893Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAE0AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T15:05:45.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 52,
               "Title": "AccessoryController.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\AccessoryController.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\AccessoryController.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\AccessoryController.cs",
               "RelativeToolTip": "IT_asserts_Claim\\Controllers\\AccessoryController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwGUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwGUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T17:06:43.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 53,
               "Title": "CreatePurchaseDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Purchase\\CreatePurchaseDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Purchase\\CreatePurchaseDto.cs",
@@ -624,59 +1205,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "PurchaseService .cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\PurchaseService .cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Implementations\\PurchaseService .cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\PurchaseService .cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Services\\Implementations\\PurchaseService .cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAjwG8AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T07:01:44.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "PurchaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\PurchaseRepository.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Implementations\\PurchaseRepository.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\PurchaseRepository.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Repositories\\Implementations\\PurchaseRepository.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAjwEcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T06:46:39.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "PurchasedItemController.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\PurchasedItemController.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\PurchasedItemController.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\PurchasedItemController.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Controllers\\PurchasedItemController.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAqwHAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T07:20:16.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 54,
               "Title": "PurchaseDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Purchase\\PurchaseDetailDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Purchase\\PurchaseDetailDto.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Purchase\\PurchaseDetailDto.cs",
               "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Purchase\\PurchaseDetailDto.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA6wBYAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAA4wBYAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-22T06:34:03.026Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 55,
               "Title": "PurchaseMappingProfile .cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Mapping\\PurchaseMappingProfile .cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Mapping\\PurchaseMappingProfile .cs",
@@ -689,33 +1231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IT_asserts_Claim.csproj",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\IT_asserts_Claim.csproj",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\IT_asserts_Claim.csproj",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\IT_asserts_Claim.csproj",
-              "RelativeToolTip": "IT_asserts_Claim\\IT_asserts_Claim.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-08-15T11:09:30.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Program.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Program.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Program.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Program.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAASwEwAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T15:07:25.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 118,
               "Title": "20260822074241_Purchase.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260822074241_Purchase.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Migrations\\20260822074241_Purchase.cs",
@@ -728,7 +1244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 56,
               "Title": "ApiResponse.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\ApiResponse.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\ApiResponse.cs",
@@ -741,7 +1257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 57,
               "Title": "PurchaseAttachmentService .cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\PurchaseAttachmentService .cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Implementations\\PurchaseAttachmentService .cs",
@@ -754,20 +1270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "PurchasedItemService.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\PurchasedItemService.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Implementations\\PurchasedItemService.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\PurchasedItemService.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Services\\Implementations\\PurchasedItemService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T07:05:50.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 58,
               "Title": "IPurchaseAttachmentRepository.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Interface\\IPurchaseAttachmentRepository.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Interface\\IPurchaseAttachmentRepository.cs",
@@ -780,7 +1283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 61,
               "Title": "IPurchaseAttachmentService.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Interface\\IPurchaseAttachmentService.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Interface\\IPurchaseAttachmentService.cs",
@@ -793,7 +1296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 62,
               "Title": "IPurchasedItemService.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Interface\\IPurchasedItemService.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Interface\\IPurchasedItemService.cs",
@@ -806,7 +1309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 60,
               "Title": "AuditInfo.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\AuditInfo.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\AuditInfo.cs",
@@ -819,7 +1322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 59,
               "Title": "UpdatePurchaseDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Purchase\\UpdatePurchaseDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Purchase\\UpdatePurchaseDto.cs",
@@ -832,7 +1335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 63,
               "Title": "IPurchaseService.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Interface\\IPurchaseService.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Interface\\IPurchaseService.cs",
@@ -845,7 +1348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 64,
               "Title": "PurchaseAttachmentRepository .cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\PurchaseAttachmentRepository .cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Implementations\\PurchaseAttachmentRepository .cs",
@@ -858,20 +1361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "PurchasedItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\PurchasedItemRepository.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Implementations\\PurchasedItemRepository.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\PurchasedItemRepository.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Repositories\\Implementations\\PurchasedItemRepository.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwBQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T06:53:57.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 67,
               "Title": "IPurchasedItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Interface\\IPurchasedItemRepository.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Interface\\IPurchasedItemRepository.cs",
@@ -884,7 +1374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 65,
               "Title": "PurchaseStatus.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Enum\\PurchaseStatus.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Enum\\PurchaseStatus.cs",
@@ -897,7 +1387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 68,
               "Title": "IPurchaseRepository.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Interface\\IPurchaseRepository.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Interface\\IPurchaseRepository.cs",
@@ -910,7 +1400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 66,
               "Title": "IAssetCategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Interface\\IAssetCategoryRepository.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Interface\\IAssetCategoryRepository.cs",
@@ -923,7 +1413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 70,
               "Title": "PurchaseAttachmentDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Purchase\\PurchaseAttachmentDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Purchase\\PurchaseAttachmentDto.cs",
@@ -936,33 +1426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "PurchasedItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\PurchasedItemDto.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\PurchaseItem\\PurchasedItemDto.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\PurchasedItemDto.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\PurchaseItem\\PurchasedItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T06:38:02.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "UpdatePurchasedItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\UpdatePurchasedItemDto.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\PurchaseItem\\UpdatePurchasedItemDto.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\UpdatePurchasedItemDto.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\PurchaseItem\\UpdatePurchasedItemDto.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAACAAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T06:37:32.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 69,
               "Title": "PurchaseAttachment.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\PurchaseAttachment.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\PurchaseAttachment.cs",
@@ -975,20 +1439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "CreatePurchasedItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\CreatePurchasedItemDto.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\PurchaseItem\\CreatePurchasedItemDto.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\PurchaseItem\\CreatePurchasedItemDto.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\Dtos\\PurchaseItem\\CreatePurchasedItemDto.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAB8AAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T06:36:58.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 71,
               "Title": "NextPurchaseNumberDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Purchase\\NextPurchaseNumberDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Purchase\\NextPurchaseNumberDto.cs",
@@ -1001,7 +1452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 72,
               "Title": "PurchaseListDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Purchase\\PurchaseListDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Purchase\\PurchaseListDto.cs",
@@ -1014,46 +1465,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Purchase.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\Purchase.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\Purchase.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\Purchase.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\entity\\Purchase.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAkwA0AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T06:04:59.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "PurchasedItem.cs",
-              "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\PurchasedItem.cs",
-              "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\PurchasedItem.cs",
-              "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\PurchasedItem.cs",
-              "RelativeToolTip": "IT_asserts_Claim\\entity\\PurchasedItem.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAACkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-22T06:06:49.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 73,
               "Title": "OwnershipType.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Enum\\OwnershipType.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Enum\\OwnershipType.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Enum\\OwnershipType.cs",
               "RelativeToolTip": "IT_asserts_Claim\\Enum\\OwnershipType.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAABBwAMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-22T05:59:29.741Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 74,
               "Title": "20260816164025_AddVendor.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260816164025_AddVendor.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Migrations\\20260816164025_AddVendor.cs",
@@ -1066,7 +1491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 75,
               "Title": "VendorController.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\VendorController.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\VendorController.cs",
@@ -1079,7 +1504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 76,
               "Title": "VendorService .cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\VendorService .cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Implementations\\VendorService .cs",
@@ -1092,7 +1517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 78,
               "Title": "VendorRepository .cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\VendorRepository .cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Implementations\\VendorRepository .cs",
@@ -1105,7 +1530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 79,
               "Title": "IVendorService.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Interface\\IVendorService.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Interface\\IVendorService.cs",
@@ -1118,7 +1543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 80,
               "Title": "IVendorRepository.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Interface\\IVendorRepository.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Interface\\IVendorRepository.cs",
@@ -1131,7 +1556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 81,
               "Title": "VendorMappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Mapping\\VendorMappingProfile.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Mapping\\VendorMappingProfile.cs",
@@ -1144,7 +1569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 77,
               "Title": "Vendor.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\Vendor.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\Vendor.cs",
@@ -1157,7 +1582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 82,
               "Title": "VendorDropdownDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Vendor\\VendorDropdownDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Vendor\\VendorDropdownDto.cs",
@@ -1170,20 +1595,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 83,
               "Title": "UpdateVendorDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Vendor\\UpdateVendorDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Vendor\\UpdateVendorDto.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Vendor\\UpdateVendorDto.cs",
               "RelativeToolTip": "IT_asserts_Claim\\Dtos\\Vendor\\UpdateVendorDto.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAB0AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAIBQwB0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-16T16:28:19.953Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 84,
               "Title": "CreateVendorDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Vendor\\CreateVendorDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Vendor\\CreateVendorDto.cs",
@@ -1196,7 +1621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 85,
               "Title": "VendorDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Vendor\\VendorDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Vendor\\VendorDto.cs",
@@ -1209,33 +1634,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 86,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Properties\\launchSettings.json",
               "RelativeToolTip": "IT_asserts_Claim\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAABRwAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-08-16T12:14:41.715Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 87,
               "Title": "AssetBrandService.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\AssetBrandService.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Implementations\\AssetBrandService.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\AssetBrandService.cs",
               "RelativeToolTip": "IT_asserts_Claim\\Services\\Implementations\\AssetBrandService.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAA5wCkAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwCkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-15T04:33:35.516Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 88,
               "Title": "CreateAssetBrandDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset Brand\\CreateAssetBrandDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset Brand\\CreateAssetBrandDto.cs",
@@ -1248,7 +1673,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 89,
               "Title": "AssetBrandRepository.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\AssetBrandRepository.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Implementations\\AssetBrandRepository.cs",
@@ -1261,7 +1686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 90,
               "Title": "IAssetBrandService.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Interface\\IAssetBrandService.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Interface\\IAssetBrandService.cs",
@@ -1274,7 +1699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 91,
               "Title": "IAssetBrandRepository.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Interface\\IAssetBrandRepository.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Interface\\IAssetBrandRepository.cs",
@@ -1287,7 +1712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 92,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\appsettings.json",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\appsettings.json",
@@ -1300,7 +1725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 93,
               "Title": "IT_asserts_Claim.http",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\IT_asserts_Claim.http",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\IT_asserts_Claim.http",
@@ -1313,7 +1738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 94,
               "Title": "20260815113727_Category1.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260815113727_Category1.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Migrations\\20260815113727_Category1.cs",
@@ -1326,7 +1751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 95,
               "Title": "20260815112642_Category.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Migrations\\20260815112642_Category.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Migrations\\20260815112642_Category.cs",
@@ -1339,20 +1764,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 96,
               "Title": "IAssetModelService.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Interface\\IAssetModelService.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Interface\\IAssetModelService.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Interface\\IAssetModelService.cs",
               "RelativeToolTip": "IT_asserts_Claim\\Services\\Interface\\IAssetModelService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAwwAsAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA/wAsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-15T04:28:50.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 97,
               "Title": "AssetModelRepository.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Implementations\\AssetModelRepository.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Implementations\\AssetModelRepository.cs",
@@ -1365,7 +1790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 98,
               "Title": "AssetModelService.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Implementations\\AssetModelService.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Implementations\\AssetModelService.cs",
@@ -1378,7 +1803,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 99,
               "Title": "IAssetCategoryService.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Services\\Interface\\IAssetCategoryService.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Services\\Interface\\IAssetCategoryService.cs",
@@ -1391,7 +1816,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 100,
               "Title": "IAssetModelRepository.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Repositories\\Interface\\IAssetModelRepository.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Repositories\\Interface\\IAssetModelRepository.cs",
@@ -1404,7 +1829,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 101,
               "Title": "UpdateAssetCategoryDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset Category\\UpdateAssetCategoryDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset Category\\UpdateAssetCategoryDto.cs",
@@ -1417,7 +1842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 102,
               "Title": "AssetBrandDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset Brand\\AssetBrandDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset Brand\\AssetBrandDto.cs",
@@ -1430,7 +1855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 103,
               "Title": "UpdateAssetBrandDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset Brand\\UpdateAssetBrandDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset Brand\\UpdateAssetBrandDto.cs",
@@ -1443,7 +1868,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 104,
               "Title": "AssetModelDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset Model\\AssetModelDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset Model\\AssetModelDto.cs",
@@ -1456,7 +1881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 105,
               "Title": "CreateAssetModelDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset Model\\CreateAssetModelDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset Model\\CreateAssetModelDto.cs",
@@ -1469,7 +1894,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 106,
               "Title": "UpdateAssetModelDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\Asset Model\\UpdateAssetModelDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\Asset Model\\UpdateAssetModelDto.cs",
@@ -1482,7 +1907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 107,
               "Title": "AssetCategoryResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\AssetCategoryResponseDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\AssetCategoryResponseDto.cs",
@@ -1495,7 +1920,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 108,
               "Title": "AssetBrandRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\AssetBrandRequestDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\AssetBrandRequestDto.cs",
@@ -1508,7 +1933,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 109,
               "Title": "AssetBrandResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\AssetBrandResponseDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\AssetBrandResponseDto.cs",
@@ -1521,7 +1946,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 110,
               "Title": "UpdateAssetmodelDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\UpdateAssetmodelDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\UpdateAssetmodelDto.cs",
@@ -1534,33 +1959,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 111,
               "Title": "AssetModelRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\AssetModelRequestDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\AssetModelRequestDto.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\AssetModelRequestDto.cs",
               "RelativeToolTip": "IT_asserts_Claim\\Dtos\\AssetModelRequestDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-15T05:07:48.73Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 112,
               "Title": "AssetModelResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\AssetModelResponseDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\AssetModelResponseDto.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\AssetModelResponseDto.cs",
               "RelativeToolTip": "IT_asserts_Claim\\Dtos\\AssetModelResponseDto.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA9wBAAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-15T05:08:53.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 113,
               "Title": "AssetCategoryRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Dtos\\AssetCategoryRequestDto.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Dtos\\AssetCategoryRequestDto.cs",
@@ -1573,20 +1998,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 114,
               "Title": "Accessory.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\Accessory.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\Accessory.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\Accessory.cs",
               "RelativeToolTip": "IT_asserts_Claim\\entity\\Accessory.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA6wBsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAiwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T15:04:02.144Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 115,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\entity\\Employee.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\entity\\Employee.cs",
@@ -1599,13 +2024,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 116,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "IT_asserts_Claim\\Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\Users\\sethu\\Desktop\\IT_assests\\IT_asserts_Claim\\IT_asserts_Claim\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "IT_asserts_Claim\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAIBQwAsAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAuwAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T15:09:34.133Z",
               "EditorCaption": ""
