@@ -97,6 +97,7 @@ namespace IT_asserts.Services.Implementations
         }
 
         // ─── BULK REGISTER ASSETS ────────────────────────────────────────────
+
         public async Task<List<AssetDto>> BulkRegisterAsync(BulkCreateAssetDto dto)
         {
             if (dto.SerialNumbers == null || dto.SerialNumbers.Count == 0)
@@ -119,12 +120,29 @@ namespace IT_asserts.Services.Implementations
             if (existingSerials.Any())
                 throw new InvalidOperationException($"Serial numbers already exist: {string.Join(", ", existingSerials)}");
 
+            // ═══════════════════════════════════════════════════════════════════════
+            // FIX 1: Generate asset tag sequence IN MEMORY (one DB call only)
+            // ═══════════════════════════════════════════════════════════════════════
+            var prefix = GetCategoryPrefix(dto.Category);
+            var year = DateTime.UtcNow.Year;
+            var pattern = $"AST-{prefix}-{year}-";
+
+            var lastTag = await _assetRepository.GetLastAssetTagAsync(pattern);
+            var nextSequence = 1;
+
+            if (lastTag != null)
+            {
+                var lastSequenceStr = lastTag.Substring(pattern.Length);
+                if (int.TryParse(lastSequenceStr, out var lastSequence))
+                    nextSequence = lastSequence + 1;
+            }
+
             var assets = new List<Asset>();
-            var histories = new List<AssetLifecycleHistory>();
 
             foreach (var serial in trimmedSerials)
             {
-                var assetTag = await GenerateAssetTagAsync(dto.Category);
+                var assetTag = $"{pattern}{nextSequence:D4}";
+                nextSequence++; // ← Increment in memory for each asset
 
                 var asset = new Asset
                 {
@@ -145,22 +163,29 @@ namespace IT_asserts.Services.Implementations
                 };
 
                 assets.Add(asset);
-
-                histories.Add(new AssetLifecycleHistory
-                {
-                    AssetId = asset.Id,
-                    Action = "Registered",
-                    OldStatus = null,
-                    NewStatus = AssetStatus.Available,
-                    Remarks = "Asset registered from purchase (bulk)",
-                    PerformedBy = "System",
-                    PerformedDate = DateTime.UtcNow
-                });
             }
 
+            // ═══════════════════════════════════════════════════════════════════════
+            // FIX 2: Save assets FIRST, then create lifecycle histories
+            //         (FK_AssetLifecycleHistories_Assets_AssetId needs Asset to exist)
+            // ═══════════════════════════════════════════════════════════════════════
             await _assetRepository.AddRangeAsync(assets);
+            await _assetRepository.SaveChangesAsync(); // ← Assets saved to DB
+
+            // NOW create lifecycle histories (AssetId FK is satisfied)
+            var histories = assets.Select(asset => new AssetLifecycleHistory
+            {
+                AssetId = asset.Id,
+                Action = "Registered",
+                OldStatus = null,
+                NewStatus = AssetStatus.Available,
+                Remarks = "Asset registered from purchase (bulk)",
+                PerformedBy = "System",
+                PerformedDate = DateTime.UtcNow
+            }).ToList();
+
             await _historyRepository.AddRangeAsync(histories);
-            await _assetRepository.SaveChangesAsync();
+            await _historyRepository.SaveChangesAsync(); // ← Histories saved after assets exist
 
             // Reload with navigation properties
             var assetIds = assets.Select(a => a.Id).ToList();
@@ -174,6 +199,8 @@ namespace IT_asserts.Services.Implementations
 
             return _mapper.Map<List<AssetDto>>(savedAssets);
         }
+
+
 
         // ─── UPDATE ASSET ────────────────────────────────────────────────────
         public async Task<AssetDto?> UpdateAsync(Guid id, UpdateAssetDto dto)

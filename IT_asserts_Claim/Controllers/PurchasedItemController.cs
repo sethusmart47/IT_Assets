@@ -56,7 +56,7 @@ namespace IT_asserts_Claim.Controllers
             /// <summary>
             /// Add new item to purchase.
             /// </summary>
-            [HttpPost]
+            [HttpPost("{purchaseId}")]
             public async Task<IActionResult> Create(Guid purchaseId, [FromBody] CreatePurchasedItemDto dto)
             {
                 try
@@ -80,8 +80,8 @@ namespace IT_asserts_Claim.Controllers
             /// <summary>
             /// Update existing item.
             /// </summary>
-            [HttpPut("{itemId:guid}")]
-            public async Task<IActionResult> Update(Guid purchaseId, Guid itemId, [FromBody] UpdatePurchasedItemDto dto)
+            [HttpPut("{itemId}")]
+            public async Task<IActionResult> Update(Guid itemId, [FromBody] UpdatePurchasedItemDto dto)
             {
                 try
                 {

@@ -5,6 +5,8 @@
      Draft = 1,
     Completed = 2,
     Inprogress = 3,
-    Received = 4
+    Received = 4,
+    Pending=5
+
     }
 }
