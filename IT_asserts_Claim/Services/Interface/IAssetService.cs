@@ -13,6 +13,7 @@ namespace IT_asserts.Services.Interface
         Task<bool> DeleteAsync(Guid id);
         Task<ValidationResultDto> ValidateSerialNumbersAsync(ValidateSerialNumbersDto dto);
         Task<List<AvailablePurchaseDto>> GetAvailablePurchasesAsync();
+        Task<AssetDetailDto?> SearchAvailableAssetAsync(string? serialNumber, string? assetTag);
         Task<List<AvailablePurchaseItemDto>> GetAvailableItemsAsync(Guid purchaseId);
         Task<RegistrationSummaryDto?> GetRegistrationSummaryAsync(Guid purchaseId);
     }

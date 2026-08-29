@@ -8,6 +8,11 @@ namespace IT_asserts_Claim.Dtos.Asset_Brand
         [MaxLength(100)]
         public string BrandName { get; set; } = string.Empty;
 
-        
+
+        [Required]
+        public Guid AssetCategoryId { get; set; }
+
+
+
     }
 }

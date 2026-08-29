@@ -1,73 +1,5 @@
 [
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.AccessoryController",
-    "Method": "AddAccessory",
-    "RelativePath": "api/Accessory/{empcode}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "empcode",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "accessory",
-        "Type": "IT_asserts_Claim.Models.Accessory",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IT_asserts_Claim.Controllers.AccessoryController",
-    "Method": "UpdateAccessory",
-    "RelativePath": "api/Accessory/{empcode}/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "empcode",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "updated",
-        "Type": "IT_asserts_Claim.Models.Accessory",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IT_asserts_Claim.Controllers.AccessoryController",
-    "Method": "DeleteAccessory",
-    "RelativePath": "api/Accessory/{empcode}/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "empcode",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "IT_asserts.Controllers.AssetController",
     "Method": "GetAll",
     "RelativePath": "api/Asset",
@@ -179,6 +111,27 @@
   },
   {
     "ContainingType": "IT_asserts.Controllers.AssetController",
+    "Method": "SearchAvailableAsset",
+    "RelativePath": "api/Asset/available/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serialNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "assetTag",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetController",
     "Method": "BulkRegister",
     "RelativePath": "api/Asset/bulk-register",
     "HttpMethod": "POST",
@@ -242,6 +195,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "IT_asserts.Controllers.AssetAssignmentController",
+    "Method": "ReturnAsset",
+    "RelativePath": "api/AssetAssignment/{assignmentId}/return",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assignmentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "IT_asserts.Dtos.AssetAssignment.ReturnAssetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetAssignmentController",
+    "Method": "AssignAsset",
+    "RelativePath": "api/AssetAssignment/assign",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "IT_asserts.Dtos.AssetAssignment.AssignAssetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetAssignmentController",
+    "Method": "GetAssignmentsByEmployee",
+    "RelativePath": "api/AssetAssignment/employees/{employeeId}/assignments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.AssetAssignmentController",
+    "Method": "SurrenderAssets",
+    "RelativePath": "api/AssetAssignment/surrender/{employeeId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "IT_asserts.Dtos.AssetAssignment.SurrenderAssetsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "IT_asserts_Claim.Controllers.AssetCascadingController",
     "Method": "GetCascadingDropdown",
     "RelativePath": "api/AssetCascading",
@@ -264,16 +291,11 @@
   {
     "ContainingType": "IT_asserts_Claim.Controllers.BrandController",
     "Method": "Create",
-    "RelativePath": "api/Brand/{AssetCategoryId}/Band",
+    "RelativePath": "api/Brand",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "AssetCategoryId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
       {
         "Name": "dto",
         "Type": "IT_asserts_Claim.Dtos.Asset_Brand.CreateAssetBrandDto",
@@ -431,24 +453,8 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.EmployeeController",
-    "Method": "AddEmployee",
-    "RelativePath": "api/Employee",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "emp",
-        "Type": "IT_asserts_Claim.Models.Employee",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IT_asserts_Claim.Controllers.EmployeeController",
-    "Method": "GetEmployees",
+    "ContainingType": "IT_asserts.Controllers.EmployeeController",
+    "Method": "GetAllEmployeeAsync",
     "RelativePath": "api/Employee",
     "HttpMethod": "GET",
     "IsController": true,
@@ -457,32 +463,16 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.EmployeeController",
-    "Method": "GetByEmpCode",
-    "RelativePath": "api/Employee/{empCode}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "empCode",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IT_asserts_Claim.Controllers.EmployeeController",
-    "Method": "GetById",
-    "RelativePath": "api/Employee/id/{id}",
+    "ContainingType": "IT_asserts.Controllers.EmployeeController",
+    "Method": "GetEmployeeDetailAysnc",
+    "RelativePath": "api/Employee/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -696,9 +686,9 @@
   },
   {
     "ContainingType": "IT_asserts_Claim.Controllers.PurchaseAttachmentController",
-    "Method": "Delete",
-    "RelativePath": "api/PurchaseAttachment/{attachmentId}",
-    "HttpMethod": "DELETE",
+    "Method": "Download",
+    "RelativePath": "api/PurchaseAttachment/{attachmentId}/download",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -717,8 +707,24 @@
   },
   {
     "ContainingType": "IT_asserts_Claim.Controllers.PurchaseAttachmentController",
-    "Method": "Download",
-    "RelativePath": "api/PurchaseAttachment/{attachmentId}/download",
+    "Method": "Delete",
+    "RelativePath": "api/PurchaseAttachment/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseAttachmentController",
+    "Method": "Preview",
+    "RelativePath": "api/PurchaseAttachment/{purchaseId}/{attachmentId}/preview",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -726,7 +732,7 @@
       {
         "Name": "purchaseId",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "attachmentId",

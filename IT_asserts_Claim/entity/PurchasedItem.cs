@@ -31,8 +31,8 @@ namespace IT_asserts_Claim.entity
         [Column(TypeName = "decimal(18,2)")]
         public decimal UnitPrice { get; set; }
 
-        [MaxLength(50)]
-        public string WarrantyPeriod { get; set; } = string.Empty;
+       // [MaxLength(50)]
+        //public string WarrantyPeriod { get; set; } = string.Empty;
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal SubTotal { get; set; }

@@ -29,7 +29,13 @@ namespace IT_asserts_Claim.entity
         [Required]
         public DateTime PerformedDate { get; set; } = DateTime.UtcNow;
 
-        public Guid? EmployeeId { get; set; }
+
+        
+        [MaxLength(150)]
+        public string? EmployeeEmail { get; set; }
+
+        [MaxLength(150)]
+        public string? EmployeeName { get; set; }
 
         public Guid? ReferenceId { get; set; }
 

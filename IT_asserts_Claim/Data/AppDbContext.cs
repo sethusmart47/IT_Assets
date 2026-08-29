@@ -1,4 +1,5 @@
-﻿using IT_asserts_Claim.entity;
+﻿using IT_asserts.entity;
+using IT_asserts_Claim.entity;
 using IT_asserts_Claim.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
@@ -12,13 +13,13 @@ namespace IT_asserts_Claim.Data
         }
 
         public DbSet<Employee> Employees { get; set; }
-        public DbSet<Accessory> Accessories { get; set; }
+        public DbSet<AssetAssignment> AssetAssignments { get; set; }
 
         public DbSet<AssetCategory> AssetCategories { get; set; }
         public DbSet<AssetBrand> AssetBrands { get; set; }
         public DbSet<AssetModel> AssetModels { get; set; }
 
-        public DbSet<Vendor>Vendors { get; set; }
+        public DbSet<Vendor> Vendors { get; set; }
 
         public DbSet<Purchase> Purchases { get; set; }
         public DbSet<PurchasedItem> PurchasedItems { get; set; }
@@ -84,7 +85,7 @@ namespace IT_asserts_Claim.Data
                 entity.HasIndex(e => e.Email).IsUnique();
                 entity.HasIndex(e => e.GSTNumber)
                       .IsUnique();
-                      
+
 
                 entity.HasQueryFilter(e => !e.IsDeleted);
             });
@@ -138,20 +139,35 @@ namespace IT_asserts_Claim.Data
                        .OnDelete(DeleteBehavior.Restrict);
              });
 
-                        modelBuilder.Entity<AssetLifecycleHistory>(entity =>
-                        {
-                            entity.HasQueryFilter(h => !h.IsDeleted);
+            modelBuilder.Entity<AssetLifecycleHistory>(entity =>
+            {
+                entity.HasQueryFilter(h => !h.IsDeleted);
 
-                            entity.HasOne(h => h.Asset)
-                                  .WithMany(a => a.LifecycleHistories)
-                                  .HasForeignKey(h => h.AssetId)
-                                  .OnDelete(DeleteBehavior.Restrict);
+                entity.HasOne(h => h.Asset)
+                      .WithMany(a => a.LifecycleHistories)
+                      .HasForeignKey(h => h.AssetId)
+                      .OnDelete(DeleteBehavior.Restrict);
 
-                            entity.HasIndex(h => h.AssetId);
-                            entity.HasIndex(h => new { h.AssetId, h.PerformedDate });
-                        });
+                entity.HasIndex(h => h.AssetId);
+                entity.HasIndex(h => new { h.AssetId, h.PerformedDate });
+            });
+            //Employee
+            modelBuilder.Entity<Employee>(entity =>
+            {
+                entity.HasQueryFilter(e => !e.IsDeleted);
+                entity.HasIndex(e => e.Email).IsUnique();
+            });
 
-                    }
+            // AssetAssignment
+            modelBuilder.Entity<AssetAssignment>(entity =>
+            {
+                entity.HasQueryFilter(a => !a.IsDeleted);
+            });
+
+        }
+
+
+    
 
     }
 

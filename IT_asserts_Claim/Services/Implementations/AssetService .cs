@@ -323,6 +323,8 @@ namespace IT_asserts.Services.Implementations
                         VendorName = purchase.Vendor.VendorName,
                         PurchaseDate = purchase.PurchaseDate,
                         TotalItems = purchase.PurchasedItems.Count,
+                        OwnershipType = purchase.OwnershipType,
+                        OwnershipTypeName=purchase.OwnershipType.ToString(),
                         TotalQty = totalQty,
                         RegisteredQty = registeredQty,
                         RemainingQty = remainingQty
@@ -360,7 +362,7 @@ namespace IT_asserts.Services.Implementations
                         Model = item.Model,
                         Configuration = item.Configuration,
                         UnitPrice = item.UnitPrice,
-                        WarrantyMonths = item.WarrantyPeriod,
+                       // WarrantyMonths = item.WarrantyPeriod,
                         PurchasedQty = item.Quantity,
                         RegisteredQty = registeredQty,
                         RemainingQty = remainingQty
@@ -432,5 +434,23 @@ namespace IT_asserts.Services.Implementations
                 _ => category.Length >= 3 ? category[..3].ToUpper() : category.ToUpper()
             };
         }
+        public async Task<AssetDetailDto?> SearchAvailableAssetAsync(string? serialNumber, string? assetTag)
+        {
+            Asset? asset = null;
+
+            if (!string.IsNullOrWhiteSpace(serialNumber))
+            {
+                asset = await _assetRepository.GetAvailableBySerialNumberAsync(serialNumber.Trim());
+            }
+            else if (!string.IsNullOrWhiteSpace(assetTag))
+            {
+                asset = await _assetRepository.GetAvailableByAssetTagAsync(assetTag.Trim());
+            }
+
+            if (asset == null) return null;
+
+            return _mapper.Map<AssetDetailDto>(asset);
+        }
+
     }
 }

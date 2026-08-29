@@ -94,6 +94,37 @@ namespace IT_asserts.Repositories.Implementations
                 a.Brand == brand &&
                 a.Model == model);
         }
+        public async Task<Asset?> GetAvailableBySerialNumberAsync(string serialNumber)
+        {
+            return await _context.Assets
+                .AsNoTracking()
+                .Include(a => a.Purchase)
+                    .ThenInclude(p => p.Vendor)
+                .Include(a => a.LifecycleHistories.OrderByDescending(h => h.PerformedDate))
+                .FirstOrDefaultAsync(a => a.SerialNumber.ToLower() == serialNumber.ToLower()
+                                       && a.Status == AssetStatus.Available);
+        }
+
+        public async Task<Asset?> GetAvailableByAssetTagAsync(string assetTag)
+        {
+            return await _context.Assets
+                .AsNoTracking()
+                .Include(a => a.Purchase)
+                    .ThenInclude(p => p.Vendor)
+                .Include(a => a.LifecycleHistories.OrderByDescending(h => h.PerformedDate))
+                .FirstOrDefaultAsync(a => a.AssetTag.ToLower() == assetTag.ToLower()
+                                       && a.Status == AssetStatus.Available);
+        }
+
+        //public async Task<Asset?> GetByIdAsync(Guid id)
+        //{
+        //    return await _context.Assets.FindAsync(id);
+        //}
+
+        public async Task AddLifecycleHistoryAsync(AssetLifecycleHistory history)
+        {
+            await _context.AssetLifecycleHistories.AddAsync(history);
+        }
 
         public async Task AddAsync(Asset asset)
         {

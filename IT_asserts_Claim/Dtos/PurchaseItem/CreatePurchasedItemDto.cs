@@ -28,7 +28,7 @@ namespace IT_asserts_Claim.Dtos.PurchaseItem
         [Range(0.01, double.MaxValue, ErrorMessage = "Unit price must be greater than 0.")]
         public decimal UnitPrice { get; set; }
 
-        [MaxLength(50)]
-        public string WarrantyPeriod { get; set; } = string.Empty;
+        //[MaxLength(50)]
+       // public string WarrantyPeriod { get; set; } = string.Empty;
     }
 }

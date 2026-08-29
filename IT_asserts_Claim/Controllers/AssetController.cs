@@ -171,6 +171,22 @@ namespace IT_asserts.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet("available/search")]
+        public async Task<IActionResult> SearchAvailableAsset(
+             [FromQuery] string? serialNumber,
+             [FromQuery] string? assetTag)
+        {
+            try
+            {
+                var result = await _assetService.SearchAvailableAssetAsync(serialNumber, assetTag);
+                if (result == null) return NotFound("No available asset found matching the criteria.");
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }
 

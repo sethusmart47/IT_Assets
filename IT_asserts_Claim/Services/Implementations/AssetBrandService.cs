@@ -43,13 +43,13 @@ namespace IT_asserts_Claim.Services.Implementations
             return _mapper.Map<List<AssetBrandDto>>(entities);
         }
 
-        public async Task<AssetBrandDto> CreateAsync(Guid AssetCategoryId,CreateAssetBrandDto dto)
+        public async Task<AssetBrandDto> CreateAsync(CreateAssetBrandDto dto)
         {
-            var category = await _categoryRepository.GetByIdAsync(AssetCategoryId);
+            var category = await _categoryRepository.GetByIdAsync(dto.AssetCategoryId);
             if (category == null)
                 throw new InvalidOperationException("Category does not exist.");
 
-            var nameExists = await _repository.IsNameExistsAsync(dto.BrandName.Trim(), AssetCategoryId);
+            var nameExists = await _repository.IsNameExistsAsync(dto.BrandName.Trim(), dto.AssetCategoryId);
             if (nameExists)
                 throw new InvalidOperationException($"Brand '{dto.BrandName}' already exists under this category.");
 
@@ -59,7 +59,7 @@ namespace IT_asserts_Claim.Services.Implementations
             {
                 Id = Guid.NewGuid(),
                 BrandName = dto.BrandName.Trim(),
-                AssetCategoryId = AssetCategoryId
+                AssetCategoryId = dto.AssetCategoryId
         
             };
             await _repository.AddAsync(entity);

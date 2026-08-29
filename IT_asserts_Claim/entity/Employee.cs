@@ -1,20 +1,24 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
+﻿using Claim_Form.Entities;
 using System.ComponentModel.DataAnnotations;
 namespace IT_asserts_Claim.Models
 {
-    [Index(nameof(EmpCode), IsUnique = true)]
-    public class Employee
+
+    public class Employee : AuditInfo
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
-        public string EmpCode { get; set; }
-        
-        public string EmpName { get; set; }
-        public string EmpMail { get; set; }
+        [MaxLength(150)]
+        public string EmployeeName { get; set; } = string.Empty;
 
-        public ICollection <Accessory> Accessories { get; set; }
+        [Required]
+        [MaxLength(150)]
+        public string Email { get; set; } = string.Empty;
 
+        [Required]
+        [MaxLength(100)]
+        public string Department { get; set; } = string.Empty;
+
+        [Required]
+        [MaxLength(100)]
+        public string Designation { get; set; } = string.Empty;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using IT_asserts_Claim.Enum;
+using System.ComponentModel.DataAnnotations;
 
 namespace IT_asserts.Dtos.Asset
 {
@@ -14,7 +15,11 @@ namespace IT_asserts.Dtos.Asset
         public string? Remarks { get; set; }
         public string PerformedBy { get; set; } = string.Empty;
         public DateTime PerformedDate { get; set; }
-        public Guid? EmployeeId { get; set; }
+       
+        public string? EmployeeName { get; set; }
+
+        
+        public string? EmployeeEmail { get; set; }
         public Guid? ReferenceId { get; set; }
         public string? ReferenceType { get; set; }
     }

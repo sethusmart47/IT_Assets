@@ -5,126 +5,6 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Accessory/{empcode}": {
-      "post": {
-        "tags": [
-          "Accessory"
-        ],
-        "parameters": [
-          {
-            "name": "empcode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Accessory"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Accessory"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Accessory"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Accessory/{empcode}/{id}": {
-      "put": {
-        "tags": [
-          "Accessory"
-        ],
-        "parameters": [
-          {
-            "name": "empcode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Accessory"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Accessory"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Accessory"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Accessory"
-        ],
-        "parameters": [
-          {
-            "name": "empcode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Asset": {
       "get": {
         "tags": [
@@ -402,6 +282,172 @@
         }
       }
     },
+    "/api/Asset/available/search": {
+      "get": {
+        "tags": [
+          "Asset"
+        ],
+        "parameters": [
+          {
+            "name": "serialNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "assetTag",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AssetAssignment/employees/{employeeId}/assignments": {
+      "get": {
+        "tags": [
+          "AssetAssignment"
+        ],
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AssetAssignment/assign": {
+      "post": {
+        "tags": [
+          "AssetAssignment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssignAssetDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssignAssetDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssignAssetDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AssetAssignment/{assignmentId}/return": {
+      "post": {
+        "tags": [
+          "AssetAssignment"
+        ],
+        "parameters": [
+          {
+            "name": "assignmentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReturnAssetDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReturnAssetDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReturnAssetDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AssetAssignment/surrender/{employeeId}": {
+      "post": {
+        "tags": [
+          "AssetAssignment"
+        ],
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SurrenderAssetsDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SurrenderAssetsDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SurrenderAssetsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/AssetCascading": {
       "get": {
         "tags": [
@@ -419,6 +465,35 @@
         "tags": [
           "Brand"
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Brand"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAssetBrandDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAssetBrandDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAssetBrandDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -526,48 +601,6 @@
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Brand/{AssetCategoryId}/Band": {
-      "post": {
-        "tags": [
-          "Brand"
-        ],
-        "parameters": [
-          {
-            "name": "AssetCategoryId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateAssetBrandDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateAssetBrandDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateAssetBrandDto"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK"
@@ -701,35 +734,6 @@
       }
     },
     "/api/Employee": {
-      "post": {
-        "tags": [
-          "Employee"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Employee"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Employee"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Employee"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "get": {
         "tags": [
           "Employee"
@@ -741,29 +745,7 @@
         }
       }
     },
-    "/api/Employee/{empCode}": {
-      "get": {
-        "tags": [
-          "Employee"
-        ],
-        "parameters": [
-          {
-            "name": "empCode",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Employee/id/{id}": {
+    "/api/Employee/{id}": {
       "get": {
         "tags": [
           "Employee"
@@ -774,8 +756,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -1179,15 +1161,16 @@
         }
       }
     },
-    "/api/PurchaseAttachment/{attachmentId}": {
-      "delete": {
+    "/api/PurchaseAttachment/{purchaseId}/{attachmentId}/preview": {
+      "get": {
         "tags": [
           "PurchaseAttachment"
         ],
         "parameters": [
           {
             "name": "purchaseId",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1195,6 +1178,29 @@
           },
           {
             "name": "attachmentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PurchaseAttachment/{id}": {
+      "delete": {
+        "tags": [
+          "PurchaseAttachment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
@@ -1553,28 +1559,20 @@
   },
   "components": {
     "schemas": {
-      "Accessory": {
+      "AssignAssetDto": {
+        "required": [
+          "assetId",
+          "employeeId"
+        ],
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "accessoryType": {
+          "assetId": {
             "type": "string",
-            "nullable": true
+            "format": "uuid"
           },
-          "accessoryName": {
+          "employeeId": {
             "type": "string",
-            "nullable": true
-          },
-          "serialNo": {
-            "type": "string",
-            "nullable": true
-          },
-          "issueDate": {
-            "type": "string",
-            "format": "date-time"
+            "format": "uuid"
           }
         },
         "additionalProperties": false
@@ -1638,6 +1636,7 @@
       },
       "CreateAssetBrandDto": {
         "required": [
+          "assetCategoryId",
           "brandName"
         ],
         "type": "object",
@@ -1646,6 +1645,10 @@
             "maxLength": 100,
             "minLength": 1,
             "type": "string"
+          },
+          "assetCategoryId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false
@@ -1826,11 +1829,6 @@
             "minimum": 0.01,
             "type": "number",
             "format": "double"
-          },
-          "warrantyPeriod": {
-            "maxLength": 50,
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1878,38 +1876,6 @@
         },
         "additionalProperties": false
       },
-      "Employee": {
-        "required": [
-          "empCode"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "empCode": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "empName": {
-            "type": "string",
-            "nullable": true
-          },
-          "empMail": {
-            "type": "string",
-            "nullable": true
-          },
-          "accessories": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Accessory"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "OwnershipType": {
         "enum": [
           1,
@@ -1930,6 +1896,67 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "ReturnAssetDto": {
+        "required": [
+          "conditionAtReturn"
+        ],
+        "type": "object",
+        "properties": {
+          "conditionAtReturn": {
+            "maximum": 3,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "remarks": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SurrenderAssetItemDto": {
+        "required": [
+          "assignmentId",
+          "conditionAtReturn"
+        ],
+        "type": "object",
+        "properties": {
+          "assignmentId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "conditionAtReturn": {
+            "maximum": 3,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "remarks": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SurrenderAssetsDto": {
+        "required": [
+          "assets"
+        ],
+        "type": "object",
+        "properties": {
+          "assets": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SurrenderAssetItemDto"
+            }
+          }
+        },
+        "additionalProperties": false
       },
       "UpdateAssetBrandDto": {
         "required": [
@@ -2095,11 +2122,6 @@
             "minimum": 0.01,
             "type": "number",
             "format": "double"
-          },
-          "warrantyPeriod": {
-            "maxLength": 50,
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false

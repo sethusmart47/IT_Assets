@@ -7,6 +7,7 @@
         InService = 3,
         Retired = 4,
         Lost = 5,
-        Disposed = 6
+        Disposed = 6,
+        NeedToService=7
     }
 }

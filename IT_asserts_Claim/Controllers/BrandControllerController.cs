@@ -65,17 +65,17 @@ namespace IT_asserts_Claim.Controllers
             }
         }
 
-        [HttpPost("{AssetCategoryId}/Band")]
-        public async Task<IActionResult> Create([FromRoute]Guid AssetCategoryId, [FromBody] CreateAssetBrandDto dto)
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateAssetBrandDto dto)
         {
             if (dto == null)
                 return BadRequest("Request body is required.");
-            if(AssetCategoryId==null)
+            if(dto.AssetCategoryId==null)
                 return BadRequest("AssetCategoryId is required.");
 
             try
             {
-                var result = await _brandService.CreateAsync(AssetCategoryId,dto);
+                var result = await _brandService.CreateAsync(dto);
                 return Ok(result);
             }
             catch (Exception ex)

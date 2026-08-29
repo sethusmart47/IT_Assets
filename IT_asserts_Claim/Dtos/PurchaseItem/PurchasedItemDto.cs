@@ -10,7 +10,7 @@
         public string Configuration { get; set; } = string.Empty;
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
-        public string WarrantyPeriod { get; set; } = string.Empty;
+        //public string WarrantyPeriod { get; set; } = string.Empty;
         public decimal SubTotal { get; set; }
     }
 }

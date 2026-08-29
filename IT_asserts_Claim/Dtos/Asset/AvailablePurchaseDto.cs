@@ -1,4 +1,6 @@
-﻿namespace IT_asserts.Dtos.Asset
+﻿using IT_asserts_Claim.Enum;
+
+namespace IT_asserts.Dtos.Asset
 {
     public class AvailablePurchaseDto
     {
@@ -11,6 +13,8 @@
         public int TotalQty { get; set; }
         public int RegisteredQty { get; set; }
         public int RemainingQty { get; set; }
+        public OwnershipType OwnershipType { get; set; }
+        public string OwnershipTypeName { get; set; } = string.Empty;
     }
 
     public class AvailablePurchaseItemDto
@@ -21,7 +25,9 @@
         public string Model { get; set; } = string.Empty;
         public string? Configuration { get; set; }
         public decimal UnitPrice { get; set; }
-        public string WarrantyMonths { get; set; }
+
+       
+        //public string WarrantyMonths { get; set; }
         public int PurchasedQty { get; set; }
         public int RegisteredQty { get; set; }
         public int RemainingQty { get; set; }

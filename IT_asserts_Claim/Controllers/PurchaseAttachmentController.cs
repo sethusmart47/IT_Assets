@@ -74,16 +74,35 @@ namespace IT_asserts_Claim.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-        /// <summary>
-        /// Soft delete an attachment.
-        /// </summary>
-        [HttpDelete("{attachmentId:guid}")]
-        public async Task<IActionResult> Delete(Guid purchaseId, Guid attachmentId)
+        [HttpGet("{purchaseId:guid}/{attachmentId:guid}/preview")]
+        public async Task<IActionResult> Preview(Guid purchaseId, Guid attachmentId)
         {
             try
             {
-                var result = await _attachmentService.DeleteAsync(attachmentId);
+                var (fileData, contentType, fileName) = await _attachmentService.DownloadAsync(attachmentId);
+
+                if (fileData == null)
+                    return NotFound("Attachment not found or file missing from storage.");
+
+                // KEY: Return File WITHOUT fileName parameter
+                // This sets Content-Disposition: inline (browser renders it)
+                // vs File(data, type, "name.jpg") which sets Content-Disposition: attachment (download)
+                return File(fileData, contentType ?? "application/octet-stream");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        /// <summary>
+        /// Soft delete an attachment.
+        /// </summary>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            try
+            {
+                var result = await _attachmentService.DeleteAsync(id);
                 if (!result)
                     return NotFound("Attachment not found.");
                 return Ok("Attachment deleted successfully.");
