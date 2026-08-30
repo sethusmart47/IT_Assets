@@ -864,6 +864,69 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "IT_asserts.Controllers.ServiceRequestController",
+    "Method": "GetAll",
+    "RelativePath": "api/ServiceRequest",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.ServiceRequestController",
+    "Method": "Create",
+    "RelativePath": "api/ServiceRequest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "IT_asserts.Dtos.Service.CreateServiceRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.ServiceRequestController",
+    "Method": "GetById",
+    "RelativePath": "api/ServiceRequest/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IT_asserts.Controllers.ServiceRequestController",
+    "Method": "Resolve",
+    "RelativePath": "api/ServiceRequest/{id}/resolve",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "IT_asserts.Dtos.Service.ResolveServiceRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "IT_asserts_Claim.Controllers.VendorController",
     "Method": "GetAll",
     "RelativePath": "api/Vendor",

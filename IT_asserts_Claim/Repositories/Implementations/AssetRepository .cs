@@ -42,7 +42,7 @@ namespace IT_asserts.Repositories.Implementations
         public async Task<Asset?> GetByIdWithDetailsAsync(Guid id)
         {
             return await _context.Assets
-                .AsNoTracking()
+                
                 .Include(a => a.Purchase)
                     .ThenInclude(p => p.Vendor)
                 .Include(a => a.LifecycleHistories.OrderByDescending(h => h.PerformedDate))
@@ -115,6 +115,13 @@ namespace IT_asserts.Repositories.Implementations
                 .FirstOrDefaultAsync(a => a.AssetTag.ToLower() == assetTag.ToLower()
                                        && a.Status == AssetStatus.Available);
         }
+        public async Task<bool> HasActiveAssignmentAsync(Guid assetId)
+        {
+            return await _context.AssetAssignments
+                .AnyAsync(a => a.AssetId == assetId && a.ReturnedDate == null && !a.IsDeleted);
+        }
+
+
 
         //public async Task<Asset?> GetByIdAsync(Guid id)
         //{

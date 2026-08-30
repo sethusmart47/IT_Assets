@@ -17,6 +17,7 @@ namespace IT_asserts.Repositories.Interface
         Task<Asset?> GetAvailableBySerialNumberAsync(string serialNumber);
         Task<Asset?> GetAvailableByAssetTagAsync(string assetTag);
         //Task<Asset?> GetByIdAsync(Guid id);
+        Task<bool> HasActiveAssignmentAsync(Guid assetId);
         Task AddLifecycleHistoryAsync(AssetLifecycleHistory history);
         Task AddRangeAsync(List<Asset> assets);
         Task SaveChangesAsync();

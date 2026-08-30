@@ -44,7 +44,9 @@ builder.Services.AddScoped<IPurchasedItemRepository, PurchasedItemRepository>();
 builder.Services.AddScoped<IPurchaseAttachmentRepository, PurchaseAttachmentRepository>();
 builder.Services.AddScoped<IAssetRepository, AssetRepository>();
 builder.Services.AddScoped<IAssetLifecycleHistoryRepository, AssetLifecycleHistoryRepository>(); 
-builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>(); builder.Services.AddScoped<IAssetAssignmentRepository, AssetAssignmentRepository>();
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>(); 
+builder.Services.AddScoped<IAssetAssignmentRepository, AssetAssignmentRepository>();
+builder.Services.AddScoped<IServiceRequestRepository, ServiceRequestRepository>();
 //Add this using directive
 // Services
 builder.Services.AddScoped<IAssetAssignmentService, AssetAssignmentService>();
@@ -57,6 +59,7 @@ builder.Services.AddScoped<IPurchasedItemService, PurchasedItemService>();
 builder.Services.AddScoped<IPurchaseAttachmentService, PurchaseAttachmentService>();
 builder.Services.AddScoped<IAssetService, AssetService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IServiceRequestService, ServiceRequestService>();
 
 builder.Services.AddCors(options =>
 {

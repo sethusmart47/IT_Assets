@@ -3,11 +3,14 @@
 *.user
 *.suo
 
-# .NET
+# Build output
 bin/
 obj/
 
-# Angular
-node_modules/
-dist/
-.angular/
+# User-specific files
+*.user
+*.rsuser
+*.suo
+
+# Logs
+*.log

@@ -1380,6 +1380,112 @@
         }
       }
     },
+    "/api/ServiceRequest": {
+      "get": {
+        "tags": [
+          "ServiceRequest"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ServiceRequest"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ServiceRequest/{id}": {
+      "get": {
+        "tags": [
+          "ServiceRequest"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ServiceRequest/{id}/resolve": {
+      "put": {
+        "tags": [
+          "ServiceRequest"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResolveServiceRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResolveServiceRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResolveServiceRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Vendor": {
       "get": {
         "tags": [
@@ -1833,6 +1939,46 @@
         },
         "additionalProperties": false
       },
+      "CreateServiceRequestDto": {
+        "required": [
+          "assetId",
+          "issueType",
+          "priority",
+          "reportedDate"
+        ],
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "issueType": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "reportedDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "priority": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "vendorName": {
+            "maxLength": 200,
+            "type": "string",
+            "nullable": true
+          },
+          "issueDescription": {
+            "maxLength": 2000,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateVendorDto": {
         "required": [
           "contactPerson",
@@ -1896,6 +2042,17 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "ResolveServiceRequestDto": {
+        "type": "object",
+        "properties": {
+          "resolutionNotes": {
+            "maxLength": 2000,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "ReturnAssetDto": {
         "required": [

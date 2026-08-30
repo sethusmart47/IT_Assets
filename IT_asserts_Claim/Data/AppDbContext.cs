@@ -24,6 +24,7 @@ namespace IT_asserts_Claim.Data
         public DbSet<Purchase> Purchases { get; set; }
         public DbSet<PurchasedItem> PurchasedItems { get; set; }
         public DbSet<PurchaseAttachment> PurchaseAttachments { get; set; }
+        public DbSet<ServiceRequest> ServiceRequests { get; set; }
         public DbSet<Asset> Assets { get; set; }
         public DbSet<AssetLifecycleHistory> AssetLifecycleHistories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -164,11 +165,16 @@ namespace IT_asserts_Claim.Data
                 entity.HasQueryFilter(a => !a.IsDeleted);
             });
 
+            modelBuilder.Entity<ServiceRequest>(entity =>
+            {
+                entity.HasQueryFilter(e => !e.IsDeleted);
+                entity.HasIndex(e => new { e.AssetId, e.Status });
+            });
+
         }
 
 
-    
-
+       
     }
 
 }
