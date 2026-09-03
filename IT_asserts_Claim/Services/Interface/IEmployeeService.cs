@@ -1,10 +1,10 @@
-﻿using IT_asserts.Dtos.Employee;
+﻿using ITAssetManagement.Dtos.Employee;
 
-namespace IT_asserts.Services.Interface
+namespace ITAssetManagement.Services.Interface
 {
     public interface IEmployeeService
     {
-        Task<List<EmployeeDto>> GetAllEmployeesAsync();
-        Task<EmployeeDto?> GetEmployeeDetailAsync(Guid id);
+        Task<List<EmployeeDetails>> GetAllEmployeesAsync();
+        Task<EmployeeDetails?> GetEmployeeDetailAsync(Guid id);
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace IT_asserts_Claim.Dtos
+﻿namespace ITAssetManagement.Dtos
 {
     public class AssetCascading
     {

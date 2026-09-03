@@ -1,12 +1,12 @@
-﻿using IT_asserts.Dtos.Service;
+﻿using ITAssetManagement.Dtos.Service;
 
-namespace IT_asserts.Services.Interface
+namespace ITAssetManagement.Services.Interface
 {
     public interface IServiceRequestService
     {
-        Task<List<ServiceRequestListDto>> GetAllAsync();
-        Task<ServiceRequestDto?> GetByIdAsync(Guid id);
-        Task<ServiceRequestDto> CreateAsync(CreateServiceRequestDto dto);
-        Task<ServiceRequestDto> ResolveAsync(Guid id, ResolveServiceRequestDto dto);
+        Task<List<ServiceRequestListItem>> GetAllAsync();
+        Task<ServiceRequestDetails?> GetByIdAsync(Guid id);
+        Task<ServiceRequestDetails> CreateAsync(ServiceRequestCreateRequest dto);
+        Task<ServiceRequestDetails> ResolveAsync(Guid id, ServiceRequestResolveRequest dto);
     }
 }

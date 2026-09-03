@@ -1,13 +1,13 @@
-﻿using IT_asserts_Claim.Dtos.PurchaseItem;
+﻿using ITAssetManagement.Dtos.PurchaseItem;
 
-namespace IT_asserts_Claim.Services.Interface
+namespace ITAssetManagement.Services.Interface
 {
     public interface IPurchasedItemService
     {
-        Task<List<PurchasedItemDto>> GetAllByPurchaseIdAsync(Guid purchaseId);
-        Task<PurchasedItemDto?> GetByIdAsync(Guid itemId);
-        Task<PurchasedItemDto> CreateAsync(Guid purchaseId, CreatePurchasedItemDto dto);
-        Task<PurchasedItemDto?> UpdateAsync(Guid itemId, UpdatePurchasedItemDto dto);
+        Task<List<PurchasedItemDetails>> GetAllByPurchaseIdAsync(Guid purchaseId);
+        Task<PurchasedItemDetails?> GetByIdAsync(Guid itemId);
+        Task<PurchasedItemDetails> CreateAsync(Guid purchaseId, PurchasedItemCreateRequest dto);
+        Task<PurchasedItemDetails?> UpdateAsync(Guid itemId, PurchasedItemUpdateRequest dto);
         Task<bool> DeleteAsync(Guid itemId);
     }
 }

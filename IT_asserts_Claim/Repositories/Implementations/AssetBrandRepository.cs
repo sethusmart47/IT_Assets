@@ -1,9 +1,9 @@
-﻿using IT_asserts_Claim.Data;
-using IT_asserts_Claim.entity;
-using IT_asserts_Claim.Repositories.Interface;
+﻿using ITAssetManagement.Data;
+using ITAssetManagement.Domain.Entities;
+using ITAssetManagement.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
 
-namespace IT_asserts_Claim.Repositories.Implementations
+namespace ITAssetManagement.Repositories.Implementations
 {
     public class AssetBrandRepository: IAssetBrandRepository
     {
@@ -14,7 +14,7 @@ namespace IT_asserts_Claim.Repositories.Implementations
             _context = dbContext;
         }
 
-        public async Task<List<AssetBrand>> GetAllAsync()
+        public async Task<List<AssetBrand>> GetAllAssetBrandsAsync()
         {
             return await _context.AssetBrands
                 .Include(x => x.AssetCategory)
@@ -23,7 +23,7 @@ namespace IT_asserts_Claim.Repositories.Implementations
                 .ToListAsync();
         }
 
-        public async Task<AssetBrand?> GetByIdAsync(Guid id)
+        public async Task<AssetBrand?> GetAssetBrandByIdAsync(Guid id)
         {
             return await _context.AssetBrands
                 .Include(x => x.AssetCategory)
@@ -48,16 +48,25 @@ namespace IT_asserts_Claim.Repositories.Implementations
                     && (!excludeId.HasValue || x.Id != excludeId.Value));
         }
 
-        public async Task AddAsync(AssetBrand entity)
+        public async Task AddAssetBrandAsync(AssetBrand entity)
         {
             await _context.AssetBrands.AddAsync(entity);
         }
 
-        public void Update(AssetBrand entity)
+        public void UpdateAssetBrand(AssetBrand entity)
         {
             _context.AssetBrands.Update(entity);
         }
 
+        // Generic wrapper for backward compatibility
+        public async Task<List<AssetBrand>> GetAllAsync()
+            => await GetAllAssetBrandsAsync();
+        public async Task<AssetBrand?> GetByIdAsync(Guid id)
+            => await GetAssetBrandByIdAsync(id);
+        public async Task AddAsync(AssetBrand entity)
+            => await AddAssetBrandAsync(entity);
+        public void Update(AssetBrand entity)
+            => UpdateAssetBrand(entity);
         public async Task<int> SaveChangesAsync()
         {
             return await _context.SaveChangesAsync();

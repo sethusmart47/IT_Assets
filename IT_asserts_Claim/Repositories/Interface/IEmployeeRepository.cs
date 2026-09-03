@@ -1,10 +1,10 @@
-﻿using IT_asserts_Claim.Models;
+﻿using ITAssetManagement.Domain.Entities;
 
-namespace IT_asserts.Repositories.Interface
+namespace ITAssetManagement.Repositories.Interface
 {
     public interface IEmployeeRepository
     {
-        Task<List<Employee>> GetAllAsync();
-        Task<Employee?> GetByIdAsync(Guid id);
+        Task<List<Employee>> GetAllEmployeesAsync();
+        Task<Employee?> GetEmployeeByIdAsync(Guid id);
     }
 }

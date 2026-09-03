@@ -1,14 +1,14 @@
-﻿using IT_asserts_Claim.Dtos.Asset_Brand;
+﻿using ITAssetManagement.Dtos.Asset_Brand;
 
-namespace IT_asserts_Claim.Services.Interface
+namespace ITAssetManagement.Services.Interface
 {
     public interface IAssetBrandService
     {
-        Task<List<AssetBrandDto>> GetAllAsync();
-        Task<AssetBrandDto?> GetByIdAsync(Guid id);
-        Task<List<AssetBrandDto>> GetByCategoryIdAsync(Guid categoryId);
-        Task<AssetBrandDto> CreateAsync(CreateAssetBrandDto dto);
-        Task<AssetBrandDto?> UpdateAsync(Guid id, UpdateAssetBrandDto dto);
+        Task<List<AssetBrandDetails>> GetAllAsync();
+        Task<AssetBrandDetails?> GetByIdAsync(Guid id);
+        Task<List<AssetBrandDetails>> GetByCategoryIdAsync(Guid categoryId);
+        Task<AssetBrandDetails> CreateAsync(AssetBrandCreateRequest dto);
+        Task<AssetBrandDetails?> UpdateAsync(Guid id, AssetBrandUpdateRequest dto);
         Task<bool> DeleteAsync(Guid id);
     }
 }

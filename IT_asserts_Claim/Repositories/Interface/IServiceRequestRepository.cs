@@ -1,12 +1,17 @@
-﻿using IT_asserts.entity;
+﻿using ITAssetManagement.Domain.Entities;
 
-namespace IT_asserts.Repositories.Interface
+namespace ITAssetManagement.Repositories.Interface
 {
     public interface IServiceRequestRepository
     {
+        Task<List<ServiceRequest>> GetAllServiceRequestsAsync();
+        Task<ServiceRequest?> GetServiceRequestByIdWithAssetAsync(Guid id);
+        Task AddServiceRequestAsync(ServiceRequest serviceRequest);
+        Task<int> SaveChangesAsync();
+
+        // Generic wrappers for backward compatibility
         Task<List<ServiceRequest>> GetAllAsync();
-        Task<ServiceRequest?> GetByIdWithAssetAsync(Guid id);
+        Task<ServiceRequest?> GetByIdAsync(Guid id);
         Task AddAsync(ServiceRequest serviceRequest);
-        Task SaveChangesAsync();
     }
 }

@@ -1,47 +1,48 @@
 ﻿using AutoMapper;
-using IT_asserts.Dtos.Employee;
-using IT_asserts.Repositories.Interface;
-using IT_asserts.Services.Interface;
+using ITAssetManagement.Domain.Entities;
+using ITAssetManagement.Dtos.Employee;
+using ITAssetManagement.Repositories.Interface;
+using ITAssetManagement.Services.Interface;
 
-namespace IT_asserts.Services.Implementations
+namespace ITAssetManagement.Services.Implementations
 {
-    public class EmployeeService:IEmployeeService
+    public class EmployeeService : IEmployeeService
     {
         private readonly IEmployeeRepository _employeeRepository;
         private readonly IAssetAssignmentRepository _assignmentRepository;
         private readonly IMapper _mapper;
 
         public EmployeeService(
-           IEmployeeRepository employeeRepository,
-           IAssetAssignmentRepository assignmentRepository,
-           IMapper mapper)
+            IEmployeeRepository employeeRepository,
+            IAssetAssignmentRepository assignmentRepository,
+            IMapper mapper)
         {
             _employeeRepository = employeeRepository;
             _assignmentRepository = assignmentRepository;
             _mapper = mapper;
         }
-        public async Task<List<EmployeeDto>> GetAllEmployeesAsync()
+
+        public async Task<List<EmployeeDetails>> GetAllEmployeesAsync()
         {
-            var employees = await _employeeRepository.GetAllAsync();
-            var employeeDtos = _mapper.Map<List<EmployeeDto>>(employees);
+            var employees = await _employeeRepository.GetAllEmployeesAsync();
+            var employeeDtos = _mapper.Map<List<EmployeeDetails>>(employees);
 
             foreach (var dto in employeeDtos)
             {
-                dto.ActiveAssetCount = await _assignmentRepository.GetActiveCountByEmployeeIdAsync(dto.Id);
+                dto.ActiveAssetCount = await _assignmentRepository.GetActiveAssetAssignmentCountByEmployeeIdAsync(dto.Id);
             }
 
             return employeeDtos;
         }
 
-        public async Task<EmployeeDto?> GetEmployeeDetailAsync(Guid id)
+        public async Task<EmployeeDetails?> GetEmployeeDetailAsync(Guid id)
         {
-            var employee = await _employeeRepository.GetByIdAsync(id);
+            var employee = await _employeeRepository.GetEmployeeByIdAsync(id);
             if (employee == null) return null;
 
-            var detail = _mapper.Map<EmployeeDto>(employee);
-
-            return detail;
+            var dto = _mapper.Map<EmployeeDetails>(employee);
+            dto.ActiveAssetCount = await _assignmentRepository.GetActiveAssetAssignmentCountByEmployeeIdAsync(id);
+            return dto;
         }
-
     }
 }

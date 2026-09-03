@@ -1,10 +1,7 @@
-﻿using IT_asserts.entity;
-using IT_asserts_Claim.entity;
-using IT_asserts_Claim.Models;
+﻿using ITAssetManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
 
-namespace IT_asserts_Claim.Data
+namespace ITAssetManagement.Data
 {
     public class AppDbContext : DbContext
     {
@@ -34,8 +31,8 @@ namespace IT_asserts_Claim.Data
             modelBuilder.Entity<AssetCategory>(entity =>
             {
                 entity.HasIndex(x => x.CategoryName)
-                      .IsUnique();
-
+                      .IsUnique()
+                       .HasFilter("[IsDeleted] = 0");
                 entity.HasQueryFilter(x => !x.IsDeleted);
             });
 
@@ -46,7 +43,7 @@ namespace IT_asserts_Claim.Data
                 {
                     x.AssetCategoryId,
                     x.BrandName
-                }).IsUnique();
+                }).IsUnique().HasFilter("[IsDeleted] = 0");
 
                 entity.HasOne(x => x.AssetCategory)
                       .WithMany(x => x.Brands)
@@ -63,7 +60,7 @@ namespace IT_asserts_Claim.Data
                 {
                     x.AssetBrandId,
                     x.ModelName
-                }).IsUnique();
+                }).IsUnique().HasFilter("[IsDeleted] = 0");
 
                 // Model -> Category
                 entity.HasOne(x => x.AssetCategory)

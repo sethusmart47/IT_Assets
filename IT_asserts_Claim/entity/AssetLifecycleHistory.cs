@@ -1,9 +1,9 @@
-﻿using Claim_Form.Entities;
-using IT_asserts_Claim.Enum;
+﻿using ITAssetManagement.Domain.Entities;
+using ITAssetManagement.Domain.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace IT_asserts_Claim.entity
+namespace ITAssetManagement.Domain.Entities
 {
     public class AssetLifecycleHistory : AuditInfo
     {

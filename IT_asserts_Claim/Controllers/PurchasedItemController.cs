@@ -1,9 +1,9 @@
-﻿using IT_asserts_Claim.Dtos.PurchaseItem;
-using IT_asserts_Claim.Services.Interface;
+﻿using ITAssetManagement.Dtos.PurchaseItem;
+using ITAssetManagement.Services.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IT_asserts_Claim.Controllers
+namespace ITAssetManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -57,7 +57,7 @@ namespace IT_asserts_Claim.Controllers
             /// Add new item to purchase.
             /// </summary>
             [HttpPost("{purchaseId}")]
-            public async Task<IActionResult> Create(Guid purchaseId, [FromBody] CreatePurchasedItemDto dto)
+            public async Task<IActionResult> Create(Guid purchaseId, [FromBody] PurchasedItemCreateRequest dto)
             {
                 try
                 {
@@ -81,7 +81,7 @@ namespace IT_asserts_Claim.Controllers
             /// Update existing item.
             /// </summary>
             [HttpPut("{itemId}")]
-            public async Task<IActionResult> Update(Guid itemId, [FromBody] UpdatePurchasedItemDto dto)
+            public async Task<IActionResult> Update(Guid itemId, [FromBody] PurchasedItemUpdateRequest dto)
             {
                 try
                 {

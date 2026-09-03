@@ -1,9 +1,9 @@
-﻿using IT_asserts.Dtos.Asset;
-using IT_asserts.Services.Interface;
+﻿using ITAssetManagement.Dtos.Asset;
+using ITAssetManagement.Services.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IT_asserts.Controllers
+namespace ITAssetManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -50,7 +50,7 @@ namespace IT_asserts.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] CreateAssetDto dto)
+        public async Task<IActionResult> Register([FromBody] AssetCreateRequest dto)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace IT_asserts.Controllers
         }
 
         [HttpPost("bulk-register")]
-        public async Task<IActionResult> BulkRegister([FromBody] BulkCreateAssetDto dto)
+        public async Task<IActionResult> BulkRegister([FromBody] AssetBulkCreateRequest dto)
         {
             try
             {
@@ -86,7 +86,7 @@ namespace IT_asserts.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] UpdateAssetDto dto)
+        public async Task<IActionResult> Update(Guid id, [FromBody] AssetUpdateRequest dto)
         {
             try
             {
@@ -116,7 +116,7 @@ namespace IT_asserts.Controllers
         }
 
         [HttpPost("validate-serials")]
-        public async Task<IActionResult> ValidateSerialNumbers([FromBody] ValidateSerialNumbersDto dto)
+        public async Task<IActionResult> ValidateSerialNumbers([FromBody] AssetValidateSerialNumbersRequest dto)
         {
             try
             {

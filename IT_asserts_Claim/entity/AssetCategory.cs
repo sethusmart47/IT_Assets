@@ -1,6 +1,6 @@
-﻿using Claim_Form.Entities;
+﻿using ITAssetManagement.Domain.Entities;
 
-namespace IT_asserts_Claim.entity
+namespace ITAssetManagement.Domain.Entities
 {
     public class AssetCategory: AuditInfo
     {

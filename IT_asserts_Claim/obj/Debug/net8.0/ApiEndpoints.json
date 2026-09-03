@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetController",
     "Method": "GetAll",
     "RelativePath": "api/Asset",
     "HttpMethod": "GET",
@@ -31,7 +31,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetController",
     "Method": "GetById",
     "RelativePath": "api/Asset/{id}",
     "HttpMethod": "GET",
@@ -47,7 +47,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetController",
     "Method": "Update",
     "RelativePath": "api/Asset/{id}",
     "HttpMethod": "PUT",
@@ -61,14 +61,14 @@
       },
       {
         "Name": "dto",
-        "Type": "IT_asserts.Dtos.Asset.UpdateAssetDto",
+        "Type": "ITAssetManagement.Dtos.Asset.AssetUpdateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetController",
     "Method": "Delete",
     "RelativePath": "api/Asset/{id}",
     "HttpMethod": "DELETE",
@@ -84,7 +84,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetController",
     "Method": "GetAvailableItems",
     "RelativePath": "api/Asset/available-items/{purchaseId}",
     "HttpMethod": "GET",
@@ -100,7 +100,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetController",
     "Method": "GetAvailablePurchases",
     "RelativePath": "api/Asset/available-purchases",
     "HttpMethod": "GET",
@@ -110,7 +110,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetController",
     "Method": "SearchAvailableAsset",
     "RelativePath": "api/Asset/available/search",
     "HttpMethod": "GET",
@@ -131,7 +131,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetController",
     "Method": "BulkRegister",
     "RelativePath": "api/Asset/bulk-register",
     "HttpMethod": "POST",
@@ -140,14 +140,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "IT_asserts.Dtos.Asset.BulkCreateAssetDto",
+        "Type": "ITAssetManagement.Dtos.Asset.AssetBulkCreateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetController",
     "Method": "Register",
     "RelativePath": "api/Asset/register",
     "HttpMethod": "POST",
@@ -156,14 +156,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "IT_asserts.Dtos.Asset.CreateAssetDto",
+        "Type": "ITAssetManagement.Dtos.Asset.AssetCreateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetController",
     "Method": "GetRegistrationSummary",
     "RelativePath": "api/Asset/registration-summary/{purchaseId}",
     "HttpMethod": "GET",
@@ -179,7 +179,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetController",
     "Method": "ValidateSerialNumbers",
     "RelativePath": "api/Asset/validate-serials",
     "HttpMethod": "POST",
@@ -188,14 +188,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "IT_asserts.Dtos.Asset.ValidateSerialNumbersDto",
+        "Type": "ITAssetManagement.Dtos.Asset.AssetValidateSerialNumbersRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetAssignmentController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetAssignmentController",
     "Method": "ReturnAsset",
     "RelativePath": "api/AssetAssignment/{assignmentId}/return",
     "HttpMethod": "POST",
@@ -209,14 +209,14 @@
       },
       {
         "Name": "dto",
-        "Type": "IT_asserts.Dtos.AssetAssignment.ReturnAssetDto",
+        "Type": "ITAssetManagement.Dtos.AssetAssignment.ReturnAssetDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetAssignmentController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetAssignmentController",
     "Method": "AssignAsset",
     "RelativePath": "api/AssetAssignment/assign",
     "HttpMethod": "POST",
@@ -225,14 +225,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "IT_asserts.Dtos.AssetAssignment.AssignAssetDto",
+        "Type": "ITAssetManagement.Dtos.AssetAssignment.AssignAssetDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetAssignmentController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetAssignmentController",
     "Method": "GetAssignmentsByEmployee",
     "RelativePath": "api/AssetAssignment/employees/{employeeId}/assignments",
     "HttpMethod": "GET",
@@ -248,7 +248,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.AssetAssignmentController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetAssignmentController",
     "Method": "SurrenderAssets",
     "RelativePath": "api/AssetAssignment/surrender/{employeeId}",
     "HttpMethod": "POST",
@@ -262,14 +262,14 @@
       },
       {
         "Name": "dto",
-        "Type": "IT_asserts.Dtos.AssetAssignment.SurrenderAssetsDto",
+        "Type": "ITAssetManagement.Dtos.AssetAssignment.SurrenderAssetsDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.AssetCascadingController",
+    "ContainingType": "ITAssetManagement.Controllers.AssetCascadingController",
     "Method": "GetCascadingDropdown",
     "RelativePath": "api/AssetCascading",
     "HttpMethod": "GET",
@@ -279,7 +279,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.BrandController",
+    "ContainingType": "ITAssetManagement.Controllers.BrandController",
     "Method": "GetAll",
     "RelativePath": "api/Brand",
     "HttpMethod": "GET",
@@ -289,7 +289,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.BrandController",
+    "ContainingType": "ITAssetManagement.Controllers.BrandController",
     "Method": "Create",
     "RelativePath": "api/Brand",
     "HttpMethod": "POST",
@@ -298,16 +298,69 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.Asset_Brand.CreateAssetBrandDto",
+        "Type": "ITAssetManagement.Dtos.Asset_Brand.AssetBrandCreateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.BrandController",
+    "ContainingType": "ITAssetManagement.Controllers.BrandController",
+    "Method": "GetById",
+    "RelativePath": "api/Brand/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITAssetManagement.Controllers.BrandController",
+    "Method": "Update",
+    "RelativePath": "api/Brand/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ITAssetManagement.Dtos.Asset_Brand.AssetBrandUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITAssetManagement.Controllers.BrandController",
+    "Method": "Delete",
+    "RelativePath": "api/Brand/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITAssetManagement.Controllers.BrandController",
     "Method": "GetByCategoryId",
-    "RelativePath": "api/Brand/{categoryId}",
+    "RelativePath": "api/Brand/by-category/{categoryId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -321,60 +374,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.BrandController",
-    "Method": "GetById",
-    "RelativePath": "api/Brand/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IT_asserts_Claim.Controllers.BrandController",
-    "Method": "Update",
-    "RelativePath": "api/Brand/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.Asset_Brand.UpdateAssetBrandDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IT_asserts_Claim.Controllers.BrandController",
-    "Method": "Delete",
-    "RelativePath": "api/Brand/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IT_asserts_Claim.Controllers.CategoryController",
+    "ContainingType": "ITAssetManagement.Controllers.CategoryController",
     "Method": "GetAll",
     "RelativePath": "api/Category",
     "HttpMethod": "GET",
@@ -384,7 +384,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.CategoryController",
+    "ContainingType": "ITAssetManagement.Controllers.CategoryController",
     "Method": "Create",
     "RelativePath": "api/Category",
     "HttpMethod": "POST",
@@ -393,14 +393,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.Asset_Category.CreateAssetCategoryDto",
+        "Type": "ITAssetManagement.Dtos.Asset_Category.AssetCategoryCreateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.CategoryController",
+    "ContainingType": "ITAssetManagement.Controllers.CategoryController",
     "Method": "GetById",
     "RelativePath": "api/Category/{id}",
     "HttpMethod": "GET",
@@ -416,7 +416,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.CategoryController",
+    "ContainingType": "ITAssetManagement.Controllers.CategoryController",
     "Method": "Update",
     "RelativePath": "api/Category/{id}",
     "HttpMethod": "PUT",
@@ -430,14 +430,14 @@
       },
       {
         "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.Asset_Category.UpdateAssetCategoryDto",
+        "Type": "ITAssetManagement.Dtos.Asset_Category.AssetCategoryUpdateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.CategoryController",
+    "ContainingType": "ITAssetManagement.Controllers.CategoryController",
     "Method": "Delete",
     "RelativePath": "api/Category/{id}",
     "HttpMethod": "DELETE",
@@ -453,8 +453,8 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.EmployeeController",
-    "Method": "GetAllEmployeeAsync",
+    "ContainingType": "ITAssetManagement.Controllers.EmployeesController",
+    "Method": "GetAll",
     "RelativePath": "api/Employee",
     "HttpMethod": "GET",
     "IsController": true,
@@ -463,8 +463,8 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.EmployeeController",
-    "Method": "GetEmployeeDetailAysnc",
+    "ContainingType": "ITAssetManagement.Controllers.EmployeesController",
+    "Method": "GetById",
     "RelativePath": "api/Employee/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -479,7 +479,33 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.ModelController",
+    "ContainingType": "ITAssetManagement.Controllers.EmployeesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Employees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITAssetManagement.Controllers.EmployeesController",
+    "Method": "GetById",
+    "RelativePath": "api/Employees/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITAssetManagement.Controllers.ModelController",
     "Method": "GetAll",
     "RelativePath": "api/Model",
     "HttpMethod": "GET",
@@ -489,7 +515,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.ModelController",
+    "ContainingType": "ITAssetManagement.Controllers.ModelController",
     "Method": "Create",
     "RelativePath": "api/Model",
     "HttpMethod": "POST",
@@ -498,14 +524,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.Asset_Model.CreateAssetModelDto",
+        "Type": "ITAssetManagement.Dtos.Asset_Model.AssetModelCreateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.ModelController",
+    "ContainingType": "ITAssetManagement.Controllers.ModelController",
     "Method": "GetById",
     "RelativePath": "api/Model/{id}",
     "HttpMethod": "GET",
@@ -521,7 +547,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.ModelController",
+    "ContainingType": "ITAssetManagement.Controllers.ModelController",
     "Method": "Update",
     "RelativePath": "api/Model/{id}",
     "HttpMethod": "PUT",
@@ -535,14 +561,14 @@
       },
       {
         "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.Asset_Model.UpdateAssetModelDto",
+        "Type": "ITAssetManagement.Dtos.Asset_Model.AssetModelUpdateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.ModelController",
+    "ContainingType": "ITAssetManagement.Controllers.ModelController",
     "Method": "Delete",
     "RelativePath": "api/Model/{id}",
     "HttpMethod": "DELETE",
@@ -558,7 +584,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseController",
     "Method": "GetAll",
     "RelativePath": "api/Purchase",
     "HttpMethod": "GET",
@@ -574,7 +600,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseController",
     "Method": "Create",
     "RelativePath": "api/Purchase",
     "HttpMethod": "POST",
@@ -583,14 +609,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.Purchase.CreatePurchaseDto",
+        "Type": "ITAssetManagement.Dtos.Purchase.PurchaseCreateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseController",
     "Method": "GetById",
     "RelativePath": "api/Purchase/{id}",
     "HttpMethod": "GET",
@@ -606,7 +632,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseController",
     "Method": "Update",
     "RelativePath": "api/Purchase/{id}",
     "HttpMethod": "PUT",
@@ -620,14 +646,14 @@
       },
       {
         "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.Purchase.UpdatePurchaseDto",
+        "Type": "ITAssetManagement.Dtos.Purchase.PurchaseUpdateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseController",
     "Method": "Delete",
     "RelativePath": "api/Purchase/{id}",
     "HttpMethod": "DELETE",
@@ -643,8 +669,8 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseController",
-    "Method": "Complete",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseController",
+    "Method": "Receive",
     "RelativePath": "api/Purchase/{id}/complete",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -659,7 +685,23 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseController",
+    "Method": "Receive",
+    "RelativePath": "api/Purchase/{id}/receive",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseController",
     "Method": "GetNextNumber",
     "RelativePath": "api/Purchase/next-number",
     "HttpMethod": "GET",
@@ -669,7 +711,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseAttachmentController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseAttachmentController",
     "Method": "GetAll",
     "RelativePath": "api/PurchaseAttachment",
     "HttpMethod": "GET",
@@ -685,7 +727,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseAttachmentController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseAttachmentController",
     "Method": "Download",
     "RelativePath": "api/PurchaseAttachment/{attachmentId}/download",
     "HttpMethod": "GET",
@@ -706,7 +748,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseAttachmentController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseAttachmentController",
     "Method": "Delete",
     "RelativePath": "api/PurchaseAttachment/{id}",
     "HttpMethod": "DELETE",
@@ -722,7 +764,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseAttachmentController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseAttachmentController",
     "Method": "Preview",
     "RelativePath": "api/PurchaseAttachment/{purchaseId}/{attachmentId}/preview",
     "HttpMethod": "GET",
@@ -743,7 +785,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchaseAttachmentController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchaseAttachmentController",
     "Method": "Upload",
     "RelativePath": "api/PurchaseAttachment/{purchaseId}/attachments",
     "HttpMethod": "POST",
@@ -764,7 +806,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchasedItemController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchasedItemController",
     "Method": "GetAll",
     "RelativePath": "api/PurchasedItem",
     "HttpMethod": "GET",
@@ -780,7 +822,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchasedItemController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchasedItemController",
     "Method": "GetById",
     "RelativePath": "api/PurchasedItem/{itemId}",
     "HttpMethod": "GET",
@@ -801,7 +843,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchasedItemController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchasedItemController",
     "Method": "Update",
     "RelativePath": "api/PurchasedItem/{itemId}",
     "HttpMethod": "PUT",
@@ -815,14 +857,14 @@
       },
       {
         "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.PurchaseItem.UpdatePurchasedItemDto",
+        "Type": "ITAssetManagement.Dtos.PurchaseItem.PurchasedItemUpdateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchasedItemController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchasedItemController",
     "Method": "Delete",
     "RelativePath": "api/PurchasedItem/{itemId}",
     "HttpMethod": "DELETE",
@@ -843,7 +885,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.PurchasedItemController",
+    "ContainingType": "ITAssetManagement.Controllers.PurchasedItemController",
     "Method": "Create",
     "RelativePath": "api/PurchasedItem/{purchaseId}",
     "HttpMethod": "POST",
@@ -857,14 +899,14 @@
       },
       {
         "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.PurchaseItem.CreatePurchasedItemDto",
+        "Type": "ITAssetManagement.Dtos.PurchaseItem.PurchasedItemCreateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.ServiceRequestController",
+    "ContainingType": "ITAssetManagement.Controllers.ServiceRequestController",
     "Method": "GetAll",
     "RelativePath": "api/ServiceRequest",
     "HttpMethod": "GET",
@@ -874,7 +916,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.ServiceRequestController",
+    "ContainingType": "ITAssetManagement.Controllers.ServiceRequestController",
     "Method": "Create",
     "RelativePath": "api/ServiceRequest",
     "HttpMethod": "POST",
@@ -883,14 +925,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "IT_asserts.Dtos.Service.CreateServiceRequestDto",
+        "Type": "ITAssetManagement.Dtos.Service.ServiceRequestCreateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.ServiceRequestController",
+    "ContainingType": "ITAssetManagement.Controllers.ServiceRequestController",
     "Method": "GetById",
     "RelativePath": "api/ServiceRequest/{id}",
     "HttpMethod": "GET",
@@ -906,7 +948,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts.Controllers.ServiceRequestController",
+    "ContainingType": "ITAssetManagement.Controllers.ServiceRequestController",
     "Method": "Resolve",
     "RelativePath": "api/ServiceRequest/{id}/resolve",
     "HttpMethod": "PUT",
@@ -920,14 +962,14 @@
       },
       {
         "Name": "dto",
-        "Type": "IT_asserts.Dtos.Service.ResolveServiceRequestDto",
+        "Type": "ITAssetManagement.Dtos.Service.ServiceRequestResolveRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.VendorController",
+    "ContainingType": "ITAssetManagement.Controllers.VendorController",
     "Method": "GetAll",
     "RelativePath": "api/Vendor",
     "HttpMethod": "GET",
@@ -937,7 +979,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.VendorController",
+    "ContainingType": "ITAssetManagement.Controllers.VendorController",
     "Method": "Create",
     "RelativePath": "api/Vendor",
     "HttpMethod": "POST",
@@ -946,14 +988,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.Vendor.CreateVendorDto",
+        "Type": "ITAssetManagement.Dtos.Vendor.VendorCreateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.VendorController",
+    "ContainingType": "ITAssetManagement.Controllers.VendorController",
     "Method": "GetById",
     "RelativePath": "api/Vendor/{id}",
     "HttpMethod": "GET",
@@ -969,7 +1011,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.VendorController",
+    "ContainingType": "ITAssetManagement.Controllers.VendorController",
     "Method": "Update",
     "RelativePath": "api/Vendor/{id}",
     "HttpMethod": "PUT",
@@ -983,14 +1025,14 @@
       },
       {
         "Name": "dto",
-        "Type": "IT_asserts_Claim.Dtos.Vendor.UpdateVendorDto",
+        "Type": "ITAssetManagement.Dtos.Vendor.VendorUpdateRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.VendorController",
+    "ContainingType": "ITAssetManagement.Controllers.VendorController",
     "Method": "Delete",
     "RelativePath": "api/Vendor/{id}",
     "HttpMethod": "DELETE",
@@ -1006,7 +1048,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "IT_asserts_Claim.Controllers.VendorController",
+    "ContainingType": "ITAssetManagement.Controllers.VendorController",
     "Method": "GetDropdown",
     "RelativePath": "api/Vendor/dropdown",
     "HttpMethod": "GET",
@@ -1014,26 +1056,5 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IT_asserts_Claim.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[IT_asserts_Claim.WeatherForecast, IT_asserts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

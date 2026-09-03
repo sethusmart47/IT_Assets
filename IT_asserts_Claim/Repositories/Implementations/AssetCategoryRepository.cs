@@ -1,11 +1,9 @@
-﻿using IT_asserts_Claim.Data;
-using IT_asserts_Claim.entity;
-using IT_asserts_Claim.Repositories.Interface;
+﻿using ITAssetManagement.Data;
+using ITAssetManagement.Domain.Entities;
+using ITAssetManagement.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.IdentityModel.Logging;
 
-namespace IT_asserts_Claim.Repositories.Implementations
+namespace ITAssetManagement.Repositories.Implementations
 {
     public class AssetCategoryRepository: IAssetCategoryRepository
     {
@@ -13,9 +11,8 @@ namespace IT_asserts_Claim.Repositories.Implementations
         public AssetCategoryRepository(AppDbContext context)
         {
             _context = context;
-
         }
-        public async Task<List<AssetCategory>> GetAllAsync()
+        public async Task<List<AssetCategory>> GetAllAssetCategoriesAsync()
         {
             return await _context.AssetCategories
                 .Include(c=>c.Brands)
@@ -25,7 +22,7 @@ namespace IT_asserts_Claim.Repositories.Implementations
                 .ToListAsync();
         }
 
-        public async Task<AssetCategory?> GetByIdAsync(Guid id)
+        public async Task<AssetCategory?> GetAssetCategoryByIdAsync(Guid id)
         {
             return await _context.AssetCategories
                 .FirstOrDefaultAsync(x => x.Id == id);
@@ -38,15 +35,28 @@ namespace IT_asserts_Claim.Repositories.Implementations
                     && (!excludeId.HasValue || x.Id != excludeId.Value));
         }
 
-        public async Task AddAsync(AssetCategory entity)
+        public async Task AddAssetCategoryAsync(AssetCategory entity)
         {
             await _context.AssetCategories.AddAsync(entity);
         }
 
-        public void Update(AssetCategory entity)
+        public void UpdateAssetCategory(AssetCategory entity)
         {
             _context.AssetCategories.Update(entity);
         }
+
+        // Generic wrappers for backward compatibility
+        public async Task<List<AssetCategory>> GetAllAsync()
+            => await GetAllAssetCategoriesAsync();
+
+        public async Task<AssetCategory?> GetByIdAsync(Guid id)
+            => await GetAssetCategoryByIdAsync(id);
+
+        public async Task AddAsync(AssetCategory entity)
+            => await AddAssetCategoryAsync(entity);
+
+        public void Update(AssetCategory entity)
+            => UpdateAssetCategory(entity);
 
         public async Task<int> SaveChangesAsync()
         {

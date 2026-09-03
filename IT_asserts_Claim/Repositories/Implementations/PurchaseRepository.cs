@@ -1,10 +1,10 @@
-﻿using IT_asserts_Claim.Data;
-using IT_asserts_Claim.entity;
-using IT_asserts_Claim.Enum;
-using IT_asserts_Claim.Repositories.Interface;
+﻿using ITAssetManagement.Data;
+using ITAssetManagement.Domain.Entities;
+using ITAssetManagement.Domain.Enums;
+using ITAssetManagement.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
 
-namespace IT_asserts_Claim.Repositories.Implementations
+namespace ITAssetManagement.Repositories.Implementations
 {
     public class PurchaseRepository : IPurchaseRepository
     {
@@ -15,7 +15,7 @@ namespace IT_asserts_Claim.Repositories.Implementations
             _context = context;
         }
 
-        public async Task<List<Purchase>> GetAllAsync(PurchaseStatus? status = null)
+        public async Task<List<Purchase>> GetAllPurchasesAsync(PurchaseStatus? status = null)
         {
             var query = _context.Purchases
                 .Include(p => p.Vendor)
@@ -33,7 +33,7 @@ namespace IT_asserts_Claim.Repositories.Implementations
                 .ToListAsync();
         }
 
-        public async Task<Purchase?> GetByIdAsync(Guid id)
+        public async Task<Purchase?> GetPurchaseByIdAsync(Guid id)
         {
             return await _context.Purchases
                 .Include(p => p.Vendor)
@@ -41,7 +41,7 @@ namespace IT_asserts_Claim.Repositories.Implementations
                 .FirstOrDefaultAsync();
         }
 
-        public async Task<Purchase?> GetByIdWithDetailsAsync(Guid id)
+        public async Task<Purchase?> GetPurchaseByIdWithDetailsAsync(Guid id)
         {
             return await _context.Purchases
                 .Include(p => p.Vendor)
@@ -49,6 +49,24 @@ namespace IT_asserts_Claim.Repositories.Implementations
                 .Include(p => p.Attachments.Where(a => !a.IsDeleted))
                 .Where(p => !p.IsDeleted)
                 .FirstOrDefaultAsync(p => p.Id == id);
+        }
+
+        public async Task<List<Purchase>> GetCompletedWithItemsAsync()
+        {
+            return await _context.Purchases
+                .AsNoTracking()
+                .Include(p => p.Vendor)
+                .Include(p => p.PurchasedItems.Where(i => !i.IsDeleted))
+                .Where(p => !p.IsDeleted && p.Status == PurchaseStatus.Completed)
+                .ToListAsync();
+        }
+
+        public async Task<Purchase?> GetByIdWithItemsAsync(Guid id)
+        {
+            return await _context.Purchases
+                .AsNoTracking()
+                .Include(p => p.PurchasedItems.Where(i => !i.IsDeleted))
+                .FirstOrDefaultAsync(p => p.Id == id && !p.IsDeleted);
         }
 
         public async Task<bool> IsInvoiceNumberExistsAsync(string invoiceNumber, Guid? excludeId = null)
@@ -80,15 +98,31 @@ namespace IT_asserts_Claim.Repositories.Implementations
             return $"{prefix}001";
         }
 
-        public async Task AddAsync(Purchase entity)
+        public async Task AddPurchaseAsync(Purchase entity)
         {
             await _context.Purchases.AddAsync(entity);
         }
 
-        public void Update(Purchase entity)
+        public void UpdatePurchase(Purchase entity)
         {
             _context.Purchases.Update(entity);
         }
+
+        // Generic wrappers for backward compatibility
+        public async Task<List<Purchase>> GetAllAsync(PurchaseStatus? status = null)
+            => await GetAllPurchasesAsync(status);
+
+        public async Task<Purchase?> GetByIdAsync(Guid id)
+            => await GetPurchaseByIdAsync(id);
+
+        public async Task<Purchase?> GetByIdWithDetailsAsync(Guid id)
+            => await GetPurchaseByIdWithDetailsAsync(id);
+
+        public async Task AddAsync(Purchase entity)
+            => await AddPurchaseAsync(entity);
+
+        public void Update(Purchase entity)
+            => UpdatePurchase(entity);
 
         public async Task<int> SaveChangesAsync()
         {

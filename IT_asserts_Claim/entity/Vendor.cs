@@ -1,7 +1,7 @@
-﻿using Claim_Form.Entities;
+﻿using ITAssetManagement.Domain.Entities;
 using System.ComponentModel.DataAnnotations;
 
-namespace IT_asserts_Claim.entity
+namespace ITAssetManagement.Domain.Entities
 {
     public class Vendor:AuditInfo
     {

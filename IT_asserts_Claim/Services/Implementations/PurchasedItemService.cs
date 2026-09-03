@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using IT_asserts_Claim.Dtos.PurchaseItem;
-using IT_asserts_Claim.entity;
-using IT_asserts_Claim.Repositories.Interface;
-using IT_asserts_Claim.Services.Interface;
+using ITAssetManagement.Dtos.PurchaseItem;
+using ITAssetManagement.Domain.Entities;
+using ITAssetManagement.Repositories.Interface;
+using ITAssetManagement.Services.Interface;
 
-namespace IT_asserts_Claim.Services.Implementations
+namespace ITAssetManagement.Services.Implementations
 {
     public class PurchasedItemService : IPurchasedItemService
     {
@@ -25,23 +25,23 @@ namespace IT_asserts_Claim.Services.Implementations
             _logger = logger;
         }
 
-        public async Task<List<PurchasedItemDto>> GetAllByPurchaseIdAsync(Guid purchaseId)
+        public async Task<List<PurchasedItemDetails>> GetAllByPurchaseIdAsync(Guid purchaseId)
         {
             var items = await _itemRepository.GetAllByPurchaseIdAsync(purchaseId);
-            return _mapper.Map<List<PurchasedItemDto>>(items);
+            return _mapper.Map<List<PurchasedItemDetails>>(items);
         }
 
-        public async Task<PurchasedItemDto?> GetByIdAsync(Guid itemId)
+        public async Task<PurchasedItemDetails?> GetByIdAsync(Guid itemId)
         {
-            var item = await _itemRepository.GetByIdAsync(itemId);
+            var item = await _itemRepository.GetPurchasedItemByIdAsync(itemId);
             if (item == null) return null;
-            return _mapper.Map<PurchasedItemDto>(item);
+            return _mapper.Map<PurchasedItemDetails>(item);
         }
 
-        public async Task<PurchasedItemDto> CreateAsync(Guid purchaseId, CreatePurchasedItemDto dto)
+        public async Task<PurchasedItemDetails> CreateAsync(Guid purchaseId, PurchasedItemCreateRequest dto)
         {
             // Validate purchase exists
-            var purchase = await _purchaseRepository.GetByIdAsync(purchaseId);
+            var purchase = await _purchaseRepository.GetPurchaseByIdAsync(purchaseId);
             if (purchase == null)
                 throw new InvalidOperationException("Purchase not found.");
 
@@ -51,7 +51,7 @@ namespace IT_asserts_Claim.Services.Implementations
             item.PurchaseId = purchaseId;
             item.SubTotal = dto.Quantity * dto.UnitPrice;
 
-            await _itemRepository.AddAsync(item);
+            await _itemRepository.AddPurchasedItemAsync(item);
             await _itemRepository.SaveChangesAsync();
 
             // Recalculate purchase total
@@ -60,12 +60,12 @@ namespace IT_asserts_Claim.Services.Implementations
             _logger.LogInformation("Item added: {Category} | {Brand} | {Model} → Purchase {PurchaseId}",
                 dto.Category, dto.Brand, dto.Model, purchaseId);
 
-            return _mapper.Map<PurchasedItemDto>(item);
+            return _mapper.Map<PurchasedItemDetails>(item);
         }
 
-        public async Task<PurchasedItemDto?> UpdateAsync(Guid itemId, UpdatePurchasedItemDto dto)
+        public async Task<PurchasedItemDetails?> UpdateAsync(Guid itemId, PurchasedItemUpdateRequest dto)
         {
-            var item = await _itemRepository.GetByIdAsync(itemId);
+            var item = await _itemRepository.GetPurchasedItemByIdAsync(itemId);
             if (item == null) return null;
 
             // Update fields directly
@@ -86,12 +86,12 @@ namespace IT_asserts_Claim.Services.Implementations
 
             _logger.LogInformation("Item updated: {ItemId}", itemId);
 
-            return _mapper.Map<PurchasedItemDto>(item);
+            return _mapper.Map<PurchasedItemDetails>(item);
         }
 
         public async Task<bool> DeleteAsync(Guid itemId)
         {
-            var item = await _itemRepository.GetByIdAsync(itemId);
+            var item = await _itemRepository.GetPurchasedItemByIdAsync(itemId);
             if (item == null) return false;
 
             var purchaseId = item.PurchaseId;
@@ -113,13 +113,13 @@ namespace IT_asserts_Claim.Services.Implementations
 
         private async Task RecalculatePurchaseTotalAsync(Guid purchaseId)
         {
-            var purchase = await _purchaseRepository.GetByIdAsync(purchaseId);
+            var purchase = await _purchaseRepository.GetPurchaseByIdAsync(purchaseId);
             if (purchase == null) return;
 
             var items = await _itemRepository.GetAllByPurchaseIdAsync(purchaseId);
             purchase.TotalAmount = items.Sum(i => i.SubTotal);
 
-            _purchaseRepository.Update(purchase);
+            _purchaseRepository.UpdatePurchase(purchase);
             await _purchaseRepository.SaveChangesAsync();
         }
     }

@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using IT_asserts_Claim.Dtos.Asset_Model;
-using IT_asserts_Claim.entity;
-using IT_asserts_Claim.Repositories.Interface;
-using IT_asserts_Claim.Services.Interface;
+using ITAssetManagement.Dtos.Asset_Model;
+using ITAssetManagement.Domain.Entities;
+using ITAssetManagement.Repositories.Interface;
+using ITAssetManagement.Services.Interface;
 
-namespace IT_asserts_Claim.Services.Implementations
+namespace ITAssetManagement.Services.Implementations
 {
     public class AssetModelService: IAssetModelService
     {
@@ -28,25 +28,25 @@ namespace IT_asserts_Claim.Services.Implementations
             _logger = logger;
         }
 
-        public async Task<List<AssetModelDto>> GetAllAsync()
+        public async Task<List<AssetModelDetails>> GetAllAsync()
         {
             var entities = await _repository.GetAllAsync();
-            return _mapper.Map<List<AssetModelDto>>(entities);
+            return _mapper.Map<List<AssetModelDetails>>(entities);
         }
 
-        public async Task<AssetModelDto?> GetByIdAsync(Guid id)
+        public async Task<AssetModelDetails?> GetByIdAsync(Guid id)
         {
             var entity = await _repository.GetByIdAsync(id);
-            return entity != null ? _mapper.Map<AssetModelDto>(entity) : null;
+            return entity != null ? _mapper.Map<AssetModelDetails>(entity) : null;
         }
 
-        public async Task<AssetModelDto> CreateAsync(CreateAssetModelDto dto)
+        public async Task<AssetModelDetails> CreateAsync(AssetModelCreateRequest dto)
         {
-            var category = await _categoryRepository.GetByIdAsync(dto.AssetCategoryId);
+            var category = await _categoryRepository.GetAssetCategoryByIdAsync(dto.AssetCategoryId);
             if (category == null)
                 throw new InvalidOperationException("Category does not exist.");
 
-            var brand = await _brandRepository.GetByIdAsync(dto.AssetBrandId);
+            var brand = await _brandRepository.GetAssetBrandByIdAsync(dto.AssetBrandId);
             if (brand == null)
                 throw new InvalidOperationException("Brand does not exist.");
 
@@ -66,19 +66,19 @@ namespace IT_asserts_Claim.Services.Implementations
             _logger.LogInformation("Model created: {Name}", entity.ModelName);
 
             var reloaded = await _repository.GetByIdAsync(entity.Id);
-            return _mapper.Map<AssetModelDto>(reloaded!);
+            return _mapper.Map<AssetModelDetails>(reloaded!);
         }
 
-        public async Task<AssetModelDto?> UpdateAsync(Guid id, UpdateAssetModelDto dto)
+        public async Task<AssetModelDetails?> UpdateAsync(Guid id, AssetModelUpdateRequest dto)
         {
             var entity = await _repository.GetByIdAsync(id);
             if (entity == null) return null;
 
-            var category = await _categoryRepository.GetByIdAsync(dto.AssetCategoryId);
+            var category = await _categoryRepository.GetAssetCategoryByIdAsync(dto.AssetCategoryId);
             if (category == null)
                 throw new InvalidOperationException("Category does not exist.");
 
-            var brand = await _brandRepository.GetByIdAsync(dto.AssetBrandId);
+            var brand = await _brandRepository.GetAssetBrandByIdAsync(dto.AssetBrandId);
             if (brand == null)
                 throw new InvalidOperationException("Brand does not exist.");
 
@@ -100,7 +100,7 @@ namespace IT_asserts_Claim.Services.Implementations
             _logger.LogInformation("Model updated: {Id}", id);
 
             var reloaded = await _repository.GetByIdAsync(id);
-            return _mapper.Map<AssetModelDto>(reloaded!);
+            return _mapper.Map<AssetModelDetails>(reloaded!);
         }
 
         public async Task<bool> DeleteAsync(Guid id)

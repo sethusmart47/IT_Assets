@@ -1,9 +1,9 @@
-﻿using IT_asserts_Claim.Dtos.Asset_Model;
-using IT_asserts_Claim.Services.Interface;
+﻿using ITAssetManagement.Dtos.Asset_Model;
+using ITAssetManagement.Services.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IT_asserts_Claim.Controllers
+namespace ITAssetManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -49,7 +49,7 @@ namespace IT_asserts_Claim.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateAssetModelDto dto)
+        public async Task<IActionResult> Create([FromBody] AssetModelCreateRequest dto)
         {
             if (dto == null)
                 return BadRequest("Request body is required.");
@@ -66,7 +66,7 @@ namespace IT_asserts_Claim.Controllers
         }
 
         [HttpPut("{id:guid}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] UpdateAssetModelDto dto)
+        public async Task<IActionResult> Update(Guid id, [FromBody] AssetModelUpdateRequest dto)
         {
             if (dto == null)
                 return BadRequest("Request body is required.");

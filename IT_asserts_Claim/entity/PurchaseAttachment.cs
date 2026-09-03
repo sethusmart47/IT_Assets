@@ -1,8 +1,8 @@
-﻿using Claim_Form.Entities;
+﻿using ITAssetManagement.Domain.Entities;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace IT_asserts_Claim.entity
+namespace ITAssetManagement.Domain.Entities
 {
     public class PurchaseAttachment:AuditInfo
     {

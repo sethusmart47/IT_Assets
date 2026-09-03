@@ -1,7 +1,7 @@
-﻿using IT_asserts.Dtos.AssetAssignment;
-using IT_asserts.Dtos.Employee;
+﻿using ITAssetManagement.Dtos.AssetAssignment;
+using ITAssetManagement.Dtos.Employee;
 
-namespace IT_asserts.Services.Interface
+namespace ITAssetManagement.Services.Interface
 {
     public interface IAssetAssignmentService
     {

@@ -1,6 +1,6 @@
-﻿using Claim_Form.Entities;
+﻿using ITAssetManagement.Domain.Entities;
 using System.ComponentModel.DataAnnotations;
-namespace IT_asserts_Claim.Models
+namespace ITAssetManagement.Domain.Entities
 {
 
     public class Employee : AuditInfo

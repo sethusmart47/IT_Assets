@@ -1,4 +1,4 @@
-﻿namespace IT_asserts_Claim.Enum
+﻿namespace ITAssetManagement.Domain.Enums
 {
     public enum  PurchaseStatus
     {

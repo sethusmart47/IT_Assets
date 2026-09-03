@@ -1,4 +1,4 @@
-﻿namespace Claim_Form.Entities
+﻿namespace ITAssetManagement.Domain.Entities
 {
     public abstract class AuditInfo
     {

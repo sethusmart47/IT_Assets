@@ -1,14 +1,14 @@
-﻿using IT_asserts_Claim.Dtos.Vendor;
+﻿using ITAssetManagement.Dtos.Vendor;
 
-namespace IT_asserts_Claim.Services.Interface
+namespace ITAssetManagement.Services.Interface
 {
     public interface IVendorService
     {
-        Task<List<VendorDto>> GetAllAsync();
-        Task<VendorDto?> GetByIdAsync(Guid id);
-        Task<List<VendorDropdownDto>> GetDropdownAsync();
-        Task<VendorDto> CreateAsync(CreateVendorDto dto);
-        Task<VendorDto?> UpdateAsync(Guid id, UpdateVendorDto dto);
+        Task<List<VendorDetails>> GetAllAsync();
+        Task<VendorDetails?> GetByIdAsync(Guid id);
+        Task<List<VendorDropdownItem>> GetDropdownAsync();
+        Task<VendorDetails> CreateAsync(VendorCreateRequest dto);
+        Task<VendorDetails?> UpdateAsync(Guid id, VendorUpdateRequest dto);
         Task<bool> DeleteAsync(Guid id);
     }
 }

@@ -1,9 +1,9 @@
-﻿using IT_asserts_Claim.Data;
-using IT_asserts_Claim.entity;
-using IT_asserts_Claim.Repositories.Interface;
+﻿using ITAssetManagement.Data;
+using ITAssetManagement.Domain.Entities;
+using ITAssetManagement.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
 
-namespace IT_asserts_Claim.Repositories.Implementations
+namespace ITAssetManagement.Repositories.Implementations
 {
     public class PurchasedItemRepository : IPurchasedItemRepository
     {
@@ -23,23 +23,30 @@ namespace IT_asserts_Claim.Repositories.Implementations
                 .ToListAsync();
         }
 
-        public async Task<PurchasedItem?> GetByIdAsync(Guid itemId)
+        public async Task<PurchasedItem?> GetPurchasedItemByIdAsync(Guid itemId)
         {
             return await _context.PurchasedItems
                 .Where(i => !i.IsDeleted && i.Id == itemId)
                 .FirstOrDefaultAsync();
         }
 
-        public async Task AddAsync(PurchasedItem entity)
+        public async Task AddPurchasedItemAsync(PurchasedItem entity)
         {
             await _context.PurchasedItems.AddAsync(entity);
         }
 
-        public void Update(PurchasedItem entity)
+        public void UpdatePurchasedItem(PurchasedItem entity)
         {
             _context.PurchasedItems.Update(entity);
         }
 
+        // Generic wrapper for backward compatibility
+        public async Task<PurchasedItem?> GetByIdAsync(Guid itemId)
+            => await GetPurchasedItemByIdAsync(itemId);
+        public async Task AddAsync(PurchasedItem entity)
+            => await AddPurchasedItemAsync(entity);
+        public void Update(PurchasedItem entity)
+            => UpdatePurchasedItem(entity);
         public async Task<int> SaveChangesAsync()
         {
             return await _context.SaveChangesAsync();

@@ -1,8 +1,8 @@
-﻿using IT_asserts_Claim.Services.Interface;
+﻿using ITAssetManagement.Services.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IT_asserts_Claim.Controllers
+namespace ITAssetManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

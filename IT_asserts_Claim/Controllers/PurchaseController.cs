@@ -1,10 +1,9 @@
-﻿using IT_asserts_Claim.Dtos.Purchase;
-using IT_asserts_Claim.Enum;
-using IT_asserts_Claim.Services.Interface;
-using Microsoft.AspNetCore.Http;
+using ITAssetManagement.Dtos.Purchase;
+using ITAssetManagement.Domain.Enums;
+using ITAssetManagement.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IT_asserts_Claim.Controllers
+namespace ITAssetManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -17,148 +16,93 @@ namespace IT_asserts_Claim.Controllers
             _purchaseService = purchaseService;
         }
 
-        /// <summary>
-        /// Get all purchases. Optional filter by status (Draft/Completed).
-        /// </summary>
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] PurchaseStatus? status = null)
         {
-            try
-            {
-                var result = await _purchaseService.GetAllAsync(status);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var result = await _purchaseService.GetAllPurchasesAsync(status);
+            return Ok(result);
         }
 
-        /// <summary>
-        /// Get purchase by Id with items and attachments.
-        /// </summary>
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> GetById(Guid id)
         {
-            try
-            {
-                var result = await _purchaseService.GetByIdAsync(id);
-                if (result == null)
-                    return NotFound("Purchase not found.");
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var result = await _purchaseService.GetPurchaseDetailsAsync(id);
+            if (result == null)
+                return NotFound(new { message = "Purchase not found." });
+            return Ok(result);
         }
 
-        /// <summary>
-        /// Get next auto-generated purchase number (PO-YYYYMMDD-NNN).
-        /// </summary>
         [HttpGet("next-number")]
         public async Task<IActionResult> GetNextNumber()
         {
-            try
-            {
-                var result = await _purchaseService.GetNextPurchaseNumberAsync();
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var result = await _purchaseService.GetNextPurchaseNumberAsync();
+            return Ok(result);
         }
 
-        /// <summary>
-        /// Create new purchase (saved as Draft).
-        /// </summary>
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreatePurchaseDto dto)
+        public async Task<IActionResult> Create([FromBody] PurchaseCreateRequest dto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             try
             {
-                if (!ModelState.IsValid)
-                    return BadRequest(ModelState);
-
-                var result = await _purchaseService.CreateAsync(dto);
-                return Ok(result);
+                var result = await _purchaseService.CreatePurchaseAsync(dto);
+                return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
             }
             catch (InvalidOperationException ex)
             {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
+                return Conflict(new { message = ex.Message });
             }
         }
 
-        /// <summary>
-        /// Update purchase header information.
-        /// </summary>
         [HttpPut("{id:guid}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] UpdatePurchaseDto dto)
+        public async Task<IActionResult> Update(Guid id, [FromBody] PurchaseUpdateRequest dto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             try
             {
-                if (!ModelState.IsValid)
-                    return BadRequest(ModelState);
-
-                var result = await _purchaseService.UpdateAsync(id, dto);
+                var result = await _purchaseService.UpdatePurchaseAsync(id, dto);
                 if (result == null)
-                    return NotFound("Purchase not found.");
+                    return NotFound(new { message = "Purchase not found." });
                 return Ok(result);
             }
             catch (InvalidOperationException ex)
             {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
+                return BadRequest(new { message = ex.Message });
             }
         }
 
-        /// <summary>
-        /// Mark purchase as Completed (validates items exist).
-        /// </summary>
+        [HttpPut("{id:guid}/receive")]
         [HttpPut("{id:guid}/complete")]
-        public async Task<IActionResult> Complete(Guid id)
+        public async Task<IActionResult> Receive(Guid id)
         {
             try
             {
-                var result = await _purchaseService.CompletePurchaseAsync(id);
+                var result = await _purchaseService.ReceivePurchaseAsync(id);
                 if (!result)
-                    return NotFound("Purchase not found.");
-                return Ok("Purchase completed successfully.");
+                    return NotFound(new { message = "Purchase not found." });
+                return Ok(new { message = "Purchase received successfully." });
             }
             catch (InvalidOperationException ex)
             {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
+                return BadRequest(new { message = ex.Message });
             }
         }
 
-        /// <summary>
-        /// Soft delete purchase (cascades to items and attachments).
-        /// </summary>
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             try
             {
-                var result = await _purchaseService.DeleteAsync(id);
+                var result = await _purchaseService.DeletePurchaseAsync(id);
                 if (!result)
-                    return NotFound("Purchase not found.");
-                return Ok("Purchase deleted successfully.");
+                    return NotFound(new { message = "Purchase not found." });
+                return Ok(new { message = "Purchase deleted successfully." });
             }
-            catch (Exception ex)
+            catch (InvalidOperationException ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(new { message = ex.Message });
             }
         }
     }

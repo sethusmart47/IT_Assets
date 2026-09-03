@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using IT_asserts_Claim.Dtos.Asset_Brand;
-using IT_asserts_Claim.entity;
-using IT_asserts_Claim.Repositories.Interface;
-using IT_asserts_Claim.Services.Interface;
+using ITAssetManagement.Dtos.Asset_Brand;
+using ITAssetManagement.Domain.Entities;
+using ITAssetManagement.Repositories.Interface;
+using ITAssetManagement.Services.Interface;
 
-namespace IT_asserts_Claim.Services.Implementations
+namespace ITAssetManagement.Services.Implementations
 {
     public class AssetBrandService: IAssetBrandService
     {
@@ -25,27 +25,27 @@ namespace IT_asserts_Claim.Services.Implementations
             _logger = logger;
         }
 
-        public async Task<List<AssetBrandDto>> GetAllAsync()
+        public async Task<List<AssetBrandDetails>> GetAllAsync()
         {
             var entities = await _repository.GetAllAsync();
-            return _mapper.Map<List<AssetBrandDto>>(entities);
+            return _mapper.Map<List<AssetBrandDetails>>(entities);
         }
 
-        public async Task<AssetBrandDto?> GetByIdAsync(Guid id)
+        public async Task<AssetBrandDetails?> GetByIdAsync(Guid id)
         {
             var entity = await _repository.GetByIdAsync(id);
-            return entity != null ? _mapper.Map<AssetBrandDto>(entity) : null;
+            return entity != null ? _mapper.Map<AssetBrandDetails>(entity) : null;
         }
 
-        public async Task<List<AssetBrandDto>> GetByCategoryIdAsync(Guid categoryId)
+        public async Task<List<AssetBrandDetails>> GetByCategoryIdAsync(Guid categoryId)
         {
             var entities = await _repository.GetByCategoryIdAsync(categoryId);
-            return _mapper.Map<List<AssetBrandDto>>(entities);
+            return _mapper.Map<List<AssetBrandDetails>>(entities);
         }
 
-        public async Task<AssetBrandDto> CreateAsync(CreateAssetBrandDto dto)
+        public async Task<AssetBrandDetails> CreateAsync(AssetBrandCreateRequest dto)
         {
-            var category = await _categoryRepository.GetByIdAsync(dto.AssetCategoryId);
+            var category = await _categoryRepository.GetAssetCategoryByIdAsync(dto.AssetCategoryId);
             if (category == null)
                 throw new InvalidOperationException("Category does not exist.");
 
@@ -68,15 +68,15 @@ namespace IT_asserts_Claim.Services.Implementations
             _logger.LogInformation("Brand created: {Name}", entity.BrandName);
 
             var reloaded = await _repository.GetByIdAsync(entity.Id);
-            return _mapper.Map<AssetBrandDto>(reloaded!);
+            return _mapper.Map<AssetBrandDetails>(reloaded!);
         }
 
-        public async Task<AssetBrandDto?> UpdateAsync(Guid id, UpdateAssetBrandDto dto)
+        public async Task<AssetBrandDetails?> UpdateAsync(Guid id, AssetBrandUpdateRequest dto)
         {
             var entity = await _repository.GetByIdAsync(id);
             if (entity == null) return null;
 
-            var category = await _categoryRepository.GetByIdAsync(dto.AssetCategoryId);
+            var category = await _categoryRepository.GetAssetCategoryByIdAsync(dto.AssetCategoryId);
             if (category == null)
                 throw new InvalidOperationException("Category does not exist.");
 
@@ -94,7 +94,7 @@ namespace IT_asserts_Claim.Services.Implementations
             _logger.LogInformation("Brand updated: {Id}", id);
 
             var reloaded = await _repository.GetByIdAsync(id);
-            return _mapper.Map<AssetBrandDto>(reloaded!);
+            return _mapper.Map<AssetBrandDetails>(reloaded!);
         }
 
         public async Task<bool> DeleteAsync(Guid id)

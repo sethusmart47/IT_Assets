@@ -88,17 +88,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetDto"
+                "$ref": "#/components/schemas/AssetUpdateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetDto"
+                "$ref": "#/components/schemas/AssetUpdateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetDto"
+                "$ref": "#/components/schemas/AssetUpdateRequest"
               }
             }
           }
@@ -140,17 +140,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetDto"
+                "$ref": "#/components/schemas/AssetCreateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetDto"
+                "$ref": "#/components/schemas/AssetCreateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetDto"
+                "$ref": "#/components/schemas/AssetCreateRequest"
               }
             }
           }
@@ -171,17 +171,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/BulkCreateAssetDto"
+                "$ref": "#/components/schemas/AssetBulkCreateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/BulkCreateAssetDto"
+                "$ref": "#/components/schemas/AssetBulkCreateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/BulkCreateAssetDto"
+                "$ref": "#/components/schemas/AssetBulkCreateRequest"
               }
             }
           }
@@ -202,17 +202,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ValidateSerialNumbersDto"
+                "$ref": "#/components/schemas/AssetValidateSerialNumbersRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ValidateSerialNumbersDto"
+                "$ref": "#/components/schemas/AssetValidateSerialNumbersRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ValidateSerialNumbersDto"
+                "$ref": "#/components/schemas/AssetValidateSerialNumbersRequest"
               }
             }
           }
@@ -479,17 +479,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetBrandDto"
+                "$ref": "#/components/schemas/AssetBrandCreateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetBrandDto"
+                "$ref": "#/components/schemas/AssetBrandCreateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetBrandDto"
+                "$ref": "#/components/schemas/AssetBrandCreateRequest"
               }
             }
           }
@@ -542,17 +542,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetBrandDto"
+                "$ref": "#/components/schemas/AssetBrandUpdateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetBrandDto"
+                "$ref": "#/components/schemas/AssetBrandUpdateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetBrandDto"
+                "$ref": "#/components/schemas/AssetBrandUpdateRequest"
               }
             }
           }
@@ -585,7 +585,7 @@
         }
       }
     },
-    "/api/Brand/{categoryId}": {
+    "/api/Brand/by-category/{categoryId}": {
       "get": {
         "tags": [
           "Brand"
@@ -627,17 +627,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetCategoryDto"
+                "$ref": "#/components/schemas/AssetCategoryCreateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetCategoryDto"
+                "$ref": "#/components/schemas/AssetCategoryCreateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetCategoryDto"
+                "$ref": "#/components/schemas/AssetCategoryCreateRequest"
               }
             }
           }
@@ -690,17 +690,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetCategoryDto"
+                "$ref": "#/components/schemas/AssetCategoryUpdateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetCategoryDto"
+                "$ref": "#/components/schemas/AssetCategoryUpdateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetCategoryDto"
+                "$ref": "#/components/schemas/AssetCategoryUpdateRequest"
               }
             }
           }
@@ -733,10 +733,45 @@
         }
       }
     },
+    "/api/Employees": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Employee": {
       "get": {
         "tags": [
-          "Employee"
+          "Employees"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Employees/{id}": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -748,7 +783,7 @@
     "/api/Employee/{id}": {
       "get": {
         "tags": [
-          "Employee"
+          "Employees"
         ],
         "parameters": [
           {
@@ -787,17 +822,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetModelDto"
+                "$ref": "#/components/schemas/AssetModelCreateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetModelDto"
+                "$ref": "#/components/schemas/AssetModelCreateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssetModelDto"
+                "$ref": "#/components/schemas/AssetModelCreateRequest"
               }
             }
           }
@@ -850,17 +885,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetModelDto"
+                "$ref": "#/components/schemas/AssetModelUpdateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetModelDto"
+                "$ref": "#/components/schemas/AssetModelUpdateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateAssetModelDto"
+                "$ref": "#/components/schemas/AssetModelUpdateRequest"
               }
             }
           }
@@ -921,17 +956,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreatePurchaseDto"
+                "$ref": "#/components/schemas/PurchaseCreateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreatePurchaseDto"
+                "$ref": "#/components/schemas/PurchaseCreateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreatePurchaseDto"
+                "$ref": "#/components/schemas/PurchaseCreateRequest"
               }
             }
           }
@@ -984,17 +1019,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdatePurchaseDto"
+                "$ref": "#/components/schemas/PurchaseUpdateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdatePurchaseDto"
+                "$ref": "#/components/schemas/PurchaseUpdateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdatePurchaseDto"
+                "$ref": "#/components/schemas/PurchaseUpdateRequest"
               }
             }
           }
@@ -1031,6 +1066,29 @@
       "get": {
         "tags": [
           "Purchase"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Purchase/{id}/receive": {
+      "put": {
+        "tags": [
+          "Purchase"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -1287,17 +1345,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdatePurchasedItemDto"
+                "$ref": "#/components/schemas/PurchasedItemUpdateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdatePurchasedItemDto"
+                "$ref": "#/components/schemas/PurchasedItemUpdateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdatePurchasedItemDto"
+                "$ref": "#/components/schemas/PurchasedItemUpdateRequest"
               }
             }
           }
@@ -1358,17 +1416,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreatePurchasedItemDto"
+                "$ref": "#/components/schemas/PurchasedItemCreateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreatePurchasedItemDto"
+                "$ref": "#/components/schemas/PurchasedItemCreateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreatePurchasedItemDto"
+                "$ref": "#/components/schemas/PurchasedItemCreateRequest"
               }
             }
           }
@@ -1399,17 +1457,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateServiceRequestDto"
+                "$ref": "#/components/schemas/ServiceRequestCreateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateServiceRequestDto"
+                "$ref": "#/components/schemas/ServiceRequestCreateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateServiceRequestDto"
+                "$ref": "#/components/schemas/ServiceRequestCreateRequest"
               }
             }
           }
@@ -1464,17 +1522,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ResolveServiceRequestDto"
+                "$ref": "#/components/schemas/ServiceRequestResolveRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ResolveServiceRequestDto"
+                "$ref": "#/components/schemas/ServiceRequestResolveRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ResolveServiceRequestDto"
+                "$ref": "#/components/schemas/ServiceRequestResolveRequest"
               }
             }
           }
@@ -1505,17 +1563,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateVendorDto"
+                "$ref": "#/components/schemas/VendorCreateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateVendorDto"
+                "$ref": "#/components/schemas/VendorCreateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateVendorDto"
+                "$ref": "#/components/schemas/VendorCreateRequest"
               }
             }
           }
@@ -1568,17 +1626,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateVendorDto"
+                "$ref": "#/components/schemas/VendorUpdateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateVendorDto"
+                "$ref": "#/components/schemas/VendorUpdateRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateVendorDto"
+                "$ref": "#/components/schemas/VendorUpdateRequest"
               }
             }
           }
@@ -1622,68 +1680,52 @@
           }
         }
       }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
     "schemas": {
-      "AssignAssetDto": {
+      "AssetBrandCreateRequest": {
         "required": [
-          "assetId",
-          "employeeId"
+          "assetCategoryId",
+          "brandName"
         ],
         "type": "object",
         "properties": {
-          "assetId": {
-            "type": "string",
-            "format": "uuid"
+          "brandName": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
-          "employeeId": {
+          "assetCategoryId": {
             "type": "string",
             "format": "uuid"
           }
         },
         "additionalProperties": false
       },
-      "BulkCreateAssetDto": {
+      "AssetBrandUpdateRequest": {
+        "required": [
+          "assetCategoryId",
+          "brandName"
+        ],
+        "type": "object",
+        "properties": {
+          "brandName": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "assetCategoryId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssetBulkCreateRequest": {
         "type": "object",
         "properties": {
           "purchaseId": {
@@ -1740,26 +1782,7 @@
         },
         "additionalProperties": false
       },
-      "CreateAssetBrandDto": {
-        "required": [
-          "assetCategoryId",
-          "brandName"
-        ],
-        "type": "object",
-        "properties": {
-          "brandName": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "assetCategoryId": {
-            "type": "string",
-            "format": "uuid"
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateAssetCategoryDto": {
+      "AssetCategoryCreateRequest": {
         "required": [
           "categoryName"
         ],
@@ -1773,7 +1796,24 @@
         },
         "additionalProperties": false
       },
-      "CreateAssetDto": {
+      "AssetCategoryUpdateRequest": {
+        "required": [
+          "categoryName"
+        ],
+        "type": "object",
+        "properties": {
+          "categoryName": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssetCreateRequest": {
         "type": "object",
         "properties": {
           "purchaseId": {
@@ -1827,7 +1867,7 @@
         },
         "additionalProperties": false
       },
-      "CreateAssetModelDto": {
+      "AssetModelCreateRequest": {
         "required": [
           "assetBrandId",
           "assetCategoryId",
@@ -1851,7 +1891,93 @@
         },
         "additionalProperties": false
       },
-      "CreatePurchaseDto": {
+      "AssetModelUpdateRequest": {
+        "required": [
+          "assetBrandId",
+          "assetCategoryId",
+          "modelName"
+        ],
+        "type": "object",
+        "properties": {
+          "modelName": {
+            "maxLength": 150,
+            "minLength": 1,
+            "type": "string"
+          },
+          "assetCategoryId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "assetBrandId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssetUpdateRequest": {
+        "type": "object",
+        "properties": {
+          "condition": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssetValidateSerialNumbersRequest": {
+        "type": "object",
+        "properties": {
+          "purchaseId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "serialNumbers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssignAssetDto": {
+        "required": [
+          "assetId",
+          "employeeId"
+        ],
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "employeeId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OwnershipType": {
+        "enum": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "PurchaseCreateRequest": {
         "required": [
           "expectedDeliveryDate",
           "invoiceDate",
@@ -1894,7 +2020,61 @@
         },
         "additionalProperties": false
       },
-      "CreatePurchasedItemDto": {
+      "PurchaseStatus": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "PurchaseUpdateRequest": {
+        "required": [
+          "expectedDeliveryDate",
+          "invoiceDate",
+          "invoiceNumber",
+          "ownershipType",
+          "purchaseDate",
+          "vendorId"
+        ],
+        "type": "object",
+        "properties": {
+          "vendorId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "purchaseDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "invoiceNumber": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "invoiceDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "expectedDeliveryDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "ownershipType": {
+            "$ref": "#/components/schemas/OwnershipType"
+          },
+          "remarks": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PurchasedItemCreateRequest": {
         "required": [
           "brand",
           "category",
@@ -1939,7 +2119,72 @@
         },
         "additionalProperties": false
       },
-      "CreateServiceRequestDto": {
+      "PurchasedItemUpdateRequest": {
+        "required": [
+          "brand",
+          "category",
+          "configuration",
+          "model",
+          "quantity",
+          "unitPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "category": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "brand": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "model": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "configuration": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "quantity": {
+            "maximum": 2147483647,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitPrice": {
+            "minimum": 0.01,
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReturnAssetDto": {
+        "required": [
+          "conditionAtReturn"
+        ],
+        "type": "object",
+        "properties": {
+          "conditionAtReturn": {
+            "maximum": 3,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "remarks": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ServiceRequestCreateRequest": {
         "required": [
           "assetId",
           "issueType",
@@ -1979,95 +2224,11 @@
         },
         "additionalProperties": false
       },
-      "CreateVendorDto": {
-        "required": [
-          "contactPerson",
-          "email",
-          "phone",
-          "vendorName"
-        ],
-        "type": "object",
-        "properties": {
-          "vendorName": {
-            "maxLength": 200,
-            "minLength": 1,
-            "type": "string"
-          },
-          "contactPerson": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "email": {
-            "maxLength": 150,
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
-          },
-          "phone": {
-            "maxLength": 20,
-            "minLength": 1,
-            "type": "string"
-          },
-          "gstNumber": {
-            "maxLength": 20,
-            "type": "string",
-            "nullable": true
-          },
-          "address": {
-            "maxLength": 500,
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "OwnershipType": {
-        "enum": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "PurchaseStatus": {
-        "enum": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "ResolveServiceRequestDto": {
+      "ServiceRequestResolveRequest": {
         "type": "object",
         "properties": {
           "resolutionNotes": {
             "maxLength": 2000,
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ReturnAssetDto": {
-        "required": [
-          "conditionAtReturn"
-        ],
-        "type": "object",
-        "properties": {
-          "conditionAtReturn": {
-            "maximum": 3,
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
-          },
-          "remarks": {
-            "maxLength": 500,
             "type": "string",
             "nullable": true
           }
@@ -2115,122 +2276,42 @@
         },
         "additionalProperties": false
       },
-      "UpdateAssetBrandDto": {
+      "VendorCreateRequest": {
         "required": [
-          "assetCategoryId",
-          "brandName"
+          "contactPerson",
+          "email",
+          "phone",
+          "vendorName"
         ],
         "type": "object",
         "properties": {
-          "brandName": {
+          "vendorName": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "contactPerson": {
             "maxLength": 100,
             "minLength": 1,
             "type": "string"
           },
-          "assetCategoryId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "isActive": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateAssetCategoryDto": {
-        "required": [
-          "categoryName"
-        ],
-        "type": "object",
-        "properties": {
-          "categoryName": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "isActive": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateAssetDto": {
-        "type": "object",
-        "properties": {
-          "condition": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "remarks": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateAssetModelDto": {
-        "required": [
-          "assetBrandId",
-          "assetCategoryId",
-          "modelName"
-        ],
-        "type": "object",
-        "properties": {
-          "modelName": {
+          "email": {
             "maxLength": 150,
             "minLength": 1,
-            "type": "string"
-          },
-          "assetCategoryId": {
             "type": "string",
-            "format": "uuid"
+            "format": "email"
           },
-          "assetBrandId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "isActive": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdatePurchaseDto": {
-        "required": [
-          "expectedDeliveryDate",
-          "invoiceDate",
-          "invoiceNumber",
-          "ownershipType",
-          "purchaseDate",
-          "vendorId"
-        ],
-        "type": "object",
-        "properties": {
-          "vendorId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "purchaseDate": {
-            "type": "string",
-            "format": "date"
-          },
-          "invoiceNumber": {
-            "maxLength": 100,
+          "phone": {
+            "maxLength": 20,
             "minLength": 1,
             "type": "string"
           },
-          "invoiceDate": {
+          "gstNumber": {
+            "maxLength": 20,
             "type": "string",
-            "format": "date"
+            "nullable": true
           },
-          "expectedDeliveryDate": {
-            "type": "string",
-            "format": "date"
-          },
-          "ownershipType": {
-            "$ref": "#/components/schemas/OwnershipType"
-          },
-          "remarks": {
+          "address": {
             "maxLength": 500,
             "type": "string",
             "nullable": true
@@ -2238,52 +2319,7 @@
         },
         "additionalProperties": false
       },
-      "UpdatePurchasedItemDto": {
-        "required": [
-          "brand",
-          "category",
-          "configuration",
-          "model",
-          "quantity",
-          "unitPrice"
-        ],
-        "type": "object",
-        "properties": {
-          "category": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "brand": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "model": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "configuration": {
-            "maxLength": 300,
-            "minLength": 1,
-            "type": "string"
-          },
-          "quantity": {
-            "maximum": 2147483647,
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
-          },
-          "unitPrice": {
-            "minimum": 0.01,
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateVendorDto": {
+      "VendorUpdateRequest": {
         "required": [
           "contactPerson",
           "email",
@@ -2325,46 +2361,6 @@
           },
           "isActive": {
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ValidateSerialNumbersDto": {
-        "type": "object",
-        "properties": {
-          "purchaseId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "serialNumbers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "WeatherForecast": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "temperatureC": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "summary": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false

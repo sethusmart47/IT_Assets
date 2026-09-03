@@ -1,13 +1,11 @@
 ﻿using AutoMapper;
-using IT_asserts_Claim.Dtos;
-using IT_asserts_Claim.Dtos.Asset_Category;
-using IT_asserts_Claim.DTOs;
-using IT_asserts_Claim.entity;
-using IT_asserts_Claim.Repositories.Interface;
-using IT_asserts_Claim.Services.Interface;
+using ITAssetManagement.Dtos.Asset_Category;
+using ITAssetManagement.Domain.Entities;
+using ITAssetManagement.Repositories.Interface;
+using ITAssetManagement.Services.Interface;
 using Microsoft.Extensions.Logging;
 
-namespace IT_asserts_Claim.Services.Implementations
+namespace ITAssetManagement.Services.Implementations
 {
     public class AssetCategoryService: IAssetCategoryService
     {
@@ -21,19 +19,19 @@ namespace IT_asserts_Claim.Services.Implementations
             _mapper = mapper;
             _logger = logger;
         }
-        public async Task<List<AssetCategoryDto>> GetAllAsync()
+        public async Task<List<AssetCategoryDetails>> GetAllAsync()
         {
-            var entities = await _assetCategoryRepository.GetAllAsync();
-            return _mapper.Map<List<AssetCategoryDto>>(entities);
+            var entities = await _assetCategoryRepository.GetAllAssetCategoriesAsync();
+            return _mapper.Map<List<AssetCategoryDetails>>(entities);
         }
 
-        public async Task<AssetCategoryDto?> GetByIdAsync(Guid id)
+        public async Task<AssetCategoryDetails?> GetByIdAsync(Guid id)
         {
-            var entity = await _assetCategoryRepository.GetByIdAsync(id);
-            return entity != null ? _mapper.Map<AssetCategoryDto>(entity) : null;
+            var entity = await _assetCategoryRepository.GetAssetCategoryByIdAsync(id);
+            return entity != null ? _mapper.Map<AssetCategoryDetails>(entity) : null;
         }
 
-        public async Task<AssetCategoryDto> CreateAsync(Dtos.Asset_Category.CreateAssetCategoryDto dto)
+        public async Task<AssetCategoryDetails> CreateAsync(AssetCategoryCreateRequest dto)
         {
             var nameExists = await _assetCategoryRepository.IsNameExistsAsync(dto.CategoryName.Trim());
             if (nameExists)
@@ -42,17 +40,17 @@ namespace IT_asserts_Claim.Services.Implementations
             var entity = _mapper.Map<AssetCategory>(dto);
             entity.CategoryName = dto.CategoryName.Trim();
 
-            await _assetCategoryRepository.AddAsync(entity);
+            await _assetCategoryRepository.AddAssetCategoryAsync(entity);
             await _assetCategoryRepository.SaveChangesAsync();
 
             _logger.LogInformation("Category created: {Name}", entity.CategoryName);
 
-            return _mapper.Map<AssetCategoryDto>(entity);
+            return _mapper.Map<AssetCategoryDetails>(entity);
         }
 
-        public async Task<AssetCategoryDto?> UpdateAsync(Guid id, Dtos.Asset_Category.UpdateAssetCategoryDto dto)
+        public async Task<AssetCategoryDetails?> UpdateAsync(Guid id, AssetCategoryUpdateRequest dto)
         {
-            var entity = await _assetCategoryRepository.GetByIdAsync(id);
+            var entity = await _assetCategoryRepository.GetAssetCategoryByIdAsync(id);
             if (entity == null) return null;
 
             var nameExists = await _assetCategoryRepository.IsNameExistsAsync(dto.CategoryName.Trim(), id);
@@ -62,23 +60,23 @@ namespace IT_asserts_Claim.Services.Implementations
             entity.CategoryName = dto.CategoryName.Trim();
             entity.IsActive = dto.IsActive;
 
-            _assetCategoryRepository.Update(entity);
+            _assetCategoryRepository.UpdateAssetCategory(entity);
             await _assetCategoryRepository.SaveChangesAsync();
 
             _logger.LogInformation("Category updated: {Id}", id);
 
-            return _mapper.Map<AssetCategoryDto>(entity);
+            return _mapper.Map<AssetCategoryDetails>(entity);
         }
 
         public async Task<bool> DeleteAsync(Guid id)
         {
-            var entity = await _assetCategoryRepository.GetByIdAsync(id);
+            var entity = await _assetCategoryRepository.GetAssetCategoryByIdAsync(id);
             if (entity == null) return false;
 
             entity.IsDeleted = true;
             entity.IsActive = false;
 
-            _assetCategoryRepository.Update(entity);
+            _assetCategoryRepository.UpdateAssetCategory(entity);
             await _assetCategoryRepository.SaveChangesAsync();
 
             _logger.LogInformation("Category soft-deleted: {Id}", id);
