@@ -8,9 +8,5 @@ namespace ITAssetManagement.Repositories.Interface
         Task AddAssetLifecycleHistoryAsync(AssetLifecycleHistory history);
         Task AddAssetLifecycleHistoriesAsync(List<AssetLifecycleHistory> histories);
         Task<int> SaveChangesAsync();
-
-        // Generic wrappers for backward compatibility
-        Task AddAsync(AssetLifecycleHistory history);
-        Task AddRangeAsync(List<AssetLifecycleHistory> histories);
     }
 }

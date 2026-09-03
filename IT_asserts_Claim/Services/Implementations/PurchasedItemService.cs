@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using ITAssetManagement.Dtos.PurchaseItem;
 using ITAssetManagement.Domain.Entities;
 using ITAssetManagement.Repositories.Interface;
@@ -45,19 +45,17 @@ namespace ITAssetManagement.Services.Implementations
             if (purchase == null)
                 throw new InvalidOperationException("Purchase not found.");
 
-            // Map DTO → Entity
+            // Map DTO ? Entity
             var item = _mapper.Map<PurchasedItem>(dto);
             item.Id = Guid.NewGuid();
             item.PurchaseId = purchaseId;
             item.SubTotal = dto.Quantity * dto.UnitPrice;
 
             await _itemRepository.AddPurchasedItemAsync(item);
+            purchase.TotalAmount = purchase.TotalAmount + item.SubTotal;
             await _itemRepository.SaveChangesAsync();
 
-            // Recalculate purchase total
-            await RecalculatePurchaseTotalAsync(purchaseId);
-
-            _logger.LogInformation("Item added: {Category} | {Brand} | {Model} → Purchase {PurchaseId}",
+            _logger.LogInformation("Item added: {Category} | {Brand} | {Model} ? Purchase {PurchaseId}",
                 dto.Category, dto.Brand, dto.Model, purchaseId);
 
             return _mapper.Map<PurchasedItemDetails>(item);
@@ -67,6 +65,8 @@ namespace ITAssetManagement.Services.Implementations
         {
             var item = await _itemRepository.GetPurchasedItemByIdAsync(itemId);
             if (item == null) return null;
+
+            var oldSubTotal = item.SubTotal;
 
             // Update fields directly
             item.Category = dto.Category.Trim();
@@ -79,10 +79,17 @@ namespace ITAssetManagement.Services.Implementations
             item.SubTotal = dto.Quantity * dto.UnitPrice;
 
             _itemRepository.Update(item);
-            await _itemRepository.SaveChangesAsync();
+            var delta = item.SubTotal - oldSubTotal;
+            if (delta != 0)
+            {
+                var purchase = await _purchaseRepository.GetPurchaseByIdAsync(item.PurchaseId);
+                if (purchase != null)
+                    purchase.TotalAmount = purchase.TotalAmount + delta;
+            }
 
-            // Recalculate purchase total
-            await RecalculatePurchaseTotalAsync(item.PurchaseId);
+            // Single SaveChangesAsync persists the item mutation and any purchase-total change
+            // because _itemRepository and _purchaseRepository share the same scoped DbContext.
+            await _itemRepository.SaveChangesAsync();
 
             _logger.LogInformation("Item updated: {ItemId}", itemId);
 
@@ -100,27 +107,17 @@ namespace ITAssetManagement.Services.Implementations
             item.IsActive = false;
 
             _itemRepository.Update(item);
-            await _itemRepository.SaveChangesAsync();
 
-            // Recalculate purchase total
-            await RecalculatePurchaseTotalAsync(purchaseId);
+            var purchase = await _purchaseRepository.GetPurchaseByIdAsync(purchaseId);
+            if (purchase != null)
+                purchase.TotalAmount = purchase.TotalAmount - item.SubTotal;
+
+            // Single SaveChangesAsync persists the soft-delete and the purchase-total change.
+            await _itemRepository.SaveChangesAsync();
 
             _logger.LogInformation("Item soft-deleted: {ItemId}", itemId);
             return true;
         }
-
-        // ─── PRIVATE ───
-
-        private async Task RecalculatePurchaseTotalAsync(Guid purchaseId)
-        {
-            var purchase = await _purchaseRepository.GetPurchaseByIdAsync(purchaseId);
-            if (purchase == null) return;
-
-            var items = await _itemRepository.GetAllByPurchaseIdAsync(purchaseId);
-            purchase.TotalAmount = items.Sum(i => i.SubTotal);
-
-            _purchaseRepository.UpdatePurchase(purchase);
-            await _purchaseRepository.SaveChangesAsync();
-        }
     }
 }
+

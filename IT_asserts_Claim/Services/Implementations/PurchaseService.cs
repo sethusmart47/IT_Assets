@@ -55,15 +55,13 @@ namespace ITAssetManagement.Services.Implementations
             purchase.PurchaseNumber = purchaseNumber;
             purchase.InvoiceNumber = dto.InvoiceNumber.Trim();
             purchase.Remarks = dto.Remarks?.Trim();
-            purchase.Status = PurchaseStatus.Inprogress;
+            purchase.Status = PurchaseStatus.Ordered;
             purchase.TotalAmount = 0;
-            purchase.CreatedAt = DateTime.UtcNow;
-            purchase.CreatedBy = "System";
 
             await _purchaseRepository.AddPurchaseAsync(purchase);
             await _purchaseRepository.SaveChangesAsync();
 
-            _logger.LogInformation("Purchase created: {PurchaseNumber}, Status: InProgress", purchaseNumber);
+            _logger.LogInformation("Purchase created: {PurchaseNumber}, Status: Ordered", purchaseNumber);
 
             var created = await _purchaseRepository.GetPurchaseByIdWithDetailsAsync(purchase.Id);
             return _mapper.Map<PurchaseDetails>(created!);
@@ -74,12 +72,10 @@ namespace ITAssetManagement.Services.Implementations
             var purchase = await _purchaseRepository.GetPurchaseByIdAsync(id);
             if (purchase == null) return null;
 
-            if (purchase.Status == PurchaseStatus.Received)
-                throw new InvalidOperationException("Received purchase cannot be edited.");
-
-            var daysSinceCreation = (DateTime.UtcNow - purchase.CreatedAt).TotalDays;
-            if (daysSinceCreation > 5)
-                throw new InvalidOperationException("Purchase can only be edited within 5 days after creation.");
+            if (purchase.Status == PurchaseStatus.Confirmed)
+                throw new InvalidOperationException("Confirmed purchase cannot be edited.");
+            if (purchase.Status == PurchaseStatus.Cancelled)
+                throw new InvalidOperationException("Cancelled purchase cannot be edited.");
 
             var invoiceExists = await _purchaseRepository.IsInvoiceNumberExistsAsync(dto.InvoiceNumber.Trim(), id);
             if (invoiceExists)
@@ -92,8 +88,6 @@ namespace ITAssetManagement.Services.Implementations
             purchase.ExpectedDeliveryDate = dto.ExpectedDeliveryDate;
             purchase.OwnershipType = dto.OwnershipType;
             purchase.Remarks = dto.Remarks?.Trim();
-            purchase.ModifiedAt = DateTime.UtcNow;
-            purchase.ModifiedBy = "System";
 
             _purchaseRepository.UpdatePurchase(purchase);
             await _purchaseRepository.SaveChangesAsync();
@@ -104,27 +98,45 @@ namespace ITAssetManagement.Services.Implementations
             return _mapper.Map<PurchaseDetails>(updated!);
         }
 
-        public async Task<bool> ReceivePurchaseAsync(Guid id)
+        public async Task<bool> ConfirmPurchaseAsync(Guid id)
         {
-            var purchase = await _purchaseRepository.GetPurchaseByIdWithDetailsAsync(id);
+            var purchase = await _purchaseRepository.GetPurchaseByIdAsync(id);
             if (purchase == null) return false;
 
-            if (purchase.Status == PurchaseStatus.Received)
-                throw new InvalidOperationException("Purchase is already received.");
+            if (purchase.Status == PurchaseStatus.Confirmed)
+                throw new InvalidOperationException("Purchase is already confirmed.");
+            if (purchase.Status == PurchaseStatus.Cancelled)
+                throw new InvalidOperationException("Cancelled purchase cannot be confirmed.");
 
-            var activeItems = purchase.PurchasedItems.Where(i => !i.IsDeleted).ToList();
-            if (activeItems.Count == 0)
-                throw new InvalidOperationException("Cannot receive purchase without items. Add at least one item.");
+            var hasItems = await _purchaseRepository.HasPurchasedItemsAsync(id);
+            if (!hasItems)
+                throw new InvalidOperationException("Cannot confirm purchase without items. Add at least one item.");
 
-            purchase.TotalAmount = activeItems.Sum(i => i.SubTotal);
-            purchase.Status = PurchaseStatus.Received;
-            purchase.ModifiedAt = DateTime.UtcNow;
-            purchase.ModifiedBy = "System";
+            purchase.Status = PurchaseStatus.Confirmed;
 
             _purchaseRepository.UpdatePurchase(purchase);
             await _purchaseRepository.SaveChangesAsync();
 
-            _logger.LogInformation("Purchase received: {PurchaseNumber}", purchase.PurchaseNumber);
+            _logger.LogInformation("Purchase confirmed: {PurchaseNumber}", purchase.PurchaseNumber);
+            return true;
+        }
+
+        public async Task<bool> CancelPurchaseAsync(Guid id)
+        {
+            var purchase = await _purchaseRepository.GetPurchaseByIdAsync(id);
+            if (purchase == null) return false;
+
+            if (purchase.Status == PurchaseStatus.Confirmed)
+                throw new InvalidOperationException("Confirmed purchase cannot be cancelled.");
+            if (purchase.Status == PurchaseStatus.Cancelled)
+                throw new InvalidOperationException("Purchase is already cancelled.");
+
+            purchase.Status = PurchaseStatus.Cancelled;
+
+            _purchaseRepository.UpdatePurchase(purchase);
+            await _purchaseRepository.SaveChangesAsync();
+
+            _logger.LogInformation("Purchase cancelled: {PurchaseNumber}", purchase.PurchaseNumber);
             return true;
         }
 
@@ -133,28 +145,22 @@ namespace ITAssetManagement.Services.Implementations
             var purchase = await _purchaseRepository.GetPurchaseByIdWithDetailsAsync(id);
             if (purchase == null) return false;
 
-            if (purchase.Status == PurchaseStatus.Received)
-                throw new InvalidOperationException("Received purchase cannot be deleted.");
+            if (purchase.Status == PurchaseStatus.Confirmed)
+                throw new InvalidOperationException("Confirmed purchase cannot be deleted.");
 
             purchase.IsDeleted = true;
             purchase.IsActive = false;
-            purchase.DeletedAt = DateTime.UtcNow;
-            purchase.DeletedBy = "System";
 
             foreach (var item in purchase.PurchasedItems)
             {
                 item.IsDeleted = true;
                 item.IsActive = false;
-                item.DeletedAt = DateTime.UtcNow;
-                item.DeletedBy = "System";
             }
 
             foreach (var attachment in purchase.Attachments)
             {
                 attachment.IsDeleted = true;
                 attachment.IsActive = false;
-                attachment.DeletedAt = DateTime.UtcNow;
-                attachment.DeletedBy = "System";
             }
 
             _purchaseRepository.UpdatePurchase(purchase);

@@ -9,12 +9,7 @@ namespace ITAssetManagement.Repositories.Interface
         Task AddPurchaseAttachmentAsync(PurchaseAttachment entity);
         Task AddPurchaseAttachmentsAsync(List<PurchaseAttachment> entities);
         void UpdatePurchaseAttachment(PurchaseAttachment entity);
-        Task<int> SaveChangesAsync();
-
-        // Generic wrappers for backward compatibility
-        Task<PurchaseAttachment?> GetByIdAsync(Guid attachmentId);
-        Task AddAsync(PurchaseAttachment entity);
-        Task AddRangeAsync(List<PurchaseAttachment> entities);
         void Update(PurchaseAttachment entity);
+        Task<int> SaveChangesAsync();
     }
 }

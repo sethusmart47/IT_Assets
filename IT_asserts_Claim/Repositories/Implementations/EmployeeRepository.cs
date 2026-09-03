@@ -5,18 +5,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ITAssetManagement.Repositories.Implementations
 {
-    public class EmployeeRepository : IEmployeeRepository
+    public class EmployeeRepository : Repository<Employee>, IEmployeeRepository
     {
-        private readonly AppDbContext _context;
-
-        public EmployeeRepository(AppDbContext context)
+        public EmployeeRepository(AppDbContext context) : base(context)
         {
-            _context = context;
         }
 
         public async Task<List<Employee>> GetAllEmployeesAsync()
         {
-            return await _context.Employees
+            return await Context.Employees
                 .AsNoTracking()
                 .OrderBy(e => e.EmployeeName)
                 .ToListAsync();
@@ -24,7 +21,7 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<Employee?> GetEmployeeByIdAsync(Guid id)
         {
-            return await _context.Employees.FindAsync(id);
+            return await Context.Employees.FindAsync(id);
         }
     }
 }

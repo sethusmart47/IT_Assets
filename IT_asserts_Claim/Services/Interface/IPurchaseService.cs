@@ -10,7 +10,8 @@ namespace ITAssetManagement.Services.Interface
         Task<NextPurchaseNumber> GetNextPurchaseNumberAsync();
         Task<PurchaseDetails> CreatePurchaseAsync(PurchaseCreateRequest dto);
         Task<PurchaseDetails?> UpdatePurchaseAsync(Guid id, PurchaseUpdateRequest dto);
-        Task<bool> ReceivePurchaseAsync(Guid id);
+        Task<bool> ConfirmPurchaseAsync(Guid id);
+        Task<bool> CancelPurchaseAsync(Guid id);
         Task<bool> DeletePurchaseAsync(Guid id);
     }
 }

@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using ITAssetManagement.Dtos.Asset_Model;
 using ITAssetManagement.Domain.Entities;
 using ITAssetManagement.Repositories.Interface;
@@ -30,13 +30,13 @@ namespace ITAssetManagement.Services.Implementations
 
         public async Task<List<AssetModelDetails>> GetAllAsync()
         {
-            var entities = await _repository.GetAllAsync();
+            var entities = await _repository.GetAllAssetModelsAsync();
             return _mapper.Map<List<AssetModelDetails>>(entities);
         }
 
         public async Task<AssetModelDetails?> GetByIdAsync(Guid id)
         {
-            var entity = await _repository.GetByIdAsync(id);
+            var entity = await _repository.GetAssetModelByIdAsync(id);
             return entity != null ? _mapper.Map<AssetModelDetails>(entity) : null;
         }
 
@@ -59,19 +59,20 @@ namespace ITAssetManagement.Services.Implementations
 
             var entity = _mapper.Map<AssetModel>(dto);
             entity.ModelName = dto.ModelName.Trim();
+            entity.AssetCategory = category;
+            entity.AssetBrand = brand;
 
-            await _repository.AddAsync(entity);
+            await _repository.AddAssetModelAsync(entity);
             await _repository.SaveChangesAsync();
 
             _logger.LogInformation("Model created: {Name}", entity.ModelName);
 
-            var reloaded = await _repository.GetByIdAsync(entity.Id);
-            return _mapper.Map<AssetModelDetails>(reloaded!);
+            return _mapper.Map<AssetModelDetails>(entity);
         }
 
         public async Task<AssetModelDetails?> UpdateAsync(Guid id, AssetModelUpdateRequest dto)
         {
-            var entity = await _repository.GetByIdAsync(id);
+            var entity = await _repository.GetAssetModelByIdAsync(id);
             if (entity == null) return null;
 
             var category = await _categoryRepository.GetAssetCategoryByIdAsync(dto.AssetCategoryId);
@@ -92,26 +93,27 @@ namespace ITAssetManagement.Services.Implementations
             entity.ModelName = dto.ModelName.Trim();
             entity.AssetCategoryId = dto.AssetCategoryId;
             entity.AssetBrandId = dto.AssetBrandId;
+            entity.AssetCategory = category;
+            entity.AssetBrand = brand;
             entity.IsActive = dto.IsActive;
 
-            _repository.Update(entity);
+            _repository.UpdateAssetModel(entity);
             await _repository.SaveChangesAsync();
 
             _logger.LogInformation("Model updated: {Id}", id);
 
-            var reloaded = await _repository.GetByIdAsync(id);
-            return _mapper.Map<AssetModelDetails>(reloaded!);
+            return _mapper.Map<AssetModelDetails>(entity);
         }
 
         public async Task<bool> DeleteAsync(Guid id)
         {
-            var entity = await _repository.GetByIdAsync(id);
+            var entity = await _repository.GetAssetModelByIdAsync(id);
             if (entity == null) return false;
 
             entity.IsDeleted = true;
             entity.IsActive = false;
 
-            _repository.Update(entity);
+            _repository.UpdateAssetModel(entity);
             await _repository.SaveChangesAsync();
 
             _logger.LogInformation("Model soft-deleted: {Id}", id);
@@ -120,3 +122,4 @@ namespace ITAssetManagement.Services.Implementations
         }
     }
 }
+

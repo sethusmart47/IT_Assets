@@ -58,9 +58,7 @@ namespace ITAssetManagement.Services.Implementations
             {
                 AssetId = dto.AssetId,
                 EmployeeId = dto.EmployeeId,
-                AssignedDate = DateTime.UtcNow,
-                CreatedBy = "System",
-                CreatedAt = DateTime.UtcNow
+                AssignedDate = DateTime.UtcNow
             };
 
             await _assignmentRepository.AddAssetAssignmentAsync(assignment);
@@ -68,8 +66,6 @@ namespace ITAssetManagement.Services.Implementations
             asset.Status = AssetStatus.Assigned;
             asset.CurrentEmployeeId = dto.EmployeeId;
             asset.AssignedDate = DateOnly.FromDateTime(DateTime.UtcNow);
-            asset.ModifiedAt = DateTime.UtcNow;
-            asset.ModifiedBy = "System";
 
             var history = new AssetLifecycleHistory
             {
@@ -81,9 +77,7 @@ namespace ITAssetManagement.Services.Implementations
                 EmployeeEmail = employee.Email,
                 Remarks = $"Assigned to {employee.EmployeeName}",
                 PerformedBy = "System",
-                PerformedDate = DateTime.UtcNow,
-                CreatedBy = "System",
-                CreatedAt = DateTime.UtcNow
+                PerformedDate = DateTime.UtcNow
             };
 
             await _assetRepository.AddAssetLifecycleHistoryAsync(history);
@@ -108,13 +102,9 @@ namespace ITAssetManagement.Services.Implementations
             assignment.ReturnedDate = DateTime.UtcNow;
             assignment.ConditionAtReturn = dto.ConditionAtReturn;
             assignment.Remarks = dto.Remarks;
-            assignment.ModifiedAt = DateTime.UtcNow;
-            assignment.ModifiedBy = "System";
 
             asset.Status = newStatus;
             asset.Condition = newCondition;
-            asset.ModifiedAt = DateTime.UtcNow;
-            asset.ModifiedBy = "System";
 
             if (newStatus == AssetStatus.Available)
             {
@@ -137,9 +127,7 @@ namespace ITAssetManagement.Services.Implementations
                 EmployeeEmail = employee.Email,
                 Remarks = dto.Remarks ?? $"Returned by {employee.EmployeeName} — Condition: {GetConditionName(dto.ConditionAtReturn)}",
                 PerformedBy = "System",
-                PerformedDate = DateTime.UtcNow,
-                CreatedBy = "System",
-                CreatedAt = DateTime.UtcNow
+                PerformedDate = DateTime.UtcNow
             };
 
             await _assetRepository.AddAssetLifecycleHistoryAsync(history);
@@ -169,13 +157,9 @@ namespace ITAssetManagement.Services.Implementations
                 assignment.ReturnedDate = DateTime.UtcNow;
                 assignment.ConditionAtReturn = item.ConditionAtReturn;
                 assignment.Remarks = item.Remarks;
-                assignment.ModifiedAt = DateTime.UtcNow;
-                assignment.ModifiedBy = "System";
 
                 asset.Status = newStatus;
                 asset.Condition = newCondition;
-                asset.ModifiedAt = DateTime.UtcNow;
-                asset.ModifiedBy = "System";
                 asset.CurrentEmployeeId = null;
                 asset.AssignedDate = null;
 
@@ -189,9 +173,7 @@ namespace ITAssetManagement.Services.Implementations
                     EmployeeEmail = employee.Email,
                     Remarks = item.Remarks ?? $"Surrendered by {employee.EmployeeName} — Condition: {GetConditionName(item.ConditionAtReturn)}",
                     PerformedBy = "System",
-                    PerformedDate = DateTime.UtcNow,
-                    CreatedBy = "System",
-                    CreatedAt = DateTime.UtcNow
+                    PerformedDate = DateTime.UtcNow
                 };
 
                 await _assetRepository.AddAssetLifecycleHistoryAsync(history);

@@ -670,8 +670,8 @@
   },
   {
     "ContainingType": "ITAssetManagement.Controllers.PurchaseController",
-    "Method": "Receive",
-    "RelativePath": "api/Purchase/{id}/complete",
+    "Method": "Cancel",
+    "RelativePath": "api/Purchase/{id}/cancel",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -686,8 +686,8 @@
   },
   {
     "ContainingType": "ITAssetManagement.Controllers.PurchaseController",
-    "Method": "Receive",
-    "RelativePath": "api/Purchase/{id}/receive",
+    "Method": "Confirm",
+    "RelativePath": "api/Purchase/{id}/confirm",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,

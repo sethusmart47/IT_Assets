@@ -8,10 +8,5 @@ namespace ITAssetManagement.Repositories.Interface
         Task<ServiceRequest?> GetServiceRequestByIdWithAssetAsync(Guid id);
         Task AddServiceRequestAsync(ServiceRequest serviceRequest);
         Task<int> SaveChangesAsync();
-
-        // Generic wrappers for backward compatibility
-        Task<List<ServiceRequest>> GetAllAsync();
-        Task<ServiceRequest?> GetByIdAsync(Guid id);
-        Task AddAsync(ServiceRequest serviceRequest);
     }
 }

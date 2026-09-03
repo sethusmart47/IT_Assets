@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using ITAssetManagement.Dtos.Asset_Brand;
 using ITAssetManagement.Domain.Entities;
 using ITAssetManagement.Repositories.Interface;
@@ -27,13 +27,13 @@ namespace ITAssetManagement.Services.Implementations
 
         public async Task<List<AssetBrandDetails>> GetAllAsync()
         {
-            var entities = await _repository.GetAllAsync();
+            var entities = await _repository.GetAllAssetBrandsAsync();
             return _mapper.Map<List<AssetBrandDetails>>(entities);
         }
 
         public async Task<AssetBrandDetails?> GetByIdAsync(Guid id)
         {
-            var entity = await _repository.GetByIdAsync(id);
+            var entity = await _repository.GetAssetBrandByIdAsync(id);
             return entity != null ? _mapper.Map<AssetBrandDetails>(entity) : null;
         }
 
@@ -53,27 +53,24 @@ namespace ITAssetManagement.Services.Implementations
             if (nameExists)
                 throw new InvalidOperationException($"Brand '{dto.BrandName}' already exists under this category.");
 
-            //var entity = _mapper.Map<AssetBrand>(dto);
-            //entity.BrandName = dto.BrandName.Trim();
             var entity = new AssetBrand
             {
                 Id = Guid.NewGuid(),
                 BrandName = dto.BrandName.Trim(),
-                AssetCategoryId = dto.AssetCategoryId
-        
+                AssetCategoryId = dto.AssetCategoryId,
+                AssetCategory = category
             };
-            await _repository.AddAsync(entity);
+            await _repository.AddAssetBrandAsync(entity);
             await _repository.SaveChangesAsync();
 
             _logger.LogInformation("Brand created: {Name}", entity.BrandName);
 
-            var reloaded = await _repository.GetByIdAsync(entity.Id);
-            return _mapper.Map<AssetBrandDetails>(reloaded!);
+            return _mapper.Map<AssetBrandDetails>(entity);
         }
 
         public async Task<AssetBrandDetails?> UpdateAsync(Guid id, AssetBrandUpdateRequest dto)
         {
-            var entity = await _repository.GetByIdAsync(id);
+            var entity = await _repository.GetAssetBrandByIdAsync(id);
             if (entity == null) return null;
 
             var category = await _categoryRepository.GetAssetCategoryByIdAsync(dto.AssetCategoryId);
@@ -86,26 +83,26 @@ namespace ITAssetManagement.Services.Implementations
 
             entity.BrandName = dto.BrandName.Trim();
             entity.AssetCategoryId = dto.AssetCategoryId;
+            entity.AssetCategory = category;
             entity.IsActive = dto.IsActive;
 
-            _repository.Update(entity);
+            _repository.UpdateAssetBrand(entity);
             await _repository.SaveChangesAsync();
 
             _logger.LogInformation("Brand updated: {Id}", id);
 
-            var reloaded = await _repository.GetByIdAsync(id);
-            return _mapper.Map<AssetBrandDetails>(reloaded!);
+            return _mapper.Map<AssetBrandDetails>(entity);
         }
 
         public async Task<bool> DeleteAsync(Guid id)
         {
-            var entity = await _repository.GetByIdAsync(id);
+            var entity = await _repository.GetAssetBrandByIdAsync(id);
             if (entity == null) return false;
 
             entity.IsDeleted = true;
             entity.IsActive = false;
 
-            _repository.Update(entity);
+            _repository.UpdateAssetBrand(entity);
             await _repository.SaveChangesAsync();
 
             _logger.LogInformation("Brand soft-deleted: {Id}", id);
@@ -114,3 +111,4 @@ namespace ITAssetManagement.Services.Implementations
         }
     }
 }
+

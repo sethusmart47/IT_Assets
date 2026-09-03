@@ -8,11 +8,7 @@ namespace ITAssetManagement.Repositories.Interface
         Task<PurchasedItem?> GetPurchasedItemByIdAsync(Guid itemId);
         Task AddPurchasedItemAsync(PurchasedItem entity);
         void UpdatePurchasedItem(PurchasedItem entity);
-        Task<int> SaveChangesAsync();
-
-        // Generic wrappers for backward compatibility
-        Task<PurchasedItem?> GetByIdAsync(Guid itemId);
-        Task AddAsync(PurchasedItem entity);
         void Update(PurchasedItem entity);
+        Task<int> SaveChangesAsync();
     }
 }

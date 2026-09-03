@@ -5,18 +5,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ITAssetManagement.Repositories.Implementations
 {
-    public class ServiceRequestRepository : IServiceRequestRepository
+    public class ServiceRequestRepository : Repository<ServiceRequest>, IServiceRequestRepository
     {
-        private readonly AppDbContext _context;
-
-        public ServiceRequestRepository(AppDbContext context)
+        public ServiceRequestRepository(AppDbContext context) : base(context)
         {
-            _context = context;
         }
 
         public async Task<List<ServiceRequest>> GetAllServiceRequestsAsync()
         {
-            return await _context.ServiceRequests
+            return await Context.ServiceRequests
                 .AsNoTracking()
                 .Include(s => s.Asset)
                 .OrderByDescending(s => s.CreatedAt)
@@ -25,29 +22,19 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<ServiceRequest?> GetServiceRequestByIdWithAssetAsync(Guid id)
         {
-            return await _context.ServiceRequests
+            return await Context.ServiceRequests
                 .Include(s => s.Asset)
                 .FirstOrDefaultAsync(s => s.Id == id);
         }
 
         public async Task AddServiceRequestAsync(ServiceRequest serviceRequest)
         {
-            await _context.ServiceRequests.AddAsync(serviceRequest);
+            await Context.ServiceRequests.AddAsync(serviceRequest);
         }
-
-        // Generic wrappers for backward compatibility
-        public async Task<List<ServiceRequest>> GetAllAsync()
-            => await GetAllServiceRequestsAsync();
-
-        public async Task<ServiceRequest?> GetByIdAsync(Guid id)
-            => await GetServiceRequestByIdWithAssetAsync(id);
-
-        public async Task AddAsync(ServiceRequest serviceRequest)
-            => await AddServiceRequestAsync(serviceRequest);
 
         public async Task<int> SaveChangesAsync()
         {
-            return await _context.SaveChangesAsync();
+            return await Context.SaveChangesAsync();
         }
     }
 }

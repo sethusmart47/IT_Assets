@@ -1,3 +1,4 @@
+using ITAssetManagement.Common;
 using ITAssetManagement.Data;
 using ITAssetManagement.Mapping;
 using ITAssetManagement.Middleware;
@@ -13,8 +14,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Current user (defaults to "System" until JWT auth is wired in)
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+
+// DbContext with centralized audit population on every save
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+           .AddInterceptors(new AuditSaveChangesInterceptor(new CurrentUserService())));
 
 builder.Services.AddAutoMapper(typeof(Program));
 

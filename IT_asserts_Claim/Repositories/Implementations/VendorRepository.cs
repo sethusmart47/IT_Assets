@@ -5,18 +5,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ITAssetManagement.Repositories.Implementations
 {
-    public class VendorRepository : IVendorRepository
+    public class VendorRepository : Repository<Vendor>, IVendorRepository
     {
-        private readonly AppDbContext _context;
-
-        public VendorRepository(AppDbContext context)
+        public VendorRepository(AppDbContext context) : base(context)
         {
-            _context = context;
         }
 
         public async Task<List<Vendor>> GetAllVendorsAsync()
         {
-            return await _context.Vendors
+            return await Context.Vendors
                 .OrderBy(x => x.VendorName)
                 .AsNoTracking()
                 .ToListAsync();
@@ -24,58 +21,36 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<Vendor?> GetVendorByIdAsync(Guid id)
         {
-            return await _context.Vendors
+            return await Context.Vendors
                 .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<bool> IsNameExistsAsync(string vendorName, Guid? excludeId = null)
         {
-            return await _context.Vendors
+            return await Context.Vendors
                 .AnyAsync(x => x.VendorName.ToLower() == vendorName.ToLower()
                     && (!excludeId.HasValue || x.Id != excludeId.Value));
         }
 
         public async Task<bool> IsEmailExistsAsync(string email, Guid? excludeId = null)
         {
-            return await _context.Vendors
+            return await Context.Vendors
                 .AnyAsync(x => x.Email.ToLower() == email.ToLower()
                     && (!excludeId.HasValue || x.Id != excludeId.Value));
         }
 
         public async Task<bool> IsGSTExistsAsync(string gstNumber, Guid? excludeId = null)
         {
-            return await _context.Vendors
+            return await Context.Vendors
                 .AnyAsync(x => x.GSTNumber != null
                     && x.GSTNumber.ToLower() == gstNumber.ToLower()
                     && (!excludeId.HasValue || x.Id != excludeId.Value));
         }
 
-        public async Task AddVendorAsync(Vendor entity)
-        {
-            await _context.Vendors.AddAsync(entity);
-        }
+        public async Task AddVendorAsync(Vendor entity) => await AddAsync(entity);
 
-        public void UpdateVendor(Vendor entity)
-        {
-            _context.Vendors.Update(entity);
-        }
+        public void UpdateVendor(Vendor entity) => Update(entity);
 
-        // Generic wrappers for backward compatibility
-        public async Task<List<Vendor>> GetAllAsync()
-            => await GetAllVendorsAsync();
-
-        public async Task<Vendor?> GetByIdAsync(Guid id)
-            => await GetVendorByIdAsync(id);
-
-        public async Task AddAsync(Vendor entity)
-            => await AddVendorAsync(entity);
-
-        public void Update(Vendor entity)
-            => UpdateVendor(entity);
-
-        public async Task<int> SaveChangesAsync()
-        {
-            return await _context.SaveChangesAsync();
-        }
+        public async Task<int> SaveChangesAsync() => await Context.SaveChangesAsync();
     }
 }

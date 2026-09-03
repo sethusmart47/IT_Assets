@@ -1074,7 +1074,7 @@
         }
       }
     },
-    "/api/Purchase/{id}/receive": {
+    "/api/Purchase/{id}/confirm": {
       "put": {
         "tags": [
           "Purchase"
@@ -1097,7 +1097,7 @@
         }
       }
     },
-    "/api/Purchase/{id}/complete": {
+    "/api/Purchase/{id}/cancel": {
       "put": {
         "tags": [
           "Purchase"
@@ -2024,9 +2024,7 @@
         "enum": [
           1,
           2,
-          3,
-          4,
-          5
+          3
         ],
         "type": "integer",
         "format": "int32"

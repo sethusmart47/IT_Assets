@@ -37,7 +37,7 @@ namespace ITAssetManagement.Domain.Entities
         public string? Remarks { get; set; }
 
         [Required]
-        public PurchaseStatus Status { get; set; } = PurchaseStatus.Draft;
+        public PurchaseStatus Status { get; set; } = PurchaseStatus.Ordered;
 
         // ─── Navigation ───
         [ForeignKey(nameof(VendorId))]

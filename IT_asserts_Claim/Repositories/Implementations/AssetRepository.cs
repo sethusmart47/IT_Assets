@@ -6,18 +6,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ITAssetManagement.Repositories.Implementations
 {
-    public class AssetRepository : IAssetRepository
+    public class AssetRepository : Repository<Asset>, IAssetRepository
     {
-        private readonly AppDbContext _context;
-
-        public AssetRepository(AppDbContext context)
+        public AssetRepository(AppDbContext context) : base(context)
         {
-            _context = context;
         }
 
         public async Task<List<Asset>> GetAllAssetsAsync(string? status, string? category, string? brand, string? search)
         {
-            var query = _context.Assets.AsNoTracking().AsQueryable();
+            var query = Context.Assets.AsNoTracking().AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(status) && System.Enum.TryParse<AssetStatus>(status, true, out var statusEnum))
                 query = query.Where(a => a.Status == statusEnum);
@@ -41,7 +38,7 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<Asset?> GetAssetByIdWithDetailsAsync(Guid id)
         {
-            return await _context.Assets
+            return await Context.Assets
                 
                 .Include(a => a.Purchase)
                     .ThenInclude(p => p.Vendor)
@@ -51,7 +48,7 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<Asset?> GetAssetByIdAsync(Guid id)
         {
-            return await _context.Assets
+            return await Context.Assets
                 .Include(a => a.Purchase)
                     .ThenInclude(p => p.Vendor)
                 .FirstOrDefaultAsync(a => a.Id == id);
@@ -59,12 +56,12 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<bool> SerialNumberExistsAsync(string serialNumber)
         {
-            return await _context.Assets.AnyAsync(a => a.SerialNumber == serialNumber);
+            return await Context.Assets.AnyAsync(a => a.SerialNumber == serialNumber);
         }
 
         public async Task<List<string>> GetExistingSerialNumbersAsync(List<string> serialNumbers)
         {
-            return await _context.Assets
+            return await Context.Assets
                 .Where(a => serialNumbers.Contains(a.SerialNumber))
                 .Select(a => a.SerialNumber)
                 .ToListAsync();
@@ -72,7 +69,7 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<string?> GetLastAssetTagAsync(string pattern)
         {
-            var lastAsset = await _context.Assets
+            var lastAsset = await Context.Assets
                 .IgnoreQueryFilters()
                 .Where(a => a.AssetTag.StartsWith(pattern))
                 .OrderByDescending(a => a.AssetTag)
@@ -83,20 +80,49 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<int> GetRegisteredCountByPurchaseAsync(Guid purchaseId)
         {
-            return await _context.Assets.CountAsync(a => a.PurchaseId == purchaseId);
+            return await Context.Assets.CountAsync(a => a.PurchaseId == purchaseId);
+        }
+
+        public async Task<Dictionary<Guid, int>> GetRegisteredCountsByPurchasesAsync(IEnumerable<Guid> purchaseIds)
+        {
+            var ids = purchaseIds.Distinct().ToList();
+            if (ids.Count == 0) return new Dictionary<Guid, int>();
+
+            return await Context.Assets
+                .Where(a => ids.Contains(a.PurchaseId))
+                .GroupBy(a => a.PurchaseId)
+                .Select(g => new { PurchaseId = g.Key, Count = g.Count() })
+                .ToDictionaryAsync(x => x.PurchaseId, x => x.Count);
         }
 
         public async Task<int> GetRegisteredCountByPurchaseItemAsync(Guid purchaseId, string category, string brand, string model)
         {
-            return await _context.Assets.CountAsync(a =>
+            return await Context.Assets.CountAsync(a =>
                 a.PurchaseId == purchaseId &&
                 a.Category == category &&
                 a.Brand == brand &&
                 a.Model == model);
         }
+
+        public async Task<Dictionary<(string Category, string Brand, string Model), int>> GetRegisteredCountsByPurchaseItemsAsync(Guid purchaseId)
+        {
+            return await Context.Assets
+                .Where(a => a.PurchaseId == purchaseId)
+                .GroupBy(a => new { a.Category, a.Brand, a.Model })
+                .Select(g => new
+                {
+                    g.Key.Category,
+                    g.Key.Brand,
+                    g.Key.Model,
+                    Count = g.Count()
+                })
+                .ToDictionaryAsync(
+                    x => (x.Category, x.Brand, x.Model),
+                    x => x.Count);
+        }
         public async Task<Asset?> GetAvailableBySerialNumberAsync(string serialNumber)
         {
-            return await _context.Assets
+            return await Context.Assets
                 .AsNoTracking()
                 .Include(a => a.Purchase)
                     .ThenInclude(p => p.Vendor)
@@ -107,7 +133,7 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<Asset?> GetAvailableByAssetTagAsync(string assetTag)
         {
-            return await _context.Assets
+            return await Context.Assets
                 .AsNoTracking()
                 .Include(a => a.Purchase)
                     .ThenInclude(p => p.Vendor)
@@ -117,14 +143,14 @@ namespace ITAssetManagement.Repositories.Implementations
         }
         public async Task<bool> HasActiveAssignmentAsync(Guid assetId)
         {
-            return await _context.AssetAssignments
+            return await Context.AssetAssignments
                 .AnyAsync(a => a.AssetId == assetId && a.ReturnedDate == null && !a.IsDeleted);
         }
 
 
         public async Task<List<Asset>> GetByIdsWithDetailsAsync(List<Guid> ids)
         {
-            return await _context.Assets
+            return await Context.Assets
                 .AsNoTracking()
                 .Include(a => a.Purchase).ThenInclude(p => p.Vendor)
                 .Where(a => ids.Contains(a.Id))
@@ -132,49 +158,29 @@ namespace ITAssetManagement.Repositories.Implementations
                 .ToListAsync();
         }
 
-        public async Task AddLifecycleHistoryAsync(AssetLifecycleHistory history)
-        {
-            await _context.AssetLifecycleHistories.AddAsync(history);
-        }
-
-        public async Task AddLifecycleHistoriesAsync(List<AssetLifecycleHistory> histories)
-        {
-            await _context.AssetLifecycleHistories.AddRangeAsync(histories);
-        }
-
-        // Generic wrapper for backward compatibility
-        public async Task AddAssetLifecycleHistoriesAsync(List<AssetLifecycleHistory> histories)
-            => await AddLifecycleHistoriesAsync(histories);
-
         public async Task AddAssetLifecycleHistoryAsync(AssetLifecycleHistory history)
-            => await AddLifecycleHistoriesAsync(new List<AssetLifecycleHistory> { history });
+        {
+            await Context.AssetLifecycleHistories.AddAsync(history);
+        }
+
+        public async Task AddAssetLifecycleHistoriesAsync(List<AssetLifecycleHistory> histories)
+        {
+            await Context.AssetLifecycleHistories.AddRangeAsync(histories);
+        }
 
         public async Task AddAssetAsync(Asset asset)
         {
-            await _context.Assets.AddAsync(asset);
+            await Context.Assets.AddAsync(asset);
         }
 
         public async Task AddAssetsAsync(List<Asset> assets)
         {
-            await _context.Assets.AddRangeAsync(assets);
+            await Context.Assets.AddRangeAsync(assets);
         }
-
-        // Generic wrappers for backward compatibility
-        public async Task<List<Asset>> GetAllAsync(string? status, string? category, string? brand, string? search)
-            => await GetAllAssetsAsync(status, category, brand, search);
-
-        public async Task<Asset?> GetByIdAsync(Guid id)
-            => await GetAssetByIdAsync(id);
-
-        public async Task AddAsync(Asset asset)
-            => await AddAssetAsync(asset);
-
-        public async Task AddRangeAsync(List<Asset> assets)
-            => await AddAssetsAsync(assets);
 
         public async Task<int> SaveChangesAsync()
         {
-            return await _context.SaveChangesAsync();
+            return await Context.SaveChangesAsync();
         }
     }
 }

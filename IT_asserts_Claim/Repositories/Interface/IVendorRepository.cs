@@ -12,11 +12,5 @@ namespace ITAssetManagement.Repositories.Interface
         Task AddVendorAsync(Vendor entity);
         void UpdateVendor(Vendor entity);
         Task<int> SaveChangesAsync();
-
-        // Generic wrappers for backward compatibility
-        Task<List<Vendor>> GetAllAsync();
-        Task<Vendor?> GetByIdAsync(Guid id);
-        Task AddAsync(Vendor entity);
-        void Update(Vendor entity);
     }
 }

@@ -73,16 +73,31 @@ namespace ITAssetManagement.Controllers
             }
         }
 
-        [HttpPut("{id:guid}/receive")]
-        [HttpPut("{id:guid}/complete")]
-        public async Task<IActionResult> Receive(Guid id)
+        [HttpPut("{id:guid}/confirm")]
+        public async Task<IActionResult> Confirm(Guid id)
         {
             try
             {
-                var result = await _purchaseService.ReceivePurchaseAsync(id);
+                var result = await _purchaseService.ConfirmPurchaseAsync(id);
                 if (!result)
                     return NotFound(new { message = "Purchase not found." });
-                return Ok(new { message = "Purchase received successfully." });
+                return Ok(new { message = "Purchase confirmed successfully." });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpPut("{id:guid}/cancel")]
+        public async Task<IActionResult> Cancel(Guid id)
+        {
+            try
+            {
+                var result = await _purchaseService.CancelPurchaseAsync(id);
+                if (!result)
+                    return NotFound(new { message = "Purchase not found." });
+                return Ok(new { message = "Purchase cancelled successfully." });
             }
             catch (InvalidOperationException ex)
             {

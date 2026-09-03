@@ -69,9 +69,7 @@ namespace ITAssetManagement.Services.Implementations
                 WarrantyStartDate = dto.WarrantyStartDate,
                 WarrantyEndDate = dto.WarrantyEndDate,
                 WarrantyMonths = dto.WarrantyMonths,
-                Remarks = dto.Remarks?.Trim(),
-                CreatedBy = "System",
-                CreatedAt = DateTime.UtcNow
+                Remarks = dto.Remarks?.Trim()
             };
 
             await _assetRepository.AddAssetAsync(asset);
@@ -84,9 +82,7 @@ namespace ITAssetManagement.Services.Implementations
                 NewStatus = AssetStatus.Available,
                 Remarks = "Asset registered from purchase",
                 PerformedBy = "System",
-                PerformedDate = DateTime.UtcNow,
-                CreatedBy = "System",
-                CreatedAt = DateTime.UtcNow
+                PerformedDate = DateTime.UtcNow
             };
 
             await _historyRepository.AddAssetLifecycleHistoryAsync(history);
@@ -147,14 +143,11 @@ namespace ITAssetManagement.Services.Implementations
                     WarrantyStartDate = dto.WarrantyStartDate,
                     WarrantyEndDate = dto.WarrantyEndDate,
                     WarrantyMonths = dto.WarrantyMonths,
-                    Remarks = dto.Remarks?.Trim(),
-                    CreatedBy = "System",
-                    CreatedAt = DateTime.UtcNow
+                    Remarks = dto.Remarks?.Trim()
                 });
             }
 
             await _assetRepository.AddAssetsAsync(assets);
-            await _unitOfWork.SaveChangesAsync();
 
             var histories = assets.Select(asset => new AssetLifecycleHistory
             {
@@ -164,12 +157,12 @@ namespace ITAssetManagement.Services.Implementations
                 NewStatus = AssetStatus.Available,
                 Remarks = "Asset registered from purchase (bulk)",
                 PerformedBy = "System",
-                PerformedDate = DateTime.UtcNow,
-                CreatedBy = "System",
-                CreatedAt = DateTime.UtcNow
+                PerformedDate = DateTime.UtcNow
             }).ToList();
 
             await _historyRepository.AddAssetLifecycleHistoriesAsync(histories);
+
+            // Single transactional save for both assets and histories
             await _unitOfWork.SaveChangesAsync();
 
             var assetIds = assets.Select(a => a.Id).ToList();
@@ -185,8 +178,6 @@ namespace ITAssetManagement.Services.Implementations
             var oldCondition = asset.Condition;
             asset.Condition = (AssetCondition)dto.Condition;
             asset.Remarks = dto.Remarks?.Trim();
-            asset.ModifiedAt = DateTime.UtcNow;
-            asset.ModifiedBy = "System";
 
             if (oldCondition != (AssetCondition)dto.Condition)
             {
@@ -198,9 +189,7 @@ namespace ITAssetManagement.Services.Implementations
                     NewStatus = asset.Status,
                     Remarks = $"Condition changed from {oldCondition} to {(AssetCondition)dto.Condition}",
                     PerformedBy = "System",
-                    PerformedDate = DateTime.UtcNow,
-                    CreatedBy = "System",
-                    CreatedAt = DateTime.UtcNow
+                    PerformedDate = DateTime.UtcNow
                 };
                 await _historyRepository.AddAssetLifecycleHistoryAsync(history);
             }
@@ -214,8 +203,6 @@ namespace ITAssetManagement.Services.Implementations
             var asset = await _assetRepository.GetAssetByIdAsync(id);
             if (asset == null) return false;
             asset.IsDeleted = true;
-            asset.DeletedAt = DateTime.UtcNow;
-            asset.DeletedBy = "System";
             await _unitOfWork.SaveChangesAsync();
             return true;
         }
@@ -252,13 +239,18 @@ namespace ITAssetManagement.Services.Implementations
 
         public async Task<List<AvailablePurchaseListItem>> GetAvailablePurchasesAsync()
         {
-            var purchases = await _purchaseRepository.GetCompletedWithItemsAsync();
+            var purchases = await _purchaseRepository.GetConfirmedWithItemsAsync();
+
+            // Batch query: single DB round-trip for all registered counts (avoids N+1).
+            var registeredCounts = await _assetRepository
+                .GetRegisteredCountsByPurchasesAsync(purchases.Select(p => p.Id));
+
             var result = new List<AvailablePurchaseListItem>();
 
             foreach (var purchase in purchases)
             {
                 var totalQty = purchase.PurchasedItems.Sum(i => i.Quantity);
-                var registeredQty = await _assetRepository.GetRegisteredCountByPurchaseAsync(purchase.Id);
+                var registeredQty = registeredCounts.GetValueOrDefault(purchase.Id);
                 var remainingQty = totalQty - registeredQty;
                 if (remainingQty > 0)
                 {
@@ -283,11 +275,15 @@ namespace ITAssetManagement.Services.Implementations
         public async Task<List<AvailablePurchaseItemDto>> GetAvailableItemsAsync(Guid purchaseId)
         {
             var purchaseItems = await _purchasedItemRepository.GetAllByPurchaseIdAsync(purchaseId);
+
+            // Batch query: single DB round-trip for all registered counts (avoids N+1).
+            var registeredCounts = await _assetRepository.GetRegisteredCountsByPurchaseItemsAsync(purchaseId);
+
             var result = new List<AvailablePurchaseItemDto>();
 
             foreach (var item in purchaseItems)
             {
-                var registeredQty = await _assetRepository.GetRegisteredCountByPurchaseItemAsync(purchaseId, item.Category, item.Brand, item.Model);
+                var registeredQty = registeredCounts.GetValueOrDefault((item.Category, item.Brand, item.Model));
                 var remainingQty = item.Quantity - registeredQty;
                 if (remainingQty > 0)
                 {

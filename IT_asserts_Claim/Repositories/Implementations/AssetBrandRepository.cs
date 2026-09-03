@@ -5,18 +5,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ITAssetManagement.Repositories.Implementations
 {
-    public class AssetBrandRepository: IAssetBrandRepository
+    public class AssetBrandRepository : Repository<AssetBrand>, IAssetBrandRepository
     {
-        public readonly AppDbContext _context;
-
-        public AssetBrandRepository(AppDbContext dbContext)
+        public AssetBrandRepository(AppDbContext context) : base(context)
         {
-            _context = dbContext;
         }
 
         public async Task<List<AssetBrand>> GetAllAssetBrandsAsync()
         {
-            return await _context.AssetBrands
+            return await Context.AssetBrands
                 .Include(x => x.AssetCategory)
                 .OrderBy(x => x.BrandName)
                 .AsNoTracking()
@@ -25,14 +22,14 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<AssetBrand?> GetAssetBrandByIdAsync(Guid id)
         {
-            return await _context.AssetBrands
+            return await Context.AssetBrands
                 .Include(x => x.AssetCategory)
                 .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<List<AssetBrand>> GetByCategoryIdAsync(Guid categoryId)
         {
-            return await _context.AssetBrands
+            return await Context.AssetBrands
                 .Include(x => x.AssetCategory)
                 .Where(x => x.AssetCategoryId == categoryId && x.IsActive)
                 .OrderBy(x => x.BrandName)
@@ -42,34 +39,16 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<bool> IsNameExistsAsync(string name, Guid categoryId, Guid? excludeId = null)
         {
-            return await _context.AssetBrands
+            return await Context.AssetBrands
                 .AnyAsync(x => x.BrandName.ToLower() == name.ToLower()
                     && x.AssetCategoryId == categoryId
                     && (!excludeId.HasValue || x.Id != excludeId.Value));
         }
 
-        public async Task AddAssetBrandAsync(AssetBrand entity)
-        {
-            await _context.AssetBrands.AddAsync(entity);
-        }
+        public async Task AddAssetBrandAsync(AssetBrand entity) => await AddAsync(entity);
 
-        public void UpdateAssetBrand(AssetBrand entity)
-        {
-            _context.AssetBrands.Update(entity);
-        }
+        public void UpdateAssetBrand(AssetBrand entity) => Update(entity);
 
-        // Generic wrapper for backward compatibility
-        public async Task<List<AssetBrand>> GetAllAsync()
-            => await GetAllAssetBrandsAsync();
-        public async Task<AssetBrand?> GetByIdAsync(Guid id)
-            => await GetAssetBrandByIdAsync(id);
-        public async Task AddAsync(AssetBrand entity)
-            => await AddAssetBrandAsync(entity);
-        public void Update(AssetBrand entity)
-            => UpdateAssetBrand(entity);
-        public async Task<int> SaveChangesAsync()
-        {
-            return await _context.SaveChangesAsync();
-        }
+        public async Task<int> SaveChangesAsync() => await Context.SaveChangesAsync();
     }
 }

@@ -10,11 +10,5 @@ namespace ITAssetManagement.Repositories.Interface
         Task AddAssetCategoryAsync(AssetCategory entity);
         void UpdateAssetCategory(AssetCategory entity);
         Task<int> SaveChangesAsync();
-
-        // Generic wrappers for backward compatibility
-        Task<List<AssetCategory>> GetAllAsync();
-        Task<AssetCategory?> GetByIdAsync(Guid id);
-        Task AddAsync(AssetCategory entity);
-        void Update(AssetCategory entity);
     }
 }

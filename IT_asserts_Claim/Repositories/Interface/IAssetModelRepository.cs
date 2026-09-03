@@ -10,11 +10,5 @@ namespace ITAssetManagement.Repositories.Interface
         Task AddAssetModelAsync(AssetModel entity);
         void UpdateAssetModel(AssetModel entity);
         Task<int> SaveChangesAsync();
-
-        // Generic wrappers for backward compatibility
-        Task<List<AssetModel>> GetAllAsync();
-        Task<AssetModel?> GetByIdAsync(Guid id);
-        Task AddAsync(AssetModel entity);
-        void Update(AssetModel entity);
     }
 }

@@ -5,18 +5,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ITAssetManagement.Repositories.Implementations
 {
-    public class AssetModelRepository: IAssetModelRepository
+    public class AssetModelRepository : Repository<AssetModel>, IAssetModelRepository
     {
-        private readonly AppDbContext _context;
-
-        public AssetModelRepository(AppDbContext context)
+        public AssetModelRepository(AppDbContext context) : base(context)
         {
-            _context = context;
         }
 
         public async Task<List<AssetModel>> GetAllAssetModelsAsync()
         {
-            return await _context.AssetModels
+            return await Context.AssetModels
                 .Include(x => x.AssetCategory)
                 .Include(x => x.AssetBrand)
                 .OrderBy(x => x.ModelName)
@@ -26,7 +23,7 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<AssetModel?> GetAssetModelByIdAsync(Guid id)
         {
-            return await _context.AssetModels
+            return await Context.AssetModels
                 .Include(x => x.AssetCategory)
                 .Include(x => x.AssetBrand)
                 .FirstOrDefaultAsync(x => x.Id == id);
@@ -34,34 +31,16 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task<bool> IsNameExistsAsync(string name, Guid brandId, Guid? excludeId = null)
         {
-            return await _context.AssetModels
+            return await Context.AssetModels
                 .AnyAsync(x => x.ModelName.ToLower() == name.ToLower()
                     && x.AssetBrandId == brandId
                     && (!excludeId.HasValue || x.Id != excludeId.Value));
         }
 
-        public async Task AddAssetModelAsync(AssetModel entity)
-        {
-            await _context.AssetModels.AddAsync(entity);
-        }
+        public async Task AddAssetModelAsync(AssetModel entity) => await AddAsync(entity);
 
-        public void UpdateAssetModel(AssetModel entity)
-        {
-            _context.AssetModels.Update(entity);
-        }
+        public void UpdateAssetModel(AssetModel entity) => Update(entity);
 
-        // Generic wrapper for backward compatibility
-        public async Task<List<AssetModel>> GetAllAsync()
-            => await GetAllAssetModelsAsync();
-        public async Task<AssetModel?> GetByIdAsync(Guid id)
-            => await GetAssetModelByIdAsync(id);
-        public async Task AddAsync(AssetModel entity)
-            => await AddAssetModelAsync(entity);
-        public void Update(AssetModel entity)
-            => UpdateAssetModel(entity);
-        public async Task<int> SaveChangesAsync()
-        {
-            return await _context.SaveChangesAsync();
-        }
+        public async Task<int> SaveChangesAsync() => await Context.SaveChangesAsync();
     }
 }

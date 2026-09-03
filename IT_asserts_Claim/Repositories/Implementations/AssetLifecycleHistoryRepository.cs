@@ -5,18 +5,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ITAssetManagement.Repositories.Implementations
 {
-    public class AssetLifecycleHistoryRepository : IAssetLifecycleHistoryRepository
+    public class AssetLifecycleHistoryRepository : Repository<AssetLifecycleHistory>, IAssetLifecycleHistoryRepository
     {
-        private readonly AppDbContext _context;
-
-        public AssetLifecycleHistoryRepository(AppDbContext context)
+        public AssetLifecycleHistoryRepository(AppDbContext context) : base(context)
         {
-            _context = context;
         }
 
         public async Task<List<AssetLifecycleHistory>> GetByAssetIdAsync(Guid assetId)
         {
-            return await _context.AssetLifecycleHistories
+            return await Context.AssetLifecycleHistories
                 .AsNoTracking()
                 .Where(h => h.AssetId == assetId)
                 .OrderByDescending(h => h.PerformedDate)
@@ -25,24 +22,17 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public async Task AddAssetLifecycleHistoryAsync(AssetLifecycleHistory history)
         {
-            await _context.AssetLifecycleHistories.AddAsync(history);
+            await Context.AssetLifecycleHistories.AddAsync(history);
         }
 
         public async Task AddAssetLifecycleHistoriesAsync(List<AssetLifecycleHistory> histories)
         {
-            await _context.AssetLifecycleHistories.AddRangeAsync(histories);
+            await Context.AssetLifecycleHistories.AddRangeAsync(histories);
         }
-
-        // Generic wrappers for backward compatibility
-        public async Task AddAsync(AssetLifecycleHistory history)
-            => await AddAssetLifecycleHistoryAsync(history);
-
-        public async Task AddRangeAsync(List<AssetLifecycleHistory> histories)
-            => await AddAssetLifecycleHistoriesAsync(histories);
 
         public async Task<int> SaveChangesAsync()
         {
-            return await _context.SaveChangesAsync();
+            return await Context.SaveChangesAsync();
         }
     }
 }
