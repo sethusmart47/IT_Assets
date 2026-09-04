@@ -14,4 +14,5 @@ public interface IRepository<TEntity> where TEntity : class
     void Remove(TEntity entity);
     IQueryable<TEntity> Query();
     IQueryable<TEntity> QueryAsNoTracking();
+    Task<int> SaveChangesAsync();
 }

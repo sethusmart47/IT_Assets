@@ -16,7 +16,6 @@ namespace ITAssetManagement.Services.Implementations
         private readonly IAssetLifecycleHistoryRepository _historyRepository;
         private readonly IPurchaseRepository _purchaseRepository;
         private readonly IPurchasedItemRepository _purchasedItemRepository;
-        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
         public AssetService(
@@ -24,14 +23,12 @@ namespace ITAssetManagement.Services.Implementations
             IAssetLifecycleHistoryRepository historyRepository,
             IPurchaseRepository purchaseRepository,
             IPurchasedItemRepository purchasedItemRepository,
-            IUnitOfWork unitOfWork,
             IMapper mapper)
         {
             _assetRepository = assetRepository;
             _historyRepository = historyRepository;
             _purchaseRepository = purchaseRepository;
             _purchasedItemRepository = purchasedItemRepository;
-            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
@@ -86,7 +83,7 @@ namespace ITAssetManagement.Services.Implementations
             };
 
             await _historyRepository.AddAssetLifecycleHistoryAsync(history);
-            await _unitOfWork.SaveChangesAsync();
+            await _historyRepository.SaveChangesAsync();
 
             var savedAsset = await _assetRepository.GetAssetByIdAsync(asset.Id);
             return _mapper.Map<AssetDetails>(savedAsset!);
@@ -163,7 +160,7 @@ namespace ITAssetManagement.Services.Implementations
             await _historyRepository.AddAssetLifecycleHistoriesAsync(histories);
 
             // Single transactional save for both assets and histories
-            await _unitOfWork.SaveChangesAsync();
+            await _historyRepository.SaveChangesAsync();
 
             var assetIds = assets.Select(a => a.Id).ToList();
             var savedAssets = await _assetRepository.GetByIdsWithDetailsAsync(assetIds);
@@ -194,7 +191,7 @@ namespace ITAssetManagement.Services.Implementations
                 await _historyRepository.AddAssetLifecycleHistoryAsync(history);
             }
 
-            await _unitOfWork.SaveChangesAsync();
+            await _historyRepository.SaveChangesAsync();
             return _mapper.Map<AssetDetails>(asset);
         }
 
@@ -203,7 +200,7 @@ namespace ITAssetManagement.Services.Implementations
             var asset = await _assetRepository.GetAssetByIdAsync(id);
             if (asset == null) return false;
             asset.IsDeleted = true;
-            await _unitOfWork.SaveChangesAsync();
+            await _assetRepository.SaveChangesAsync();
             return true;
         }
 

@@ -2169,7 +2169,7 @@
         "type": "object",
         "properties": {
           "conditionAtReturn": {
-            "maximum": 3,
+            "maximum": 5,
             "minimum": 1,
             "type": "integer",
             "format": "int32"
@@ -2245,7 +2245,7 @@
             "format": "uuid"
           },
           "conditionAtReturn": {
-            "maximum": 3,
+            "maximum": 5,
             "minimum": 1,
             "type": "integer",
             "format": "int32"

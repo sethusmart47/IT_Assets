@@ -12,20 +12,17 @@ namespace ITAssetManagement.Services.Implementations
         private readonly IAssetAssignmentRepository _assignmentRepository;
         private readonly IEmployeeRepository _employeeRepository;
         private readonly IAssetRepository _assetRepository;
-        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
         public AssetAssignmentService(
             IAssetAssignmentRepository assignmentRepository,
             IEmployeeRepository employeeRepository,
             IAssetRepository assetRepository,
-            IUnitOfWork unitOfWork,
             IMapper mapper)
         {
             _assignmentRepository = assignmentRepository;
             _employeeRepository = employeeRepository;
             _assetRepository = assetRepository;
-            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 

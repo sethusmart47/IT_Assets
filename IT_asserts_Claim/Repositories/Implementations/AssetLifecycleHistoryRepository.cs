@@ -30,7 +30,7 @@ namespace ITAssetManagement.Repositories.Implementations
             await Context.AssetLifecycleHistories.AddRangeAsync(histories);
         }
 
-        public async Task<int> SaveChangesAsync()
+        public override async Task<int> SaveChangesAsync()
         {
             return await Context.SaveChangesAsync();
         }

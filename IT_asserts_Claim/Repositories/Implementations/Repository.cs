@@ -30,4 +30,6 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     public IQueryable<TEntity> Query() => DbSet;
 
     public IQueryable<TEntity> QueryAsNoTracking() => DbSet.AsNoTracking();
+
+    public virtual async Task<int> SaveChangesAsync() => await Context.SaveChangesAsync();
 }

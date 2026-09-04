@@ -111,7 +111,7 @@ namespace ITAssetManagement.Repositories.Implementations
             Context.Purchases.Update(entity);
         }
 
-        public async Task<int> SaveChangesAsync()
+        public override async Task<int> SaveChangesAsync()
         {
             return await Context.SaveChangesAsync();
         }

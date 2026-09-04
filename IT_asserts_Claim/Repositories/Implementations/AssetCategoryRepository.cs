@@ -38,6 +38,6 @@ namespace ITAssetManagement.Repositories.Implementations
 
         public void UpdateAssetCategory(AssetCategory entity) => Update(entity);
 
-        public async Task<int> SaveChangesAsync() => await Context.SaveChangesAsync();
+        public override async Task<int> SaveChangesAsync() => await Context.SaveChangesAsync();
     }
 }

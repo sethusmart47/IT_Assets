@@ -24,8 +24,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddAutoMapper(typeof(Program));
 
-// Unit of Work & Generic Repository
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+// Generic Repository
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 // Repositories

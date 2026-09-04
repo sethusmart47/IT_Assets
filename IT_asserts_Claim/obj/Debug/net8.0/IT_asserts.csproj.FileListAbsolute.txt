@@ -172,3 +172,4 @@ C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\ne
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\IT_asserts.pdb
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\IT_asserts.genruntimeconfig.cache
 C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\ref\IT_asserts.dll
+C:\Users\sethu\Desktop\IT_assests\IT_asserts_Claim\IT_asserts_Claim\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
