@@ -12,7 +12,7 @@
     public class ReturnAssetDto
     {
         [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Condition at return is required.")]
-        [System.ComponentModel.DataAnnotations.Range(1, 3, ErrorMessage = "Condition must be 1 (Good), 2 (Damaged), or 3 (Lost).")]
+        [System.ComponentModel.DataAnnotations.Range(1, 5, ErrorMessage = "Condition must be between 1 (New) and 5 (Damaged).")]
         public int ConditionAtReturn { get; set; }
 
         [System.ComponentModel.DataAnnotations.MaxLength(500)]
@@ -25,7 +25,7 @@
         public Guid AssignmentId { get; set; }
 
         [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Condition at return is required.")]
-        [System.ComponentModel.DataAnnotations.Range(1, 3, ErrorMessage = "Condition must be 1 (Good), 2 (Damaged), or 3 (Lost).")]
+        [System.ComponentModel.DataAnnotations.Range(1, 5, ErrorMessage = "Condition must be between 1 (New) and 5 (Damaged).")]
         public int ConditionAtReturn { get; set; }
 
         [System.ComponentModel.DataAnnotations.MaxLength(500)]

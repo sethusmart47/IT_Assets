@@ -185,28 +185,33 @@ namespace ITAssetManagement.Services.Implementations
         }
 
         /// <summary>
-        /// Enterprise return-condition mapping: 1=Good → Available, 2=Damaged → NeedToService, 3=Lost → Lost
-        /// Aligned with DTO Range(1,3) and UI labels.
+        /// Enterprise return-condition mapping aligned with AssetCondition enum (1-5).
+        /// New/Good → Available, Fair/poor → InService, Damaged → NeedToService.
         /// </summary>
         private static AssetStatus GetStatusFromCondition(int condition)
         {
             return condition switch
             {
-                1 => AssetStatus.Available,
-                2 => AssetStatus.NeedToService,
-                3 => AssetStatus.Lost,
-                _ => throw new InvalidOperationException("Invalid condition value. Must be 1 (Good), 2 (Damaged), or 3 (Lost).")
+                1 or 2 => AssetStatus.Available,
+                3 or 4 => AssetStatus.Available,
+                5 => AssetStatus.NeedToService,
+                _ => throw new InvalidOperationException("Invalid condition value. Must be between 1 (New) and 5 (Damaged).")
             };
         }
 
+        /// <summary>
+        /// Keeps the selected return condition intact as the asset's stored condition.
+        /// </summary>
         private static AssetCondition MapReturnConditionToAssetCondition(int condition)
         {
             return condition switch
             {
-                1 => AssetCondition.Good,
-                2 => AssetCondition.Damaged,
-                3 => AssetCondition.Damaged,
-                _ => AssetCondition.Good
+                1 => AssetCondition.New,
+                2 => AssetCondition.Good,
+                3 => AssetCondition.Fair,
+                4 => AssetCondition.Poor,
+                5 => AssetCondition.Damaged,
+                _ => throw new InvalidOperationException("Invalid condition value. Must be between 1 (New) and 5 (Damaged).")
             };
         }
 
@@ -214,9 +219,11 @@ namespace ITAssetManagement.Services.Implementations
         {
             return condition switch
             {
-                1 => "Good",
-                2 => "Damaged",
-                3 => "Lost",
+                1 => "New",
+                2 => "Good",
+                3 => "Fair",
+                4 => "Poor",
+                5 => "Damaged",
                 _ => "Unknown"
             };
         }

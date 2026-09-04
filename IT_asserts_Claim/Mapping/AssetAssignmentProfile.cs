@@ -26,9 +26,11 @@ namespace ITAssetManagement.Mapping
                 .ForMember(d => d.SerialNumber, opt => opt.MapFrom(s => s.Asset.SerialNumber))
                 .ForMember(d => d.NewStatus, opt => opt.MapFrom(s => s.Asset.Status.ToString()))
                 .ForMember(d => d.ConditionName, opt => opt.MapFrom(s =>
-                    s.ConditionAtReturn == 1 ? "Good" :
-                    s.ConditionAtReturn == 2 ? "Damaged" :
-                    s.ConditionAtReturn == 3 ? "Lost" : "Unknown"))
+                    s.ConditionAtReturn == 1 ? "New" :
+                    s.ConditionAtReturn == 2 ? "Good" :
+                    s.ConditionAtReturn == 3 ? "Fair" :
+                    s.ConditionAtReturn == 4 ? "Poor" :
+                    s.ConditionAtReturn == 5 ? "Damaged" : "Unknown"))
                 .ForMember(d => d.ReturnedDate, opt => opt.MapFrom(s => s.ReturnedDate ?? DateTime.UtcNow));
 
             // AssetAssignment → EmployeeAssignmentDto (for employee detail page)
@@ -42,9 +44,11 @@ namespace ITAssetManagement.Mapping
                 .ForMember(d => d.Configuration, opt => opt.MapFrom(s => s.Asset.Configuration))
                 .ForMember(d => d.Status, opt => opt.MapFrom(s => s.Asset.Status.ToString()))
                 .ForMember(d => d.ConditionAtReturnName, opt => opt.MapFrom(s =>
-                    s.ConditionAtReturn == 1 ? "Good" :
-                    s.ConditionAtReturn == 2 ? "Damaged" :
-                    s.ConditionAtReturn == 3 ? "Lost" : null));
+                    s.ConditionAtReturn == 1 ? "New" :
+                    s.ConditionAtReturn == 2 ? "Good" :
+                    s.ConditionAtReturn == 3 ? "Fair" :
+                    s.ConditionAtReturn == 4 ? "Poor" :
+                    s.ConditionAtReturn == 5 ? "Damaged" : null));
         }
     }
 }
